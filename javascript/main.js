@@ -3,16 +3,23 @@
  */
 (function ($) {
     "use strict";
+    var navigationBarHeight = 70;
     var $document = $(document);
     $document.ready(function () {
+
+        // set jump
         $(".scroll-go-to").arctic_scroll();
+
+        // init navigation bar
         $('body').scrollspy({target: '#navbar-example'});
+
+        // show and hide navigation bar
         $(window).scroll(function () {
             var $nav = $("#navbar-example");
-            if ($(window).height() - ($(document).scrollTop()) <= 70) {
+            if ($(window).height() - ($(document).scrollTop()) <= navigationBarHeight) {
                 $nav.slideDown(300);
             }
-            if ($(document).scrollTop() <= 70) {
+            if ($(document).scrollTop() <= navigationBarHeight) {
                 $nav.slideUp(300);
             }
         })
