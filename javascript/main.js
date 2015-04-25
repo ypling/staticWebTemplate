@@ -3,19 +3,37 @@
  */
 (function ($) {
     "use strict";
+    //variable declare
     var $document = $(document);
+    var movingBGImgs;
+    //function define
+    function registerMovingBGImg(selectorStr){
+        movingBGImgs = $(selectorStr);
+    }
+    function moveBackgroundImg(scrollOffset) { //move background image base on window scroll offset.
+        movingBGImgs.each(function(){
+            var element = $(this);
+            var offset = scrollOffset/2+element.offset().top;
+            element.css('background-position','50% '+offset+"px");
+        });
+    }
+
     $document.ready(function () {
         $(".scroll-go-to").arctic_scroll();
         $('body').scrollspy({target: '#navbar-example'});
+        registerMovingBGImg('.cover');
         $(window).scroll(function () {
+            console.log($(window).scrollTop());
             var $nav = $("#navbar-example");
-            if ($(window).height() - ($(document).scrollTop()) <= 70) {
+            if ($(window).height() - ($document.scrollTop()) <= 70) {
                 $nav.slideDown(300);
             }
-            if ($(document).scrollTop() <= 70) {
+            if ($document.scrollTop() <= 70) {
                 $nav.slideUp(300);
             }
-        })
+            //Moving background image slower than window
+            moveBackgroundImg($document.scrollTop());
+        });
     });
 
     // Arctic Scroll by Paul Adam Davis
