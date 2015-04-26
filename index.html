@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title></title>
     <!-- font -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="addOn/cdnLocalCopy/fonts/openSans.css">
     <!-- Bootstrap 3.3.4 css file -->
     <link rel="stylesheet" href="addOn/cdnLocalCopy/Bootstrap/bootstrap.css">
     <!-- Font Awesome 4.3.0 css file -->
     <link rel="stylesheet" href="addOn/cdnLocalCopy/Font-awesome/font-awesome.css">
+    <!--&lt;!&ndash; font &ndash;&gt;-->
+    <!--<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800" rel="stylesheet" type="text/css" />-->
     <!--&lt;!&ndash; Latest compiled and minified CSS &ndash;&gt;-->
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">-->
     <!--&lt;!&ndash; Font Awesome 4.3.0 css file &ndash;&gt;-->
@@ -18,8 +20,8 @@
     <!-- Customer css file -->
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body data-spy="scroll" data-target="#navbar-example" data-offset="150">
-
+<body data-spy="scroll" data-target="#navbar-example">
+<!-- Start of navigation bar fixed top -->
 <nav id="navbar-example" class="nav navbar-default navbar-fixed-top navbar-brilent">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -36,15 +38,38 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right" role="tablist">
-                <li class="active"><a class="scroll-go-to" data-target="#cover"><i class="fa fa-home"></i> Home<span class="sr-only">(current)</span></a></li>
-                <li><a class="scroll-go-to" data-target="#gettingStart">Getting Start</a></li>
-                <li><a class="scroll-go-to" data-target="#mid">Middle</a></li>
-                <li><a class="scroll-go-to" data-target="#contact">Bottom</a></li>
+                <li class="active">
+                    <a class="scroll-go-to" data-target="#cover">
+                        <i class="fa fa-home"></i>
+                        Home<span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="scroll-go-to" data-target="#gettingStart">
+                        <i class="fa fa-play"></i>
+                        Getting Start
+                    </a>
+                </li>
+                <li>
+                    <a class="scroll-go-to" data-target="#mid">
+                        <i class="fa fa-cogs"></i>
+                        Middle
+                    </a>
+                </li>
+                <li>
+                    <a class="scroll-go-to" data-target="#contact">
+                        <i class="fa fa-gamepad"></i>
+                        Bottom
+                    </a>
+                </li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-<section id="main-header" class="cover">
+<!-- End of navigation bar fixed top -->
+
+<!-- Start of cover -->
+<section id="main-header" class="section-block cover">
     <div class="vertical">
         <div class="main-header-content inner">
             <h1 class="page-title">Focus</h1>
@@ -71,7 +96,10 @@
     </div>
     <a class="scroll-down scroll-go-to" data-target="#contact" data-offset="-45" role="button"><i class="fa fa-angle-down"></i></a>
 </section>
-<section id="gettingStart" class="section-block">
+<!-- End of cover -->
+
+<!-- Start of first temp section -->
+<section id="gettingStart" class="section-block section-1">
     <div class="container">
         <div class="row">
             <div class="page-title">
@@ -84,24 +112,16 @@
         </div>
     </div>
 </section>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div style="margin-bottom: -50px;height: 100px;"></div>
-<section id="mid" class="section-block cover">
+<!-- End of first temp section -->
+
+<!-- start gap -->
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div style="margin-bottom: -70px;height: 100px;"></div>
+<!-- end gap -->
+
+<!-- Start of second temp section -->
+<section id="mid" class="section-block section-2 cover">
     <div class="container">
         <div class="row">
             <div class="page-title">
@@ -114,45 +134,16 @@
         </div>
     </div>
 </section>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div style="margin-bottom: -50px;height: 100px;"></div>
-<section id="contact" class="section-block">
+<!-- End of second temp section -->
+
+<!-- start gap -->
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div style="margin-bottom: -70px;height: 100px;"></div>
+<!-- end gap -->
+
+<!-- Start of third temp section -->
+<section id="contact" class="section-block section-3">
     <div class="container">
         <div class="row">
             <div class="page-title">
@@ -165,6 +156,9 @@
         </div>
     </div>
 </section>
+<!-- End of third temp section -->
+
+<!-- JavaScript files -->
 <!-- jQuery 2.1.3 -->
 <script src="addOn/cdnLocalCopy/jQuery/jquery-2.1.3.js"></script>
 <!-- Bootstrap js file 3.3.4 -->

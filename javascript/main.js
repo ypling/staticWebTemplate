@@ -4,6 +4,7 @@
 (function ($) {
     "use strict";
     //variable declare
+    var navigationBarHeight = 70;
     var $document = $(document);
     var movingBGImgs;
     //function define
@@ -19,16 +20,23 @@
     }
 
     $document.ready(function () {
+
+        // set jump
         $(".scroll-go-to").arctic_scroll();
+
+        // init navigation bar
         $('body').scrollspy({target: '#navbar-example'});
+        
+        // register moving back ground image
         registerMovingBGImg('.cover');
+
+        // show and hide navigation bar
         $(window).scroll(function () {
-            console.log($(window).scrollTop());
             var $nav = $("#navbar-example");
-            if ($(window).height() - ($document.scrollTop()) <= 70) {
+            if ($(window).height() - ($(document).scrollTop()) <= navigationBarHeight) {
                 $nav.slideDown(300);
             }
-            if ($document.scrollTop() <= 70) {
+            if ($(document).scrollTop() <= navigationBarHeight) {
                 $nav.slideUp(300);
             }
             //Moving background image slower than window

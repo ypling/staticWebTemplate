@@ -1,3 +1,28 @@
+/*************************************************
+ *************************************************
+ *****                                       *****
+ *****                 index                 *****
+ *****  0 - General settings                 *****
+ *****  1 - Cover                            *****
+ *****      1.1 - Cover background           *****
+ *****      1.2 - Cover content              *****
+ *****      1.2 - Cover ghost button         *****
+ *****  2 - Navigation Bar                   *****
+ *****  3 - Sections                         *****
+ *****      3.1 - Section general settings   *****
+ *****      3.2 - First section              *****
+ *****                                       *****
+ *****  f - Customer animate                 *****
+ *****                                       *****
+ *****                                       *****
+ *************************************************
+ *************************************************/
+
+/*************************************************
+ ******                                     ******
+ ******           General settings          ******
+ ******                                     ******
+ *************************************************/
 html {
     height: 100%;
     max-height: 100%;
@@ -17,6 +42,49 @@ body {
     color: #3A4145;
 }
 
+/*************************************************
+ ******                                     ******
+ ******          Navigation Bar             ******
+ ******                                     ******
+ *************************************************/
+
+#navbar-example {
+    display: none;
+}
+
+.nav a {
+    cursor: pointer;
+    height: 70px;
+    text-align: center;
+}
+
+.nav .navbar-header a {
+    width: 180px;
+    background: url("../images/logo.png") no-repeat center center;
+    background-size: 150px auto;
+}
+
+.nav li {
+    height: 70px;
+    text-align: center;
+}
+
+.nav li i {
+    width: 100%;
+    display: inline-block;
+}
+
+.navbar-brilent {
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+/*************************************************
+ ******                                     ******
+ ******          Navigation Bar             ******
+ ******                                     ******
+ *************************************************/
+
+/* Section general settings */
 section {
     display: block;
     padding-top: 70px;
@@ -51,7 +119,18 @@ section.section-block {
     font-family: "Open Sans", sans-serif;
 }
 
-/* cover */
+/* Section-1 */
+.section-1 {
+
+}
+
+/*************************************************
+ ******                                     ******
+ ******               Cover                 ******
+ ******                                     ******
+ *************************************************/
+
+/* Cover background */
 .cover {
     position: relative;
     margin-bottom: -50px;
@@ -83,6 +162,7 @@ section.section-block {
     margin: 0 auto;
 }
 
+/* Cover content */
 .inner .page-title {
     margin: 10px 0 10px 0;
     font-size: 5rem;
@@ -118,7 +198,7 @@ section.section-block {
     animation-delay: 0.1s;
 }
 
-/* ghost button */
+/* Cover ghost button */
 .inner div {
     list-style: none;
     width: 100%;
@@ -246,35 +326,11 @@ section.section-block {
     animation: none;
 }
 
-/* navigation bar */
-#navbar-example {
-    display: none;
-}
-
-.nav a {
-    cursor: pointer;
-    height: 70px;
-    text-align: center;
-}
-
-.nav .navbar-header a {
-    width: 180px;
-    background: url("../images/logo.png") no-repeat center center;
-    background-size: 150px auto;
-}
-
-.nav li {
-    height: 70px;
-    text-align: center;
-}
-.nav li i {
-    width: 100%;
-    display: inline-block;
-}
-
-.navbar-brilent {
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
-}
+/*************************************************
+ ******                                     ******
+ ******          Navigation Bar             ******
+ ******                                     ******
+ *************************************************/
 
 @-webkit-keyframes bounce {
     0%, 10%, 25%, 40%, 50% {
