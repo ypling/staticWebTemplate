@@ -8,9 +8,6 @@
     var $document = $(document);
     var movingBGImgs;
     //function define
-    function registerMovingBGImg(selectorStr){
-        movingBGImgs = $(selectorStr);
-    }
     function moveBackgroundImg(scrollOffset) { //move background image base on window scroll offset.
         movingBGImgs.each(function(){
             var element = $(this);
@@ -28,7 +25,7 @@
         $('body').scrollspy({target: '#navbar-example'});
         
         // register moving back ground image
-        registerMovingBGImg('.cover');
+        movingBGImgs = $('.cover');
 
         // show and hide navigation bar
         $(window).scroll(function () {
