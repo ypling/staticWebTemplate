@@ -131,16 +131,24 @@ section.section-block {
  *************************************************/
 
 /* Cover background */
-.main-header {
-    position: relative;
+.cover {
+    position:relative;
+    margin-bottom: -50px;
+    text-align: center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+#main-header{
     display: table;
     width: 100%;
     height: 100%;
-    margin-bottom: -50px;
-    text-align: center;
-    background: #222 no-repeat center center;
-    background-size: cover;
-    overflow: hidden;
+    background-image: url('../images/diablo.jpg');
+}
+
+#mid{
+    background-image: url('../images/city_by_the_bay_1232.jpg');
 }
 
 .vertical {

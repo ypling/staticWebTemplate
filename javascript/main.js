@@ -3,8 +3,19 @@
  */
 (function ($) {
     "use strict";
+    //variable declare
     var navigationBarHeight = 70;
     var $document = $(document);
+    var movingBGImgs;
+    //function define
+    function moveBackgroundImg(scrollOffset) { //move background image base on window scroll offset.
+        movingBGImgs.each(function(){
+            var element = $(this);
+            var offset = element.offset().top-scrollOffset/2;
+            element.css('background-position','50% '+offset+"px");
+        });
+    }
+
     $document.ready(function () {
 
         // set jump
@@ -12,6 +23,9 @@
 
         // init navigation bar
         $('body').scrollspy({target: '#navbar-example'});
+        
+        // register moving back ground image
+        movingBGImgs = $('.cover');
 
         // show and hide navigation bar
         $(window).scroll(function () {
@@ -22,7 +36,9 @@
             if ($(document).scrollTop() <= navigationBarHeight) {
                 $nav.slideUp(300);
             }
-        })
+            //Moving background image slower than window
+            moveBackgroundImg($document.scrollTop());
+        });
     });
 
     // Arctic Scroll by Paul Adam Davis
