@@ -14,7 +14,7 @@
     function moveBackgroundImg(scrollOffset) { //move background image base on window scroll offset.
         movingBGImgs.each(function(){
             var element = $(this);
-            var offset = scrollOffset/2+element.offset().top;
+            var offset = element.offset().top-scrollOffset/2;
             element.css('background-position','50% '+offset+"px");
         });
     }
