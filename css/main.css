@@ -77,7 +77,24 @@ body {
 .navbar-brilent {
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
 }
-
+.btn{
+    text-transform: uppercase;
+}
+.btn.homeBtn {
+position: relative;
+background: rgba(255,255,255,0.5);
+}
+.btn:hover {
+color: #43B6B1;
+border-color: #eee;
+text-shadow: none;
+background: #fff;
+}
+.btn-lg {
+margin:20px 20px 20px 20px;
+padding: 18px 23px;
+font-size: 22px;
+}
 /*************************************************
  ******                                     ******
  ******          Navigation Bar             ******
@@ -96,7 +113,7 @@ section.section-block {
 }
 
 .section-block h1 {
-    color: #222;
+    color: #fff;
     font-size: 44px;
     line-height: 44px;
     font-weight: 300;
@@ -120,10 +137,91 @@ section.section-block {
 }
 
 /* Section-1 */
-.section-1 {
-
+.section-1{
+    background-color: #43B6B1;
 }
 
+.section-2{
+    background-color: #43B6B1;
+}
+
+
+.section-3{
+    background-color: #43B6B1;
+    
+}
+.color1{
+    color: #fff;
+}
+
+h2.subTitle{
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 300;
+    font-style: normal;
+    padding: 0;
+    margin-bottom: 90px;
+    text-align: center;
+}
+
+h2.subTitle:after{
+background: #fff;
+}
+h2.subTitle:after, h1.noSubtitle:after {
+background-color: #fff;
+display: block;
+height: 1px;
+width: 150px;
+content: '';
+position: absolute;
+margin-left: -50px;
+margin-top: 20px;
+left: 50%;
+}
+.panel-group{
+    margin-bottom: 20px;
+}
+.panel-title{
+    color: #fff;
+}
+a:link, a:visited {
+text-decoration: none;
+font-family: 'Open Sans',sans-serif;
+}
+.panel-title a {
+display: block;
+padding: 10px 15px;
+margin: -10px -15px;
+outline: none;
+font-size: 20px;
+}
+a {
+background-color: transparent;
+}
+a:-webkit-any-link {
+color: #337ab7;
+cursor: auto;
+}
+h4 {
+display: block;
+-webkit-margin-before: 1.33em;
+-webkit-margin-after: 1.33em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+font-weight: bold;
+}
+.panel-default>.panel-heading {
+color: #333;
+background-color: #fff;
+border-color: #ddd;
+}
+.alert {
+font-size: 12px;
+padding: 0px;
+margin-bottom: 5px;
+border: 1px solid transparent;
+border-radius: 5px;
+}
 /*************************************************
  ******                                     ******
  ******               Cover                 ******
@@ -132,11 +230,10 @@ section.section-block {
 
 /* Cover background */
 .cover {
-    position:relative;
+    position: relative;
     margin-bottom: -50px;
     text-align: center;
     background-size: cover;
-    background-attachment: fixed;
     overflow: hidden;
 }
 
