@@ -116,6 +116,7 @@
         });
         //init tooltips
         $('[data-toggle="tooltip"]').tooltip();
+
         // set arcText for employees' name
         var $text = $('h2.name');
         $text.arctext({radius: 120, dir: -1});
@@ -169,7 +170,14 @@
             } else {
                 employeeCell.parent().show();
             }
-            lineWrapAnimation('#empContainer', '.emp-show', 80);
+        });
+        lineWrapAnimation('#empContainer', '.emp-show', 80);
+        
+        employeeCell.on('mouseenter',function(){
+
+        });
+        employeeCell.on('mouseleave',function(){
+
         });
     };
 
