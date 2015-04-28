@@ -271,8 +271,9 @@ div.filter ul li a:hover {
 .section-4{
     background-color: #4294ff;
 }
-.color1{
+.color1 {
     color: #fff;
+}
 
 div.filter ul {
     margin: 15px 0 0;
@@ -363,11 +364,18 @@ h4 {
 /* Cover background */
 .cover {
     position: relative;
-    margin-bottom: -50px;
+    margin-bottom: -70px;
     text-align: center;
     background-size: cover;
     background-attachment: fixed;
     overflow: hidden;
+}
+
+.mid-cover {
+    height: 335px;
+    margin-top: 70px;
+    margin-bottom: -70px;
+    background-image: url('../images/city_by_the_bay_1232.jpg');
 }
 
 #main-header {
@@ -377,7 +385,7 @@ h4 {
     background-image: url('../images/diablo.jpg');
 }
 
-#mid {
+#cover-1 {
     background-image: url('../images/city_by_the_bay_1232.jpg');
 }
 
