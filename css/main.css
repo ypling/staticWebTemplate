@@ -42,6 +42,10 @@ body {
     color: #3A4145;
 }
 
+a:active, a:hover {
+    outline: 0 none;
+}
+
 /*************************************************
  ******                                     ******
  ******          Navigation Bar             ******
@@ -80,7 +84,7 @@ body {
 
 /*************************************************
  ******                                     ******
- ******          Navigation Bar             ******
+ ******             Sections                ******
  ******                                     ******
  *************************************************/
 
@@ -96,7 +100,7 @@ section.section-block {
 }
 
 .section-block h1 {
-    color: #fff;
+    color: #000;
     font-size: 44px;
     line-height: 44px;
     font-weight: 300;
@@ -119,92 +123,197 @@ section.section-block {
     font-family: "Open Sans", sans-serif;
 }
 
+.section-block h2.sub-title:after, .section-block h1.no-subtitle:after {
+    background-color: #4294ff;
+    display: block;
+    height: 1px;
+    width: 150px;
+    content: '';
+    position: absolute;
+    margin-left: -75px;
+    margin-top: 20px;
+    left: 50%;
+}
+
 /* Section-1 */
-.section-1{
-    background-color: #43B6B1;
+.section-1 {
 }
 
-.section-2{
-    background-color: #43B6B1;
+/* Section-2 */
+.section-2 {
 }
 
-
-.section-3{
-    background-color: #43B6B1;
-    
-}
-.color1{
-    color: #fff;
+/* Section-3 */
+#employee.section-3 {
+    position: relative;
 }
 
-h2.subTitle{
-    font-size: 24px;
-    line-height: 24px;
-    font-weight: 300;
-    font-style: normal;
-    padding: 0;
-    margin-bottom: 90px;
+/* employee filter */
+#employee.section-3 div.filter {
+    margin-top: -30px;
+    margin-bottom: 30px;
+}
+
+div.filter ul {
+    margin: 15px 0 0;
+    font-size: 18px;
+    list-style: none;
+}
+
+div.filter ul li {
+    padding: 0 10px;
+    display: inline-block;
+    border-left: 1px solid #444;
+    list-style: outside none none;
+}
+
+div.filter ul li:before {
+    content: "";
+    display: inline-block;
+    margin-right: 4px;
+    height: 15px;
+    width: 15px;
+}
+
+div.filter ul li:first-child {
+    border-left: medium none;
+}
+
+div.filter ul li.data:before {
+    background: none repeat scroll 0 0 #FFC336;
+}
+
+div.filter ul li.engineering:before {
+    background: none repeat scroll 0 0 #269abc;
+}
+
+div.filter ul li.career:before {
+    background: none repeat scroll 0 0 #449d44;
+}
+
+div.filter ul li a {
+    cursor: pointer;
+    color: #333;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease 0s;
+    text-decoration: none;
+    background: none repeat scroll 0 0 transparent;
+}
+
+div.filter ul li a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+}
+
+/* employee show */
+#employee.section-3 div.emp {
+    position: relative;
+    float: left;
+    width: 240px;
+    height: 240px;
     text-align: center;
 }
 
-h2.subTitle:after{
-background: #fff;
+#employee.section-3 .pic {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    margin: auto;
+    overflow: hidden;
 }
-h2.subTitle:after, h1.noSubtitle:after {
-background-color: #fff;
-display: block;
-height: 1px;
-width: 150px;
-content: '';
-position: absolute;
-margin-left: -50px;
-margin-top: 20px;
-left: 50%;
+
+#employee.section-3 div.emp img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: 100%;
+    border-radius: 200px;
+    vertical-align: middle;
+    border: 0 none;
 }
-.panel-group{
+
+#employee.section-3 .data .pic {
+    border: 3px solid #FFC336;
+}
+
+#employee.section-3 .engineering .pic {
+    border: 3px solid #269abc;
+}
+
+#employee.section-3 .career .pic {
+    border: 3px solid #449d44;
+}
+
+#employee.section-3 h2.name {
+    font-family: "Courier New", sans-serif;
+    text-align: center;
+    font-size: 1.25em;
+    color: #000;
+    font-weight: 700;
+    width: 200px;
+    height: 15px;
+    position: absolute;
+    top: 155px;
+    left: -45px;
+    transform: rotate(38deg);
+}
+
+/***************************/
+.panel-group {
     margin-bottom: 20px;
 }
-.panel-title{
+
+.panel-title {
     color: #fff;
 }
+
 a:link, a:visited {
-text-decoration: none;
-font-family: 'Open Sans',sans-serif;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
 }
+
 .panel-title a {
-display: block;
-padding: 10px 15px;
-margin: -10px -15px;
-outline: none;
-font-size: 20px;
+    display: block;
+    padding: 10px 15px;
+    margin: -10px -15px;
+    outline: none;
+    font-size: 20px;
 }
+
 a {
-background-color: transparent;
+    background-color: transparent;
 }
+
 a:-webkit-any-link {
-color: #337ab7;
-cursor: auto;
+    color: #337ab7;
+    cursor: auto;
 }
+
 h4 {
-display: block;
--webkit-margin-before: 1.33em;
--webkit-margin-after: 1.33em;
--webkit-margin-start: 0px;
--webkit-margin-end: 0px;
-font-weight: bold;
+    display: block;
+    -webkit-margin-before: 1.33em;
+    -webkit-margin-after: 1.33em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
 }
-.panel-default>.panel-heading {
-color: #333;
-background-color: #fff;
-border-color: #ddd;
+
+.panel-default > .panel-heading {
+    color: #333;
+    background-color: #fff;
+    border-color: #ddd;
 }
+
 .alert {
-font-size: 12px;
-padding: 0px;
-margin-bottom: 5px;
-border: 1px solid transparent;
-border-radius: 5px;
+    font-size: 12px;
+    padding: 0;
+    margin-bottom: 5px;
+    border: 1px solid transparent;
+    border-radius: 5px;
 }
+
 /*************************************************
  ******                                     ******
  ******               Cover                 ******
@@ -213,7 +322,7 @@ border-radius: 5px;
 
 /* Cover background */
 .cover {
-    position:relative;
+    position: relative;
     margin-bottom: -50px;
     text-align: center;
     background-size: cover;
@@ -221,14 +330,14 @@ border-radius: 5px;
     overflow: hidden;
 }
 
-#main-header{
+#main-header {
     display: table;
     width: 100%;
     height: 100%;
     background-image: url('../images/diablo.jpg');
 }
 
-#mid{
+#mid {
     background-image: url('../images/city_by_the_bay_1232.jpg');
 }
 
@@ -410,7 +519,7 @@ border-radius: 5px;
 
 /*************************************************
  ******                                     ******
- ******          Navigation Bar             ******
+ ******         Customer animate            ******
  ******                                     ******
  *************************************************/
 
@@ -458,22 +567,4 @@ border-radius: 5px;
         opacity: 1;
         transform: translateY(0);
     }
-}
-.btn{
-    text-transform: uppercase;
-}
-.btn.homeBtn {
-    position: relative;
-    background: rgba(255,255,255,0.5);
-}
-.btn:hover {
-    color: #43B6B1;
-    border-color: #eee;
-    text-shadow: none;
-    background: #fff;
-}
-.btn-lg {
-    margin:20px 20px 20px 20px;
-    padding: 18px 23px;
-    font-size: 22px;
 }

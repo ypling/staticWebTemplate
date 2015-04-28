@@ -9,14 +9,15 @@
     var movingBGImgs;
     //function define
     function moveBackgroundImg(scrollOffset) { //move background image base on window scroll offset.
-        movingBGImgs.each(function(){
+        movingBGImgs.each(function () {
             var element = $(this);
-            var offset = element.offset().top-navigationBarHeight-scrollOffset/2;
-            element.css('background-position','50% '+offset+"px");
+            var offset = element.offset().top - navigationBarHeight - scrollOffset / 2;
+            element.css('background-position', '50% ' + offset + "px");
         });
     }
-    function checkName(tempName){
-        return tempName.length>2?true:false;
+
+    function checkName(tempName) {
+        return tempName.length > 2 ? true : false;
     }
 
     $document.ready(function () {
@@ -26,7 +27,7 @@
 
         // init navigation bar
         $('body').scrollspy({target: '#navbar-example'});
-        
+
         // register moving back ground image
         movingBGImgs = $('.cover');
 
@@ -42,26 +43,43 @@
             //Moving background image slower than window
             moveBackgroundImg($document.scrollTop());
         });
+
+        // validation
         var search_str = /^[\w\-\.]+@[\w\-\.]+(\.\w+)+$/;
-        $("#errorName").css("display","none");
-        $("#errorEmail").css("display","none");
-        $("#contactName").focus(function(){
-            $("#contactName").css("background-color","#FFFFCC");
+        $("#errorName").css("display", "none");
+        $("#errorEmail").css("display", "none");
+        $("#contactName").focus(function () {
+            $("#contactName").css("background-color", "#FFFFCC");
         });
-        $("#contactName").blur(function(){
-            $("#contactName").css("background-color","#D6D6FF");
-            if($("#contactName").val().length<4){$("#errorName").css("display","block");}
-            else{$("#errorName").css("display","none");}
+        $("#contactName").blur(function () {
+            $("#contactName").css("background-color", "#D6D6FF");
+            if ($("#contactName").val().length < 4) {
+                $("#errorName").css("display", "block");
+            }
+            else {
+                $("#errorName").css("display", "none");
+            }
         });
-        $("#contactEmail").focus(function(){
-            $("#contactEmail").css("background-color","#FFFFCC");
+        $("#contactEmail").focus(function () {
+            $("#contactEmail").css("background-color", "#FFFFCC");
         });
-        $("#contactEmail").blur(function(){
-            $("#contactEmail").css("background-color","#D6D6FF");
+        $("#contactEmail").blur(function () {
+            $("#contactEmail").css("background-color", "#D6D6FF");
             var email_val = $("#contactEmail").val();
-            if(!search_str.test(email_val)){$("#errorEmail").css("display","block");}
-            else{$("#errorEmail").css("display","none");}
+            if (!search_str.test(email_val)) {
+                $("#errorEmail").css("display", "block");
+            }
+            else {
+                $("#errorEmail").css("display", "none");
+            }
         });
+
+        // set arcText for employees' name
+        var $text = $('h2.name');
+        $text.arctext({radius: 120, dir: -1});
+
+        // set employee filter
+        $(".filter li").employeeFilter();
 
     });
 
@@ -97,5 +115,27 @@
         });
 
     };
+
+    $.fn.employeeFilter = function () {
+        var filterArea = $(this).closest('section');
+        var employeeCell = filterArea.find('div.emp');
+        $(this).on('click', function () {
+            var $this = $(this);
+            var needShowClass = $this.attr("class") ? $this.attr("class") : "all";
+            if (needShowClass !== "all") {
+                employeeCell.parent().hide();
+                filterArea.find("div." + needShowClass).show();
+            } else {
+                employeeCell.parent().show();
+            }
+        });
+        employeeCell.on('mouseenter',function(){
+
+        });
+        employeeCell.on('mouseleave',function(){
+
+        });
+    };
+
 })(jQuery, 'smartresize');
 
