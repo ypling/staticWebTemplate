@@ -15,9 +15,6 @@
             element.css('background-position','50% '+offset+"px");
         });
     }
-    function checkName(tempName){
-        return tempName.length>2?true:false;
-    }
 
     $document.ready(function () {
 
