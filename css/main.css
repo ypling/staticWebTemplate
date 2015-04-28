@@ -97,6 +97,7 @@ section {
 
 section.section-block {
     padding-top: 100px;
+    padding-bottom: 120px;
 }
 
 .section-block h1 {
@@ -140,20 +141,17 @@ section.section-block {
     background-color: #4294ff;
 }
 
-.section-2{
-    background-color: #4294ff;
-}
 
 /* Section-3 */
-#employee.section-3 {
+#employee {
     position: relative;
 }
 
-.section-3{
+.section-3 {
     background-color: #4294ff;
-    
+}
 /* employee filter */
-#employee.section-3 div.filter {
+#employee div.filter {
     margin-top: -30px;
     margin-bottom: 30px;
 }
@@ -204,7 +202,7 @@ div.filter ul li a:hover {
 }
 
 /* employee show */
-#employee.section-3 div.emp {
+#employee div.emp {
     position: relative;
     float: left;
     width: 240px;
@@ -212,7 +210,7 @@ div.filter ul li a:hover {
     text-align: center;
 }
 
-#employee.section-3 .pic {
+#employee .pic {
     position: relative;
     width: 200px;
     height: 200px;
@@ -221,7 +219,7 @@ div.filter ul li a:hover {
     overflow: hidden;
 }
 
-#employee.section-3 div.emp img {
+#employee div.emp img {
     position: absolute;
     top: 0;
     left: 0;
@@ -232,19 +230,23 @@ div.filter ul li a:hover {
     border: 0 none;
 }
 
-#employee.section-3 .data .pic {
+#employee .data .pic {
     border: 3px solid #FFC336;
 }
 
-#employee.section-3 .engineering .pic {
+#employee .engineering .pic {
     border: 3px solid #269abc;
 }
 
-#employee.section-3 .career .pic {
+#employee .career .pic {
     border: 3px solid #449d44;
 }
 
-#employee.section-3 h2.name {
+#employee h1 {
+    color: #000;
+}
+
+#employee h2.name {
     font-family: "Courier New", sans-serif;
     text-align: center;
     font-size: 1.25em;
@@ -257,12 +259,22 @@ div.filter ul li a:hover {
     left: -45px;
     transform: rotate(38deg);
 }
+
+#empContainer{
+    position: relative;
+    width: 100%;
+}
+
+.emp-show{
+    position: absolute;
+    float: none;
+}
 .section-4{
     background-color: #4294ff;
-
 }
-.color1{
+.color1 {
     color: #fff;
+}
 
 div.filter ul {
     margin: 15px 0 0;
@@ -290,7 +302,7 @@ height: 1px;
 width: 150px;
 content: '';
 position: absolute;
-margin-left: -50px;
+margin-left: -75px;
 margin-top: 20px;
 left: 50%;
 }
@@ -432,7 +444,6 @@ h4 {
 
 .inner div label.button {
     border: 2px solid rgba(255, 255, 255, 0.80);
-    /*background-color: rgba(255, 255, 255, 0.4);*/
     position: relative;
     width: 45%;
     min-width: 260px;
@@ -448,11 +459,13 @@ h4 {
     -o-transition: 0.3s ease;
     transition: 0.3s ease;
 }
+.inner div label.button:hover {
+    color: #4294ff;
+}
 
 .button:hover {
     border: 2px solid rgba(255, 255, 255, 1);
     color: rgba(255, 255, 255, 1);
-    /*background-color: rgba(255, 255, 255, 0.8);*/
 }
 
 .button .line {

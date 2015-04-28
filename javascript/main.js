@@ -11,9 +11,33 @@
     function moveBackgroundImg(scrollOffset) { //move background image base on window scroll offset.
         movingBGImgs.each(function(){
             var element = $(this);
-            var offset = element.offset().top - navigationBarHeight - scrollOffset / 2;
+            var offset = element.offset().top -navigationBarHeight - scrollOffset /1.5;
             element.css('background-position', '50% ' + offset + "px");
         });
+    }
+
+    function lineWrapAnimation(containerId,elementClass,gap) {
+        var elementWidth = $(elementClass).width();
+        var elementHeight = $(elementClass).height();
+        var numberForLine = Math.floor($(containerId).width()/elementWidth);
+        var max = 0 ;
+        $(elementClass+':visible').each(function (index) {
+            var numberOfLine = Math.floor(index / numberForLine)+1;
+            if(numberOfLine>max){
+                max = numberOfLine;
+            }
+            $(this).animate({
+                left:index % numberForLine * elementWidth + gap,
+                top:Math.floor(index / numberForLine) * elementHeight + gap
+            })
+        });
+        $(elementClass+':hidden').each(function (index) {
+            $(this).css(
+                {left:gap,
+                top:gap}
+            )
+        });
+        $(containerId).animate({height:(elementHeight+gap)*max});
     }
 
     $document.ready(function () {
@@ -40,6 +64,10 @@
             moveBackgroundImg($document.scrollTop());
         });
 
+        $(window).resize(function(){
+            lineWrapAnimation('#empContainer', '.emp-show', 80);
+        });
+
         // faq controller
         $('.panel-body').hide();
         $('.panel-heading').on('click',function(){
@@ -51,6 +79,10 @@
             }
             $(this).parent().siblings().find('.panel-body').slideUp();
         });
+
+        //init employee positions
+        lineWrapAnimation('#empContainer','.emp-show',80);
+
         //contact form validation
         var search_str = /^[\w\-\.]+@[\w\-\.]+(\.\w+)+$/;
         $("#errorName").css("display","none");
@@ -84,6 +116,12 @@
         });
         //init tooltips
         $('[data-toggle="tooltip"]').tooltip();
+        // set arcText for employees' name
+        var $text = $('h2.name');
+        $text.arctext({radius: 120, dir: -1});
+
+        // set employee filter
+        $(".filter li").employeeFilter();
     });
 
     // Arctic Scroll by Paul Adam Davis
@@ -131,12 +169,7 @@
             } else {
                 employeeCell.parent().show();
             }
-        });
-        employeeCell.on('mouseenter',function(){
-
-        });
-        employeeCell.on('mouseleave',function(){
-
+            lineWrapAnimation('#empContainer', '.emp-show', 80);
         });
     };
 
