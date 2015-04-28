@@ -104,11 +104,37 @@
     <div class="container">
         <div class="row">
             <div class="page-title">
-                <h1>Getting Start</h1>
-                <h2 class="sub-title">Brief description of this section</h2>
+                <h1>Apply</h1>
+                <h2 class="sub-title subTitle">Request an Application</h2>
             </div>
             <div class="content">
-                <p>1233333312312312312312312</p>
+                <center>
+                <p class="col-xs-12 col-md-4 col-md-offset-4">Sign up here to get infomation about future sessions</p>
+                <form method="post" action="#contact" class="contactForm" id="generalApplyForm" role="form">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-4 col-md-offset-4">
+                            <div class="form-group">
+                                <label for="contactEmailApply" class="col-xs-12 col-md-4" id="emailLabel">Email</label>
+                                <div class="alert alert-danger" role="alert" id="errorEmailApply">
+                                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                    <span class="sr-only error">Error:</span>
+                                    Please enter a valid Email
+                                </div>
+                                <input type="email" class="form-control"  name="contactEmailApply" id="contactEmailApply" placeholder="Enter email" title="Please enter a valid email address"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-4 col-md-offset-4">
+                            <div id="submitGroupApply" class="form-group">
+                                <center>
+                                    <button id="applySubmit" class="homeBtn btn btn-lg">submit</button>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                </center>
             </div>
         </div>
     </div>
@@ -126,15 +152,18 @@
     <div class="container">
         <div class="row">
             <div class="page-title">
-                <h1>Section 2</h1>
-                <h2 class="sub-title">Brief description of this section</h2>
+
+                <h1><i class="fa fa-bolt"></i></h1>
+
             </div>
             <div class="content">
-                <p>1233333312312312312312312</p>
+                <blockquote>Data are becoming the new raw material of business<br><small>The Economist</small>
+                </blockquote>
             </div>
         </div>
     </div>
 </section>
+
 <!-- End of second temp section -->
 
 <!-- start gap -->
@@ -447,13 +476,13 @@ The program is completely free and the tuition fee is paid for by hiring employe
                 <input type="text" class="form-control" name="contactName" id="contactName" placeholder="Enter name"  title="Please enter your name (at least 3 characters)"/>
                 </div>
                 <div class="form-group">
-                <label for="contactEmail">Email</label>
-                <div class="alert alert-danger" role="alert" id="errorEmail">
+                <label for="contactEmailContact">Email</label>
+                <div class="alert alert-danger" role="alert" id="errorEmailContact">
                   <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                   <span class="sr-only error">Error:</span>
                  Please enter a valid Email 
                 </div>
-                <input type="email" class="form-control" name="contactEmail" id="contactEmail" placeholder="Enter email" title="Please enter a valid email address"/>
+                <input type="email" class="form-control" name="contactEmailContact" id="contactEmailContact" placeholder="Enter email" title="Please enter a valid email address"/>
                 </div>
                 </div>
                 <div class="col-xs-12 col-md-4">

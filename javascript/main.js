@@ -15,9 +15,6 @@
             element.css('background-position','50% '+offset+"px");
         });
     }
-    function checkName(tempName){
-        return tempName.length>2?true:false;
-    }
 
     $document.ready(function () {
 
@@ -44,23 +41,33 @@
         });
         var search_str = /^[\w\-\.]+@[\w\-\.]+(\.\w+)+$/;
         $("#errorName").css("display","none");
-        $("#errorEmail").css("display","none");
+        $("#errorEmailApply").css("display","none");
+        $("#errorEmailContact").css("display","none");
         $("#contactName").focus(function(){
-            $("#contactName").css("background-color","#FFFFCC");
+            $(this).css("background-color","#FFFFCC");
         });
         $("#contactName").blur(function(){
-            $("#contactName").css("background-color","#D6D6FF");
-            if($("#contactName").val().length<4){$("#errorName").css("display","block");}
+            $(this).css("background-color","#D6D6FF");
+            if($(this).val().length<4){$("#errorName").css("display","block");}
             else{$("#errorName").css("display","none");}
         });
-        $("#contactEmail").focus(function(){
-            $("#contactEmail").css("background-color","#FFFFCC");
+        $("#contactEmailApply").focus(function(){
+            $(this).css("background-color","#FFFFCC");
         });
-        $("#contactEmail").blur(function(){
-            $("#contactEmail").css("background-color","#D6D6FF");
-            var email_val = $("#contactEmail").val();
-            if(!search_str.test(email_val)){$("#errorEmail").css("display","block");}
-            else{$("#errorEmail").css("display","none");}
+        $("#contactEmailApply").blur(function(){
+            $(this).css("background-color","#D6D6FF");
+            var email_val = $("#contactEmailApply").val();
+            if(!search_str.test(email_val)){$("#errorEmailApply").css("display","block");}
+            else{$("#errorEmailApply").css("display","none");}
+        });
+        $("#contactEmailContact").focus(function(){
+            $(this).css("background-color","#FFFFCC");
+        });
+        $("#contactEmailContact").blur(function(){
+            $(this).css("background-color","#D6D6FF");
+            var email_val = $(this).val();
+            if(!search_str.test(email_val)){$("#errorEmailContact").css("display","block");}
+            else{$("#errorEmailContact").css("display","none");}
         });
 
     });
