@@ -8,15 +8,15 @@
     var $document = $(document);
     var movingBGImgs;
     //function define
-    function registerMovingBGImg(selectorStr){
-        movingBGImgs = $(selectorStr);
-    }
     function moveBackgroundImg(scrollOffset) { //move background image base on window scroll offset.
         movingBGImgs.each(function(){
             var element = $(this);
-            var offset = scrollOffset/2+element.offset().top;
+            var offset = element.offset().top-navigationBarHeight-scrollOffset/2;
             element.css('background-position','50% '+offset+"px");
         });
+    }
+    function checkName(tempName){
+        return tempName.length>2?true:false;
     }
 
     $document.ready(function () {
@@ -28,7 +28,7 @@
         $('body').scrollspy({target: '#navbar-example'});
         
         // register moving back ground image
-        registerMovingBGImg('.cover');
+        movingBGImgs = $('.cover');
 
         // show and hide navigation bar
         $(window).scroll(function () {
@@ -42,7 +42,26 @@
             //Moving background image slower than window
             moveBackgroundImg($document.scrollTop());
         });
-
+        var search_str = /^[\w\-\.]+@[\w\-\.]+(\.\w+)+$/;
+        $("#errorName").css("display","none");
+        $("#errorEmail").css("display","none");
+        $("#contactName").focus(function(){
+            $("#contactName").css("background-color","#FFFFCC");
+        });
+        $("#contactName").blur(function(){
+            $("#contactName").css("background-color","#D6D6FF");
+            if($("#contactName").val().length<4){$("#errorName").css("display","block");}
+            else{$("#errorName").css("display","none");}
+        });
+        $("#contactEmail").focus(function(){
+            $("#contactEmail").css("background-color","#FFFFCC");
+        });
+        $("#contactEmail").blur(function(){
+            $("#contactEmail").css("background-color","#D6D6FF");
+            var email_val = $("#contactEmail").val();
+            if(!search_str.test(email_val)){$("#errorEmail").css("display","block");}
+            else{$("#errorEmail").css("display","none");}
+        });
 
     });
 
@@ -80,32 +99,3 @@
     };
 })(jQuery, 'smartresize');
 
-
-$(document).ready(function(){
-    var search_str = /^[\w\-\.]+@[\w\-\.]+(\.\w+)+$/;
-    $("#errorName").css("display","none");
-    $("#errorEmail").css("display","none");
-  $("#contactName").focus(function(){
-    $("#contactName").css("background-color","#FFFFCC");    
-  });
-  $("#contactName").blur(function(){
-    $("#contactName").css("background-color","#D6D6FF");  
-     if($("#contactName").val().length<4){$("#errorName").css("display","block");}
-     else{$("#errorName").css("display","none");}
-  });
-  $("#contactEmail").focus(function(){
-    $("#contactEmail").css("background-color","#FFFFCC");    
-  });
-  $("#contactEmail").blur(function(){
-    $("#contactEmail").css("background-color","#D6D6FF");
-    var email_val = $("#contactEmail").val();
-     if(!search_str.test(email_val)){$("#errorEmail").css("display","block");}
-     else{$("#errorEmail").css("display","none");}
-  });
-
-
-});
-
-function checkName(tempName){
-    return tempName.length>2?true:false;
-}
