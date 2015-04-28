@@ -533,3 +533,35 @@ form #emailCheck{
 #emailLabel{
     left:-1.8em;
 }
+
+.buttonNew {
+    border-top: 1px solid #fcfcfc;
+    background: #90caf0;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0e3769), to(#90caf0));
+    background: -webkit-linear-gradient(top, #0e3769, #90caf0);
+    background: -moz-linear-gradient(top, #0e3769, #90caf0);
+    background: -ms-linear-gradient(top, #0e3769, #90caf0);
+    background: -o-linear-gradient(top, #0e3769, #90caf0);
+    padding: 15px 30px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: #ffffff;
+    font-size: 24px;
+    font-family: Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+    vertical-align: middle;
+}
+.buttonNew:hover {
+    border-top-color: #ffffff;
+    background: #ffffff;
+    color: #4294ff;
+}
+.buttonNew:active {
+    border-top-color: #0e396e;
+    background: #0e396e;
+}
