@@ -515,3 +515,9 @@ blockquote small{
     color:#fff;
     display: inline;
 }
+form #emailCheck{
+    width:50%;
+}
+#goLeft{
+    text-align: left;
+}
