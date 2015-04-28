@@ -84,6 +84,13 @@
         });
         //init tooltips
         $('[data-toggle="tooltip"]').tooltip();
+
+        // set arcText for employees' name
+        var $text = $('h2.name');
+        $text.arctext({radius: 120, dir: -1});
+
+        // set employee filter
+        $(".filter li").employeeFilter();
     });
 
     // Arctic Scroll by Paul Adam Davis

@@ -145,15 +145,16 @@ section.section-block {
 }
 
 /* Section-3 */
-#employee.section-3 {
+.section-3 {
+    background-color: #4294ff;
+}
+
+#employee {
     position: relative;
 }
 
-.section-3{
-    background-color: #4294ff;
-    
 /* employee filter */
-#employee.section-3 div.filter {
+#employee div.filter {
     margin-top: -30px;
     margin-bottom: 30px;
 }
@@ -204,7 +205,7 @@ div.filter ul li a:hover {
 }
 
 /* employee show */
-#employee.section-3 div.emp {
+#employee div.emp {
     position: relative;
     float: left;
     width: 240px;
@@ -212,7 +213,7 @@ div.filter ul li a:hover {
     text-align: center;
 }
 
-#employee.section-3 .pic {
+#employee .pic {
     position: relative;
     width: 200px;
     height: 200px;
@@ -221,7 +222,7 @@ div.filter ul li a:hover {
     overflow: hidden;
 }
 
-#employee.section-3 div.emp img {
+#employee div.emp img {
     position: absolute;
     top: 0;
     left: 0;
@@ -232,19 +233,19 @@ div.filter ul li a:hover {
     border: 0 none;
 }
 
-#employee.section-3 .data .pic {
+#employee .data .pic {
     border: 3px solid #FFC336;
 }
 
-#employee.section-3 .engineering .pic {
+#employee .engineering .pic {
     border: 3px solid #269abc;
 }
 
-#employee.section-3 .career .pic {
+#employee .career .pic {
     border: 3px solid #449d44;
 }
 
-#employee.section-3 h2.name {
+#employee h2.name {
     font-family: "Courier New", sans-serif;
     text-align: center;
     font-size: 1.25em;
@@ -261,8 +262,9 @@ div.filter ul li a:hover {
     background-color: #4294ff;
 
 }
-.color1{
+.color1 {
     color: #fff;
+}
 
 div.filter ul {
     margin: 15px 0 0;
@@ -353,11 +355,18 @@ h4 {
 /* Cover background */
 .cover {
     position: relative;
-    margin-bottom: -50px;
+    margin-bottom: -70px;
     text-align: center;
     background-size: cover;
     background-attachment: fixed;
     overflow: hidden;
+}
+
+.mid-cover {
+    height: 335px;
+    margin-top: 70px;
+    margin-bottom: -70px;
+    background-image: url('../images/city_by_the_bay_1232.jpg');
 }
 
 #main-header {
@@ -367,7 +376,7 @@ h4 {
     background-image: url('../images/diablo.jpg');
 }
 
-#mid {
+#cover-1 {
     background-image: url('../images/city_by_the_bay_1232.jpg');
 }
 
