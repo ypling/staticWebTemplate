@@ -121,17 +121,21 @@ section.section-block {
 
 /* Section-1 */
 .section-1{
-    background-color: #43B6B1;
+    background-color: #4294ff;
 }
 
 .section-2{
-    background-color: #43B6B1;
+    background-color: #4294ff;
 }
 
 
 .section-3{
-    background-color: #43B6B1;
+    background-color: #4294ff;
     
+}
+.section-4{
+    background-color: #4294ff;
+
 }
 .color1{
     color: #fff;
@@ -469,7 +473,7 @@ border-radius: 5px;
     background: rgba(255,255,255,0.5);
 }
 .btn:hover {
-    color: #43B6B1;
+    color: #4294ff;
     border-color: #eee;
     text-shadow: none;
     background: #fff;
@@ -479,7 +483,11 @@ border-radius: 5px;
     padding: 18px 23px;
     font-size: 22px;
 }
-
+.button-lg {
+    margin:20px 20px 20px 20px;
+    padding: 18px 23px;
+    font-size: 22px;
+}
 
 blockquote{
     font-size: 44px;
@@ -520,4 +528,8 @@ form #emailCheck{
 }
 #goLeft{
     text-align: left;
+}
+
+#emailLabel{
+    left:-1.8em;
 }
