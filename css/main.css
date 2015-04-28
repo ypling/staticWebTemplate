@@ -120,20 +120,24 @@ section.section-block {
 }
 
 /* Section-1 */
-.section-1 {
-    background-color: #43B6B1;
+.section-1{
+    background-color: #4294ff;
 }
 
-.section-2 {
-    background-color: #43B6B1;
+.section-2{
+    background-color: #4294ff;
 }
 
-.section-3 {
-    background-color: #43B6B1;
+
+.section-3{
+    background-color: #4294ff;
+    
+}
+.section-4{
+    background-color: #4294ff;
 
 }
-
-.color1 {
+.color1{
     color: #fff;
 }
 
@@ -150,7 +154,6 @@ h2.subTitle {
 h2.subTitle:after {
     background: #fff;
 }
-
 h2.subTitle:after, h1.noSubtitle:after {
     background-color: #fff;
     display: block;
@@ -158,7 +161,7 @@ h2.subTitle:after, h1.noSubtitle:after {
     width: 150px;
     content: '';
     position: absolute;
-    margin-left: -50px;
+    margin-left: -75px;
     margin-top: 20px;
     left: 50%;
 }
@@ -478,7 +481,7 @@ h4 {
 }
 
 .btn:hover {
-    color: #43B6B1;
+    color: #4294ff;
     border-color: #eee;
     text-shadow: none;
     background: #fff;
@@ -488,4 +491,86 @@ h4 {
     margin: 20px 20px 20px 20px;
     padding: 18px 23px;
     font-size: 22px;
+}
+.button-lg {
+    margin:20px 20px 20px 20px;
+    padding: 18px 23px;
+    font-size: 22px;
+}
+
+blockquote{
+    font-size: 44px;
+    color:#fff;
+    border:0;
+    font-family: 'Open Sans', sans-serif;
+    line-height:120%;
+}
+blockquote:before {
+    color:#fff;
+    content: '\f10d';
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-size: 44px;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: inherit;
+    margin-right: .5em;
+
+}
+blockquote:after {
+    color:#fff;
+    content: '\f10e';
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-size: 44px;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: inherit;
+    margin-right: .5em;
+}
+blockquote small{
+    color:#fff;
+    display: inline;
+}
+form #emailCheck{
+    width:50%;
+}
+#goLeft{
+    text-align: left;
+}
+
+#emailLabel{
+    left:-1.8em;
+}
+
+.buttonNew {
+    border-top: 1px solid #fcfcfc;
+    background: #90caf0;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0e3769), to(#90caf0));
+    background: -webkit-linear-gradient(top, #0e3769, #90caf0);
+    background: -moz-linear-gradient(top, #0e3769, #90caf0);
+    background: -ms-linear-gradient(top, #0e3769, #90caf0);
+    background: -o-linear-gradient(top, #0e3769, #90caf0);
+    padding: 15px 30px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: #ffffff;
+    font-size: 24px;
+    font-family: Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+    vertical-align: middle;
+}
+.buttonNew:hover {
+    border-top-color: #ffffff;
+    background: #ffffff;
+    color: #4294ff;
+}
+.buttonNew:active {
+    border-top-color: #0e396e;
+    background: #0e396e;
 }
