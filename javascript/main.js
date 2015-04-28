@@ -11,8 +11,8 @@
     function moveBackgroundImg(scrollOffset) { //move background image base on window scroll offset.
         movingBGImgs.each(function(){
             var element = $(this);
-            var offset = element.offset().top-navigationBarHeight-scrollOffset/2;
-            element.css('background-position','50% '+offset+"px");
+            var offset = element.offset().top - navigationBarHeight - scrollOffset / 2;
+            element.css('background-position', '50% ' + offset + "px");
         });
     }
 
@@ -23,7 +23,7 @@
 
         // init navigation bar
         $('body').scrollspy({target: '#navbar-example'});
-        
+
         // register moving back ground image
         movingBGImgs = $('.cover');
 
@@ -40,6 +40,7 @@
             moveBackgroundImg($document.scrollTop());
         });
 
+        // faq controller
         $('.panel-body').hide();
         $('.panel-heading').on('click',function(){
             var answer = $(this).siblings();
@@ -117,5 +118,27 @@
         });
 
     };
+
+    $.fn.employeeFilter = function () {
+        var filterArea = $(this).closest('section');
+        var employeeCell = filterArea.find('div.emp');
+        $(this).on('click', function () {
+            var $this = $(this);
+            var needShowClass = $this.attr("class") ? $this.attr("class") : "all";
+            if (needShowClass !== "all") {
+                employeeCell.parent().hide();
+                filterArea.find("div." + needShowClass).show();
+            } else {
+                employeeCell.parent().show();
+            }
+        });
+        employeeCell.on('mouseenter',function(){
+
+        });
+        employeeCell.on('mouseleave',function(){
+
+        });
+    };
+
 })(jQuery, 'smartresize');
 

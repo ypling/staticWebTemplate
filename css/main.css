@@ -42,6 +42,10 @@ body {
     color: #3A4145;
 }
 
+a:active, a:hover {
+    outline: 0 none;
+}
+
 /*************************************************
  ******                                     ******
  ******          Navigation Bar             ******
@@ -80,7 +84,7 @@ body {
 
 /*************************************************
  ******                                     ******
- ******          Navigation Bar             ******
+ ******             Sections                ******
  ******                                     ******
  *************************************************/
 
@@ -119,6 +123,18 @@ section.section-block {
     font-family: "Open Sans", sans-serif;
 }
 
+.section-block h2.sub-title:after, .section-block h1.no-subtitle:after {
+    background-color: #4294ff;
+    display: block;
+    height: 1px;
+    width: 150px;
+    content: '';
+    position: absolute;
+    margin-left: -75px;
+    margin-top: 20px;
+    left: 50%;
+}
+
 /* Section-1 */
 .section-1{
     background-color: #4294ff;
@@ -128,10 +144,118 @@ section.section-block {
     background-color: #4294ff;
 }
 
+/* Section-3 */
+#employee.section-3 {
+    position: relative;
+}
 
 .section-3{
     background-color: #4294ff;
     
+/* employee filter */
+#employee.section-3 div.filter {
+    margin-top: -30px;
+    margin-bottom: 30px;
+}
+
+div.filter ul li {
+    padding: 0 10px;
+    display: inline-block;
+    border-left: 1px solid #444;
+    list-style: outside none none;
+}
+
+div.filter ul li:before {
+    content: "";
+    display: inline-block;
+    margin-right: 4px;
+    height: 15px;
+    width: 15px;
+}
+
+div.filter ul li:first-child {
+    border-left: medium none;
+}
+
+div.filter ul li.data:before {
+    background: none repeat scroll 0 0 #FFC336;
+}
+
+div.filter ul li.engineering:before {
+    background: none repeat scroll 0 0 #269abc;
+}
+
+div.filter ul li.career:before {
+    background: none repeat scroll 0 0 #449d44;
+}
+
+div.filter ul li a {
+    cursor: pointer;
+    color: #333;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease 0s;
+    text-decoration: none;
+    background: none repeat scroll 0 0 transparent;
+}
+
+div.filter ul li a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+}
+
+/* employee show */
+#employee.section-3 div.emp {
+    position: relative;
+    float: left;
+    width: 240px;
+    height: 240px;
+    text-align: center;
+}
+
+#employee.section-3 .pic {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+#employee.section-3 div.emp img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: 100%;
+    border-radius: 200px;
+    vertical-align: middle;
+    border: 0 none;
+}
+
+#employee.section-3 .data .pic {
+    border: 3px solid #FFC336;
+}
+
+#employee.section-3 .engineering .pic {
+    border: 3px solid #269abc;
+}
+
+#employee.section-3 .career .pic {
+    border: 3px solid #449d44;
+}
+
+#employee.section-3 h2.name {
+    font-family: "Courier New", sans-serif;
+    text-align: center;
+    font-size: 1.25em;
+    color: #000;
+    font-weight: 700;
+    width: 200px;
+    height: 15px;
+    position: absolute;
+    top: 155px;
+    left: -45px;
+    transform: rotate(38deg);
 }
 .section-4{
     background-color: #4294ff;
@@ -139,6 +263,11 @@ section.section-block {
 }
 .color1{
     color: #fff;
+
+div.filter ul {
+    margin: 15px 0 0;
+    font-size: 18px;
+    list-style: none;
 }
 
 h2.subTitle {
@@ -151,22 +280,21 @@ h2.subTitle {
     text-align: center;
 }
 
-h2.subTitle:after {
-    background: #fff;
+h2.subTitle:after{
+background: #fff;
 }
 h2.subTitle:after, h1.noSubtitle:after {
-    background-color: #fff;
-    display: block;
-    height: 1px;
-    width: 150px;
-    content: '';
-    position: absolute;
-    margin-left: -75px;
-    margin-top: 20px;
-    left: 50%;
+background-color: #fff;
+display: block;
+height: 1px;
+width: 150px;
+content: '';
+position: absolute;
+margin-left: -50px;
+margin-top: 20px;
+left: 50%;
 }
-
-.panel-group {
+.panel-group{
     margin-bottom: 20px;
 }
 
@@ -421,7 +549,7 @@ h4 {
 
 /*************************************************
  ******                                     ******
- ******          Navigation Bar             ******
+ ******         Customer animate            ******
  ******                                     ******
  *************************************************/
 
