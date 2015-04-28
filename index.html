@@ -19,6 +19,7 @@
 
     <!-- Customer css file -->
     <link rel="stylesheet" href="css/main.css">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body data-spy="scroll" data-target="#navbar-example">
 <!-- Start of navigation bar fixed top -->
@@ -138,22 +139,346 @@
 
 <!-- start gap -->
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<section id="faq" class="section-block section-3 ">
+    <div class="container">
+        <div class="row">
+            <div class="page-title">
+                <div class="col-sm-12">
+                <h1>FREQUENTLY ASKED QUESTIONS</h1>
+                <h2 class="subTitle"></h2>
+                 </div>
+            </div>
+            <div class="content">
+<div class="col-md-10 col-md-offset-1">
+<div class="panel-group" id="accordion">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+What is a data scientist?
+</a>
+</h4>
+</div>
+<div id="collapse1" class="panel-collapse collapse in">
+<div class="panel-body">
+<p>Ninety percent of all the world's data was generated in the last two years.  Every 2 days, we generate as much data as all of humanity did up to 2003.  Data scientists have the analytical and programming skills needed to extract valuable knowledge out the data.  The unique combination of skills that data scientists have are used across many industries for projects such as:</p>
+<ul>
+<li>Parsing unstructured electronic medical records to detect new risk factors for cancer</li>
+<li>Poring through educational app data to glean insights on how students learn</li>
+<li>Form personalized recommendation for restaurants and bars for millions of users</li>
+<li>Predicting crime based on social network data</li>
+<li>Crawling through stock market data for hidden price signals</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+What is the demand for data scientists?
+</a>
+</h4>
+</div>
+<div id="collapse2" class="panel-collapse collapse ">
+<div class="panel-body">
+<p>The demand for data scientists is growing exponentially [1, 2] and McKinsey estimates a need for 140,000-190,000 more data scientists over the next few years [3].  New York City, with a burgeoning technology sector and home to more Fortune 500 companies than anywhere else in the world, is quickly becoming the center for data science.  The competition for talent has led to compensation packages for talented first-year data scientists in the range from $100K to $200K.</p>
+<p>[1] "Big Data Needs Data Scientists or Quants" (Forbes Magazine, 2012)</p>
+<p>[2] "What Are The Odds That Stats Would Be This Popular?" (New York Times, 2012)</p>
+<p>[3] "Big data: The next frontier for innovation, competition, and productivity" (McKinsey Global Institute, 2011)</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+What will the program be like?
+</a>
+</h4>
+</div>
+<div id="collapse3" class="panel-collapse collapse ">
+<div class="panel-body">
+<p>There are four main components to the program:</p>
+<ul>
+<li><p><strong>Bootcamp modules.</strong>  Short modules covering both the technical and non-technical skills necessary to succeed in industry.  These are not mandatory so just attend the ones you want.</p></li>
+<li><p><strong>Seminars with mentor data scientists.</strong>  Unlike academic research seminars, we promise these will actually make sense.  Hear from the top data scientists in the world about what data science is like for them.</p></li>
+<li><p><strong>Build a series of mini projects to showcase your programming and mathematical talents.</strong>  Hone your skills on a 100 node cluster and get hands-on experience with real-world datasets.</p></li>
+<li><p><strong>Interview with amazing employers.</strong>  Meet employers looking for top applicants.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+What kind of technical skills will I learn?
+</a>
+</h4>
+</div>
+<div id="collapse4" class="panel-collapse collapse ">
+<div class="panel-body">
+<p>The program builds on your scientific training and provides you the skills needed to quickly have large industry impact.  While an advanced degree is excellent preparation, our experience has shown that academic researchers often lack a few key skills. The curriculum includes: </p>
+<ul>
+<li><p><strong>Software engineering and numerical computation.</strong> Numerical techniques for optimization and vectorized linear algebra.  Programming tools including python, numpy, scipy, scikit-learn, matplotlib.</p></li>
+<li><p><strong>Natural language processing.</strong> Handling unstructured data, stemming, bag of words, TF/IDF, topic modeling.</p></li>
+<li><p><strong>Statistics.</strong> Hypothesis testing, regression and classification, ensemble methods, cross-validation, variance-bias decomposition, data normalization.</p></li>
+<li><p><strong>Data visualization.</strong> Including geographical and temporal data.  Packages like d3, ggplot, matplotlib.</p></li>
+<li><p><strong>Databases and parallelization.</strong> SQL, Hadoop, MapReduce, Hive, Spark.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+What kind of soft skills will I learn?
+</a>
+</h4>
+</div>
+<div id="collapse5" class="panel-collapse collapse ">
+<div class="panel-body">
+<p>Succeeding in industry is as much about soft-skills as technical ones.  We cover some of the basics:</p>
+<ul>
+<li><p><strong>Communication skills.</strong>  Academics and people in industry communicate in very different ways.  We'll work with you to avoid common pitfalls and distill your research and data science insights into messages that will be appreciated by non-experts.</p></li>
+<li><p><strong>Networking.</strong>  Meeting people is really important for your career but there are half a dozen subtle mistakes that young professionals frequently make.  We'll help you avoid them.</p></li>
+<li><p><strong>Practice interviews.</strong>  Technical interviews can be notoriously tough.  We help our fellows prepare so that they know what to expect.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
+What are the benefits for fellows?
+</a>
+</h4>
+</div>
+<div id="collapse6" class="panel-collapse collapse ">
+<div class="panel-body">
+<ul>
+<li>
+<p>
+<strong>Leverage your degree.</strong>&nbsp;&nbsp;Training that links your analytical skills to job opportunities.
+</p>
+</li>
+<li>
+<p>
+<strong>Employer paid scholarships.</strong>&nbsp;&nbsp;Tuition is free for admitted fellows.
+</p>
+</li>
+<li>
+<p>
+<strong>Mentorship from hiring firms.</strong>&nbsp;&nbsp;Learn from senior data scientists at our hiring companies and build your professional network.
+</p>
+</li>
+<li>
+<p>
+<strong>Jumpstart your career.</strong>&nbsp;&nbsp;Opportunities with the most innovative employers in technology, healthcare, and finance with $100K - $200K starting compensation.
+</p>
+</li>
+<li>
+<p>
+<strong>Smart passionate fellows.</strong>&nbsp;&nbsp;Make the transition from academia with a selective peer group excited to learn and collaborate.
+</p>
+</li>
+<li>
+<p>
+<strong>Build a series of miniprojects.</strong>&nbsp;&nbsp;Apply the tools that employers value to real-world datasets.  All powered by a 100-node cluster..
+</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-parent="#accordion" href="#collapse7">
+What are the responsibilities of fellows?  What is the time commitment?
+</a>
+</h4>
+</div>
+<div id="collapse7" class="panel-collapse collapse ">
+<div class="panel-body">
+<p>The program is in partnership with the fellows and while we provide our fellows with a lot, a few things are expected in return:</p>
+<ul>
+<li><p><strong>Make a commitment to be a part of the program.</strong>  For the in person program, this means moving to New York City, Washington DC, San Francisco Bay Area for the duration of the entire program and being there every day during the workweek, interacting with the other fellows, and working on your portfolio project.  You should really think of this as a sort of internship.  For the online program, this means setting aside enough time to participate remotely.  It is difficult but possible to do so while working full-time.</p>
+<p>While it is not required, we highly recommend you stay two extra weeks for optional advanced topics as you interview for jobs.  These additional weeks were added based on near unanimous request from previous fellows.</p>
+</li>
+<li><p><strong>Make a commitment to work as a data scientist in industry shortly after completing the program.</strong>  We ask that you interview with our hiring companies immediately after the program.  If there's another company that you would like to interview with, just notify us in advance so that we have a chance to work with them as a hiring company.  Most employers would prefer you start within 2-3 months of an offer.</p></li>
+<li><p><strong>Decline to work with external recruiters while in the program.</strong>  We provide training to fellows for free and compete with external recruiters who charge for just making a placement without providing any training.  Working with them prevents us from investing in curriculum and improving the program for future fellows.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-parent="#accordion" href="#collapse8">
+Who&#39;s eligible to apply?  Postdocs?  Faculty?  What kind of research background are you looking for?
+</a>
+</h4>
+</div>
+<div id="collapse8" class="panel-collapse collapse ">
+<div class="panel-body">
+<p>We welcome applications from anyone who has or within 1 year of receiving their masters or PhD from any math, science, engineering, or social science field, including math, physics, chemistry, biology, psychology, social science, operations research, neuroscience, and many others.  This includes postdocs, faculty, masters, and PhD candidates about to graduate, and people who already have a masters or PhD.  The program is geared towards helping them make a transition to the private sector from academia and we are looking for candidates who want to start within 12 months of completing the fellowship.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-parent="#accordion" href="#collapse9">
+I&#39;m a master&#39;s student / only have a master&#39;s degree and am not pursuing a PhD.  Am I eligible?
+</a>
+</h4>
+</div>
+<div id="collapse9" class="panel-collapse collapse ">
+<div class="panel-body">
+<p>Absolutely!  Please sign-up <a href="#apply">here</a>.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-parent="#accordion" href="#collapse10">
+I have industry experience.  Do I still qualify for this program?
+</a>
+</h4>
+</div>
+<div id="collapse10" class="panel-collapse collapse ">
+<div class="panel-body">
+<p>Absolutely!  People with industry experience are often some of our strongest candidates.  Please sign-up <a href="#apply">here</a>.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-parent="#accordion" href="#collapse11">
+I have no formal programming training.  Do I still qualify for this program?
+</a>
+</h4>
+</div>
+<div id="collapse11" class="panel-collapse collapse ">
+<div class="panel-body">
+<p>Absolutely!  There are no formal skill requirements for the program.   That said, most applicants have some familiarity with programming.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-parent="#accordion" href="#collapse12">
+Are non-U.S. students eligible?
+</a>
+</h4>
+</div>
+<div id="collapse12" class="panel-collapse collapse ">
+<div class="panel-body">
+<p>We encourage applicants from all countries to <a href="#apply">apply</a>.  You can participate in the program through any visa that allows you to be in the country and take meetings, e.g. a visa that would enable you to participate in a U.S. conference.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-parent="#accordion" href="#collapse13">
+What are you looking for in an application?
+</a>
+</h4>
+</div>
+<div id="collapse13" class="panel-collapse collapse ">
+<div class="panel-body">
+<p>We are looking for people with strong scientific training who are able to work with data programatically and can make valid real-world inferences based on data.  Applicants usually have a strong background in probability, statistics, and experience with programming, scripting, or statistical packages.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a data-toggle="collapse" data-parent="#accordion" href="#collapse14">
+What is the price for fellows?  Are there hidden costs?
+</a>
+</h4>
+</div>
+<div id="collapse14" class="panel-collapse collapse ">
+<div class="panel-body">
+The program is completely free and the tuition fee is paid for by hiring employers.  The only cost for in-person fellows is their room and board during the fellowship and we can assist fellows in finding housing in New York City.  The only cost for online fellows is the cost of hosting a server in the cloud which is required for running the course material.
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <div style="margin-bottom: -70px;height: 100px;"></div>
 <!-- end gap -->
 
 <!-- Start of third temp section -->
-<section id="contact" class="section-block section-3">
+<section id="contact" class="section-block section-4 color1">
     <div class="container">
         <div class="row">
-            <div class="page-title">
-                <h1>Section 3</h1>
-                <h2 class="sub-title">Brief description of this section</h2>
-            </div>
+        <div class="col-xs-12">
+        
+            <h1>CONTACT US</h1>
+            <h2 class="subTitle">Do you have a question unaswered by the <a href="#faq">FAQ</a>? Write us!</h2>
+
             <div class="content">
-                <p>1233333312312312312312312</p>
+                <form method="post" action="#contact" class="contactForm" id="generalContactForm" role="form">
+                <div class="row">
+                <div class="col-xs-12 col-md-4">
+                <div class="form-group">
+                <label for="contactName">Name</label>
+                <div class="alert alert-danger" role="alert" id="errorName">
+                  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                  <span class="sr-only error">Error:</span>
+                 Please enter your name (at least 3 characters)
+                </div>
+                <input type="text" class="form-control" name="contactName" id="contactName" placeholder="Enter name"  title="Please enter your name (at least 3 characters)"/>
+                </div>
+                <div class="form-group">
+                <label for="contactEmail">Email</label>
+                <div class="alert alert-danger" role="alert" id="errorEmail">
+                  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                  <span class="sr-only error">Error:</span>
+                 Please enter a valid Email 
+                </div>
+                <input type="email" class="form-control" name="contactEmail" id="contactEmail" placeholder="Enter email" title="Please enter a valid email address"/>
+                </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                <div class="form-group">
+                <label for="contactComment">Comments</label>
+                <textarea name="contactComment" class="form-control" id="contactComment" cols="3" rows="5" placeholder="Enter your message"></textarea>
+                </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                <label for="recaptcha_div">Recaptcha</label>
+                <div id="recaptcha_div" class="g-recaptcha" data-sitekey="6LcE8gUTAAAAAKhpxfgb7SNWxYgtsm6jkf4vaLbz"></div>
+                </div>
+                </div>
+                <div class="row mt15">
+                <div class="col-xs-12 col-md-4 col-md-offset-4">
+                <div id="submitGroup" class="form-group">
+                    <center>
+                <button id="contactSubmit" class="homeBtn btn btn-lg">submit</button>
+                    </center>
+                </div>
+                </div>
+                </div>
+                </form>
             </div>
-        </div>
+        </div></div>
     </div>
 </section>
 <!-- End of third temp section -->
@@ -164,6 +489,7 @@
 <!-- Bootstrap js file 3.3.4 -->
 <script src="addOn/cdnLocalCopy/Bootstrap/bootstrap.js"></script>
 
+
 <!--&lt;!&ndash; jQuery 2.1.3 &ndash;&gt;-->
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
 
@@ -172,6 +498,7 @@
 
 
 <!-- Customer js file -->
+
 <script src="javascript/main.js"></script>
 </body>
 </html>
