@@ -15,9 +15,6 @@
             element.css('background-position','50% '+offset+"px");
         });
     }
-    function checkName(tempName){
-        return tempName.length>2?true:false;
-    }
 
     $document.ready(function () {
 
@@ -42,6 +39,19 @@
             //Moving background image slower than window
             moveBackgroundImg($document.scrollTop());
         });
+
+        $('.panel-body').hide();
+        $('.panel-heading').on('click',function(){
+            var answer = $(this).siblings();
+            if ( answer.is( ":hidden" ) ) {
+                answer.slideDown();
+            } else {
+                answer.slideUp();
+            }
+            $(this).parent().siblings().find('.panel-body').slideUp();
+        });
+
+        //contact form validation
         var search_str = /^[\w\-\.]+@[\w\-\.]+(\.\w+)+$/;
         $("#errorName").css("display","none");
         $("#errorEmail").css("display","none");
@@ -62,7 +72,6 @@
             if(!search_str.test(email_val)){$("#errorEmail").css("display","block");}
             else{$("#errorEmail").css("display","none");}
         });
-
     });
 
     // Arctic Scroll by Paul Adam Davis
