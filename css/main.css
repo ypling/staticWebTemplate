@@ -6,7 +6,9 @@
  *****  1 - Cover                            *****
  *****      1.1 - Cover background           *****
  *****      1.2 - Cover content              *****
- *****      1.2 - Cover ghost button         *****
+ *****      1.3 - Cover ghost button         *****
+ *****      1.4 - Cover quote                *****
+ *****      1.5 - Cover font                 *****
  *****  2 - Navigation Bar                   *****
  *****  3 - Sections                         *****
  *****      3.1 - Section general settings   *****
@@ -27,6 +29,7 @@ html {
     height: 100%;
     max-height: 100%;
     font-size: 62.5%;
+    font-weight: 400;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
@@ -34,7 +37,7 @@ body {
     position: relative;
     height: 100%;
     max-height: 100%;
-    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-family: 'Open Sans', sans-serif;
     letter-spacing: 0.01rem;
     background-color: #f8f8f8;
     font-size: 1.8rem;
@@ -44,6 +47,29 @@ body {
 
 a:active, a:hover {
     outline: 0 none;
+}
+
+.btn {
+    text-transform: uppercase;
+    border-radius: 1px;
+}
+
+.btn-brilent {
+    border: 2px #4294ff solid;
+    color: #fefefe;
+    text-shadow: none;
+    background: #4294ff;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.btn-brilent:hover, .btn-brilent:focus {
+    color: #4294ff;
+    border: 2px #eeeeee solid;
+    text-shadow: none;
+    background: rgba(255, 255, 255, 0.85);
 }
 
 /*************************************************
@@ -56,7 +82,8 @@ a:active, a:hover {
     display: none;
 }
 
-.nav a {
+.nav > li > a {
+    padding: 15px 0;
     cursor: pointer;
     height: 70px;
     text-align: center;
@@ -69,11 +96,23 @@ a:active, a:hover {
 }
 
 .nav li {
+    font-size: 0.75em;
     height: 70px;
     text-align: center;
+    text-transform: uppercase;
+}
+
+.navbar-brilent .navbar-nav > .active > a, .navbar-brilent .navbar-nav > .active > a:hover, .navbar-brilent .navbar-nav > .active > a:focus {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    background: #4294ff;
+    color: #fff;
 }
 
 .nav li i {
+    font-size: 20px;
     width: 100%;
     display: inline-block;
 }
@@ -96,11 +135,17 @@ section {
 }
 
 section.section-block {
-    padding-top: 100px;
+    padding-top: 60px;
+    margin-bottom: 40px;
+}
+
+section .container {
+    padding-bottom: 60px;
+    border-bottom: 1px solid #aaaaaa;
 }
 
 .section-block h1 {
-    color: #fff;
+    color: #000;
     font-size: 44px;
     line-height: 44px;
     font-weight: 300;
@@ -120,43 +165,68 @@ section.section-block {
     color: #888;
     margin: 0 0 90px 0;
     font-weight: 300;
-    font-family: "Open Sans", sans-serif;
+}
+.section-block h1.no-subtitle{
+    margin: 0 0 90px 0;
 }
 
 .section-block h2.sub-title:after, .section-block h1.no-subtitle:after {
     background-color: #4294ff;
     display: block;
     height: 1px;
-    width: 150px;
+    width: 100px;
     content: '';
     position: absolute;
-    margin-left: -75px;
+    margin-left: -50px;
     margin-top: 20px;
     left: 50%;
 }
 
-/* Section-1 */
-.section-1{
-    background-color: #4294ff;
+section .section-content {
+    padding: 0 15px;
+    margin-bottom: 20px;
+    color: #101010;
+    font-size: 16px;
 }
 
-.section-2{
-    background-color: #4294ff;
+section .section-content span.font-lg {
+    color: #080808;
+    border-bottom: 1px #080808 dashed;
+    font-size: 20px;
+}
+
+section div.img-container {
+}
+
+/* Section-1 */
+#video button {
+    margin: 0 auto;
+}
+
+/* Section-2 */
+#approach {
+
 }
 
 /* Section-3 */
-.section-3 {
-    background-color: #4294ff;
+#mentors {
+
 }
 
-#employee {
+.section-people {
     position: relative;
 }
 
-/* employee filter */
-#employee div.filter {
+/* mentors filter */
+.section-people div.filter {
     margin-top: -30px;
     margin-bottom: 30px;
+}
+
+div.filter ul {
+    margin: 15px 0 0;
+    font-size: 18px;
+    list-style: none;
 }
 
 div.filter ul li {
@@ -204,8 +274,8 @@ div.filter ul li a:hover {
     border-bottom: 1px solid #333;
 }
 
-/* employee show */
-#employee div.emp {
+/* mentors show */
+.section-people div.emp {
     position: relative;
     float: left;
     width: 240px;
@@ -213,7 +283,7 @@ div.filter ul li a:hover {
     text-align: center;
 }
 
-#employee .pic {
+.section-people .pic {
     position: relative;
     width: 200px;
     height: 200px;
@@ -222,7 +292,7 @@ div.filter ul li a:hover {
     overflow: hidden;
 }
 
-#employee div.emp img {
+.section-people div.emp img {
     position: absolute;
     top: 0;
     left: 0;
@@ -233,19 +303,19 @@ div.filter ul li a:hover {
     border: 0 none;
 }
 
-#employee .data .pic {
+.section-people .data .pic {
     border: 3px solid #FFC336;
 }
 
-#employee .engineering .pic {
+.section-people .engineering .pic {
     border: 3px solid #269abc;
 }
 
-#employee .career .pic {
+.section-people .career .pic {
     border: 3px solid #449d44;
 }
 
-#employee h2.name {
+.section-people h2.name {
     font-family: "Courier New", sans-serif;
     text-align: center;
     font-size: 1.25em;
@@ -259,57 +329,72 @@ div.filter ul li a:hover {
     transform: rotate(38deg);
 }
 
-#empContainer{
+.section-people div.linkedin {
+    position: absolute;
+    right: 35px;
+    bottom: 45px;
+    text-decoration: none;
+}
+
+.section-people div.linkedin a {
+    font-size: 25px;
+    background: #fff center center;
+}
+
+.section-people div.linkedin a i {
+    font-size: 40px;
+    color: #1f85be;
+}
+
+.emp-container {
     position: relative;
     width: 100%;
 }
 
-.emp-show{
+.emp-show {
     position: absolute;
     float: none;
 }
-.section-4{
-    background-color: #4294ff;
-}
-.color1 {
-    color: #fff;
+
+/* section-4 */
+#fellows {
+
 }
 
-div.filter ul {
-    margin: 15px 0 0;
-    font-size: 18px;
-    list-style: none;
+.stu-container {
+    position: relative;
+    width: 100%;
 }
 
-h2.subTitle {
-    font-size: 24px;
-    line-height: 24px;
-    font-weight: 300;
-    font-style: normal;
-    padding: 0;
-    margin-bottom: 90px;
-    text-align: center;
+.stu-show {
+    position: absolute;
+    float: none;
 }
 
-h2.subTitle:after{
-background: #fff;
+/* section-5 */
+#testimonials {
+
 }
-h2.subTitle:after, h1.noSubtitle:after {
-background-color: #fff;
-display: block;
-height: 1px;
-width: 150px;
-content: '';
-position: absolute;
-margin-left: -50px;
-margin-top: 20px;
-left: 50%;
+
+#testimonials .container {
+    border: 0 none;
 }
-.panel-group{
+
+/* section-6 */
+#academy {
+    margin-top: 70px;
+}
+
+/* section-7 */
+#faq {
+
+}
+
+#faq .panel-group {
     margin-bottom: 20px;
 }
 
-.panel-title {
+#faq .panel-title {
     color: #204d74;
     display: block;
     padding: 10px 15px;
@@ -319,21 +404,7 @@ left: 50%;
     cursor: pointer;
 }
 
-.panel-body {
-    border-top: 1px solid lightgray;
-}
-
-a {
-    background-color: transparent;
-}
-
-a:-webkit-any-link {
-    color: #337ab7;
-    cursor: auto;
-}
-
-h4 {
-    display: block;
+h4.panel-title {
     -webkit-margin-before: 1.33em;
     -webkit-margin-after: 1.33em;
     -webkit-margin-start: 0px;
@@ -341,18 +412,58 @@ h4 {
     font-weight: bold;
 }
 
-.panel-default > .panel-heading {
+#faq .panel-body {
+    border-top: 1px solid lightgray;
+}
+
+#faq .panel-default > .panel-heading {
     color: #333;
     background-color: #fff;
     border-color: #ddd;
 }
 
-.alert {
+#faq .alert {
     font-size: 12px;
     padding: 0;
     margin-bottom: 5px;
     border: 1px solid transparent;
     border-radius: 5px;
+}
+
+/* section-8 */
+#contact {
+    color: #fff;
+    background-color: #4294ff;
+}
+#contact h1 {
+    color: #fff;
+}
+
+#contact h2{
+    color: #A2F4FF;
+}
+
+#contact a{
+    background-color: transparent;
+    color: #82D4FF;
+}
+
+#contact .btn-brilent {
+    border: 2px #fefefe solid;
+    color: #4294ff;
+    text-shadow: none;
+    background: #fefefe;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#contact .btn-brilent:hover,#contact .btn-brilent:focus {
+    color: #fefefe;
+    border: 2px #eeeeee solid;
+    text-shadow: none;
+    background: #4294ff;
 }
 
 /*************************************************
@@ -371,24 +482,65 @@ h4 {
     overflow: hidden;
 }
 
+/* Sub cover settings */
 .mid-cover {
     height: 335px;
     margin-top: 70px;
     margin-bottom: -70px;
-    background-image: url('../images/city_by_the_bay_1232.jpg');
+    background-image: url('../images/coaches.jpg');
 }
 
+/* Main cover settings */
 #main-header {
     display: table;
     width: 100%;
     height: 100%;
-    background-image: url('../images/diablo.jpg');
+    background-image: url('../images/home.jpg');
 }
 
-#cover-1 {
-    background-image: url('../images/city_by_the_bay_1232.jpg');
+/* Main cover Login button */
+#main-header div.login {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    padding: 35px 40px;
+    margin: 0 0 30px;
+    border: medium none;
+    display: block;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, transparent 100%) repeat scroll 0 0 transparent;
 }
 
+#main-header div.login a {
+    display: inline-block;
+    float: right;
+    width: 150px;
+    height: 38px;
+    padding: 0 20px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    line-height: 35px;
+    white-space: nowrap;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+}
+
+#main-header div.login a:hover {
+    font-size: 16px;
+    color: #4294ff;
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.1s ease;
+}
+
+/* Main cover layout */
 .vertical {
     display: table-cell;
     vertical-align: middle;
@@ -396,6 +548,7 @@ h4 {
 
 .inner {
     position: relative;
+    top: 20px;
     width: 80%;
     max-width: 710px;
     margin: 0 auto;
@@ -438,7 +591,7 @@ h4 {
 }
 
 /* Cover ghost button */
-.inner div {
+div.ghost-button-group {
     list-style: none;
     width: 100%;
     height: 36px;
@@ -448,15 +601,15 @@ h4 {
     text-align: center;
 }
 
-.inner div label.button {
+label.button {
     border: 2px solid rgba(255, 255, 255, 0.80);
     position: relative;
     width: 45%;
     min-width: 260px;
-    height: 36px;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: 20px;
+    height: 44px;
+    font-size: 22px;
+    padding: 5px 12px;
+    margin: 0 15px 20px 15px;
     color: rgba(255, 255, 255, 0.6);
     border-radius: 0;
     z-index: 999;
@@ -466,18 +619,16 @@ h4 {
     transition: 0.3s ease;
 }
 
-.inner div label.button:hover {
+label.button:hover {
+    text-shadow: none;
+    background: rgba(255, 255, 255, 0.85);
+    border: 2px solid rgba(255, 255, 255, 1);
     color: #4294ff;
 }
 
-.button:hover {
-    border: 2px solid rgba(255, 255, 255, 1);
-    color: rgba(255, 255, 255, 1);
-}
-
-.button .line {
+label.button .line {
     display: block;
-    z-index: 99999;
+    z-index: 9999;
     position: absolute;
     background: none;
     -webkit-transition: 0.3s ease;
@@ -486,54 +637,54 @@ h4 {
     transition: 0.3s ease;
 }
 
-.button:hover .line {
+label.button:hover .line {
     background-color: rgba(255, 255, 255, 1);
 }
 
-.button .line-top {
+label.button .line-top {
     height: 2px;
     width: 0;
     left: -110%;
     top: -2px;
 }
 
-.button:hover .line-top {
+label.button:hover .line-top {
     width: 100%;
     left: -2px;
 }
 
-.button .line-bottom {
+label.button .line-bottom {
     width: 0;
     height: 2px;
     right: -110%;
     bottom: -2px;
 }
 
-.button:hover .line-bottom {
+label.button:hover .line-bottom {
     width: 100%;
     right: -2px;
 }
 
-.button .line-left {
+label.button .line-left {
     width: 2px;
     height: 0;
     left: -2px;
     bottom: -110%
 }
 
-.button:hover .line-left {
+label.button:hover .line-left {
     height: 100%;
     bottom: -2px;
 }
 
-.button .line-right {
+label.button .line-right {
     width: 2px;
     height: 0;
     right: -2px;
     top: -110%
 }
 
-.button:hover .line-right {
+label.button:hover .line-right {
     height: 100%;
     top: -2px;
 }
@@ -565,6 +716,46 @@ h4 {
     -moz-animation: none;
     -o-animation: none;
     animation: none;
+}
+
+/* Cover quote */
+blockquote {
+    font-size: 44px;
+    color: #fff;
+    border: 0;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 120%;
+}
+
+blockquote:before {
+    color: #fff;
+    content: '\f10d';
+    font-family: FontAwesome, sans-serif;
+    font-weight: normal;
+    font-size: 44px;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: inherit;
+    margin-right: .5em;
+
+}
+
+blockquote:after {
+    color: #fff;
+    content: '\f10e';
+    font-family: FontAwesome, sans-serif;
+    font-weight: normal;
+    font-size: 44px;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: inherit;
+    margin-right: .5em;
+}
+
+/* Cover font */
+blockquote small {
+    color: #fff;
+    display: inline;
 }
 
 /*************************************************
@@ -619,78 +810,6 @@ h4 {
     }
 }
 
-.btn {
-    text-transform: uppercase;
-}
-
-.btn.homeBtn {
-    position: relative;
-    background: rgba(255, 255, 255, 0.5);
-}
-
-.btn:hover {
-    color: #4294ff;
-    border-color: #eee;
-    text-shadow: none;
-    background: #fff;
-}
-
-.btn-lg {
-    margin: 20px 20px 20px 20px;
-    padding: 18px 23px;
-    font-size: 22px;
-}
-.button-lg {
-    margin:20px 20px 20px 20px;
-    padding: 18px 23px;
-    font-size: 22px;
-}
-
-blockquote{
-    font-size: 44px;
-    color:#fff;
-    border:0;
-    font-family: 'Open Sans', sans-serif;
-    line-height:120%;
-}
-blockquote:before {
-    color:#fff;
-    content: '\f10d';
-    font-family: FontAwesome;
-    font-weight: normal;
-    font-size: 44px;
-    font-style: normal;
-    display: inline-block;
-    text-decoration: inherit;
-    margin-right: .5em;
-
-}
-blockquote:after {
-    color:#fff;
-    content: '\f10e';
-    font-family: FontAwesome;
-    font-weight: normal;
-    font-size: 44px;
-    font-style: normal;
-    display: inline-block;
-    text-decoration: inherit;
-    margin-right: .5em;
-}
-blockquote small{
-    color:#fff;
-    display: inline;
-}
-form #emailCheck{
-    width:50%;
-}
-#goLeft{
-    text-align: left;
-}
-
-#emailLabel{
-    left:-1.8em;
-}
-
 .buttonNew {
     border-top: 1px solid #fcfcfc;
     background: #90caf0;
@@ -703,21 +822,23 @@ form #emailCheck{
     -webkit-border-radius: 16px;
     -moz-border-radius: 16px;
     border-radius: 16px;
-    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
-    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-    box-shadow: rgba(0,0,0,1) 0 1px 0;
-    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    -moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
     color: #ffffff;
     font-size: 24px;
     font-family: Helvetica, Arial, Sans-Serif;
     text-decoration: none;
     vertical-align: middle;
 }
+
 .buttonNew:hover {
     border-top-color: #ffffff;
     background: #ffffff;
     color: #4294ff;
 }
+
 .buttonNew:active {
     border-top-color: #0e396e;
     background: #0e396e;
