@@ -72,6 +72,10 @@ a:active, a:hover {
     background: rgba(255, 255, 255, 0.85);
 }
 
+button i {
+    margin-right: 7px;
+}
+
 /*************************************************
  ******                                     ******
  ******          Navigation Bar             ******
@@ -128,20 +132,30 @@ a:active, a:hover {
  *************************************************/
 
 /* Section general settings */
-section {
-    display: block;
-    padding-top: 70px;
-    margin-bottom: -70px;
-}
-
 section.section-block {
+    display: block;
     padding-top: 60px;
     margin-bottom: 40px;
 }
 
 section .container {
     padding-bottom: 60px;
-    border-bottom: 1px solid #aaaaaa;
+}
+
+section .container:after {
+    width: 80%;
+    height: 1px;
+    margin-bottom: 5px;
+    margin-top: 60px;
+    position: absolute;
+    left: 50%;
+    margin-left: -40%;
+    display: block;
+    content: '';
+    background: linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0.3) 60%, transparent 100%);
+    background: -o-linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0.3) 60%, transparent 100%);
+    background: -moz-linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0.3) 60%, transparent 100%);
+    background: -webkit-linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0.3) 60%, transparent 100%);
 }
 
 .section-block h1 {
@@ -166,8 +180,9 @@ section .container {
     margin: 0 0 90px 0;
     font-weight: 300;
 }
-.section-block h1.no-subtitle{
-    margin: 0 0 90px 0;
+
+.section-block h1.no-subtitle {
+    margin-bottom: 90px;
 }
 
 .section-block h2.sub-title:after, .section-block h1.no-subtitle:after {
@@ -196,9 +211,24 @@ section .section-content span.font-lg {
 }
 
 section div.img-container {
+
+}
+
+section div.apply-button {
+    margin-top: 60px;
+    text-align: center;
+}
+
+section div.apply-button button {
+    margin: 10px 15px;
+    width: 280px;
 }
 
 /* Section-1 */
+#video {
+    margin-top: 70px;
+}
+
 #video button {
     margin: 0 auto;
 }
@@ -206,6 +236,22 @@ section div.img-container {
 /* Section-2 */
 #approach {
 
+}
+
+#approach ul {
+    list-style: none;
+}
+
+#approach ul li {
+    margin-bottom: 5px;
+}
+
+#approach ul li:nth-child(odd) {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+#approach ul li:nth-child(even) {
+    background: rgba(255, 255, 255, 0.1);
 }
 
 /* Section-3 */
@@ -278,13 +324,14 @@ div.filter ul li a:hover {
 .section-people div.emp {
     position: relative;
     float: left;
-    width: 240px;
+    width: 100%;
     height: 240px;
     text-align: center;
 }
 
 .section-people .pic {
     position: relative;
+    background-color: #e6f2f7;
     width: 200px;
     height: 200px;
     border-radius: 200px;
@@ -293,6 +340,7 @@ div.filter ul li a:hover {
 }
 
 .section-people div.emp img {
+    background-color: #e6f2f7;
     position: absolute;
     top: 0;
     left: 0;
@@ -321,22 +369,27 @@ div.filter ul li a:hover {
     font-size: 1.25em;
     color: #000;
     font-weight: 700;
-    width: 200px;
+    width: 100%;
     height: 15px;
     position: absolute;
     top: 155px;
-    left: -45px;
-    transform: rotate(38deg);
+    left: -70px;
+    -webkit-transform: rotate(42deg);
+    transform: rotate(42deg);
 }
 
 .section-people div.linkedin {
     position: absolute;
-    right: 35px;
+    left: 50%;
     bottom: 45px;
+    width: 40px;
+    height: 35px;
+    margin-left: 50px;
     text-decoration: none;
 }
 
 .section-people div.linkedin a {
+    position: relative;
     font-size: 25px;
     background: #fff center center;
 }
@@ -376,13 +429,82 @@ div.filter ul li a:hover {
 
 }
 
-#testimonials .container {
-    border: 0 none;
+#testimonials div.testimonial {
+    display: block;
+    margin: 60px 10px;
+    padding: 15px;
+    font-size: 16px;
+    height: 180px;
+    position: relative;
+}
+
+#testimonials div.testimonial:nth-child(odd) {
+    background: rgba(66, 148, 255, 0.1);
+    text-align: right;
+}
+
+#testimonials div.testimonial:nth-child(even) {
+    background: rgba(255, 255, 255, 0.1);
+    text-align: left;
+}
+
+#testimonials div.testimonial p.camper-name {
+    margin: 30px 0 0 0;
+}
+
+#testimonials div.testimonial p.camper-title {
+    font-weight: 600;
+}
+
+#testimonials .container:after {
+    display: none;
+}
+
+#testimonials div.apply-button {
+    margin-top: 0;
 }
 
 /* section-6 */
 #academy {
     margin-top: 70px;
+}
+
+#academy div.section-content-summary {
+    text-align: center;
+    font-size: 1.1em;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #888;
+    margin-bottom: 30px;
+}
+
+#academy i {
+    margin-right: 10px;
+}
+
+#academy h4 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+#academy .online-content {
+    position: relative;
+    display: block;
+    margin: 40px 15px;
+}
+
+#academy .online-content i {
+    width: 55px;
+    height: 55px;
+    margin: 5px 5px 5px 15px;
+    float: left;
+    font-size: 50px;
+    color: #4294ff;
+}
+
+#academy .online-content p {
+    margin-left: 80px;
+    height: auto;
 }
 
 /* section-7 */
@@ -402,14 +524,7 @@ div.filter ul li a:hover {
     outline: none;
     font-size: 20px;
     cursor: pointer;
-}
-
-h4.panel-title {
-    -webkit-margin-before: 1.33em;
-    -webkit-margin-after: 1.33em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 #faq .panel-body {
@@ -431,19 +546,21 @@ h4.panel-title {
 }
 
 /* section-8 */
-#contact {
+#applyNow {
+
+}
+
+/* section-9 */
+#contact, #contact h1 {
     color: #fff;
     background-color: #4294ff;
 }
-#contact h1 {
-    color: #fff;
-}
 
-#contact h2{
+#contact h2 {
     color: #A2F4FF;
 }
 
-#contact a{
+#contact a {
     background-color: transparent;
     color: #82D4FF;
 }
@@ -459,7 +576,7 @@ h4.panel-title {
     transition: all 0.3s ease;
 }
 
-#contact .btn-brilent:hover,#contact .btn-brilent:focus {
+#contact .btn-brilent:hover, #contact .btn-brilent:focus {
     color: #fefefe;
     border: 2px #eeeeee solid;
     text-shadow: none;
@@ -484,10 +601,14 @@ h4.panel-title {
 
 /* Sub cover settings */
 .mid-cover {
-    height: 335px;
+    height: 375px;
     margin-top: 70px;
     margin-bottom: -70px;
-    background-image: url('../images/coaches.jpg');
+    background-image: url('../images/covers/coaches.jpg');
+}
+
+.cover-content {
+    margin-top: 100px;
 }
 
 /* Main cover settings */
@@ -495,7 +616,7 @@ h4.panel-title {
     display: table;
     width: 100%;
     height: 100%;
-    background-image: url('../images/home.jpg');
+    background-image: url('../images/covers/home.jpg');
 }
 
 /* Main cover Login button */
@@ -560,7 +681,6 @@ h4.panel-title {
     font-size: 5rem;
     letter-spacing: -1px;
     font-weight: 700;
-    font-family: "Open Sans", sans-serif;
     color: #fff;
     -webkit-animation: fade-in-down 0.6s;
     -moz-animation: fade-in-down 0.6s;
@@ -577,7 +697,6 @@ h4.panel-title {
     font-size: 2rem;
     line-height: 1.5em;
     font-weight: 400;
-    font-family: "Merriweather", serif;
     letter-spacing: 0.01rem;
     color: rgba(255, 255, 255, 0.8);
     -webkit-animation: fade-in-down 0.9s;
