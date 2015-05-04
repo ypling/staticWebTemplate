@@ -16,30 +16,23 @@
         });
     }
 
-    function lineWrapAnimation(containerId, elementClass, gap) {
+    function lineWrapAnimation(containerId, elementClass) {
         var elementWidth = $(elementClass).width();
         var elementHeight = $(elementClass).height();
         var numberForLine = Math.floor($(containerId).width() / elementWidth);
+        var widthGap = ((($(containerId).width()) - (numberForLine * elementWidth)) / (numberForLine + 1));
         var max = 0;
         $(elementClass + ':visible').each(function (index) {
             var numberOfLine = Math.floor(index / numberForLine) + 1;
             if (numberOfLine > max) {
                 max = numberOfLine;
             }
-            $(this).animate({
-                left: index % numberForLine * elementWidth + gap,
-                top: Math.floor(index / numberForLine) * elementHeight + gap
+            $(this).css({
+                left: index % numberForLine === 0 ? widthGap : index % numberForLine * (elementWidth + widthGap) + widthGap,
+                top: Math.floor(index / numberForLine) === 0 ? 0 : Math.floor(index / numberForLine) * elementHeight
             })
         });
-        $(elementClass + ':hidden').each(function (index) {
-            $(this).css(
-                {
-                    left: gap,
-                    top: gap
-                }
-            )
-        });
-        $(containerId).animate({height: elementHeight * max + gap});
+        $(containerId).css({height: elementHeight * max});
     }
 
     $document.ready(function () {
@@ -67,8 +60,8 @@
         });
 
         $(window).resize(function () {
-            lineWrapAnimation('.emp-container', '.emp-show', 80);
-            lineWrapAnimation('.stu-container', '.stu-show', 80);
+            lineWrapAnimation('.mentor-container', '.mentor-show');
+            lineWrapAnimation('.fellow-container', '.fellow-show');
         });
 
         // faq controller
@@ -83,9 +76,11 @@
             $(this).parent().siblings().find('.panel-body').slideUp();
         });
 
-        //init employee positions
-        lineWrapAnimation('.emp-container', '.emp-show', 80);
-        lineWrapAnimation('.stu-container', '.stu-show', 80);
+        //init mentors positions
+        lineWrapAnimation('.mentor-container', '.mentor-show');
+
+        //init fellows positions
+        lineWrapAnimation('.fellow-container', '.fellow-show');
 
         //contact form validation
         var search_str = /^[\w\-\.]+@[\w\-\.]+(\.\w+)+$/;
@@ -130,15 +125,12 @@
                 $("#errorEmailContact").css("display", "none");
             }
         });
-        //init tooltips
-        $('[data-toggle="tooltip"]').tooltip();
 
-        // set arcText for employees' name
-        var $text = $('h2.name');
-        $text.arctext({radius: 120, dir: -1});
+        // set arcText for mentors' name
+        $('h2.mentorsName').arctext({radius: 120, dir: -1});
 
-        // set employee filter
-        $(".filter li").employeeFilter();
+        // set arcText for fellows' name
+        //$('h2.fellowsName').arctext({radius: 55, dir: -1});
     });
 
     // Arctic Scroll by Paul Adam Davis
@@ -173,49 +165,4 @@
         });
 
     };
-
-    $.fn.employeeFilter = function () {
-        var filterArea = $(this).closest('section');
-        var employeeCell = filterArea.find('div.emp-show');
-        $(this).on('click', function () {
-            var $this = $(this);
-            var needShowClass = $this.attr("class") ? $this.attr("class") : "all";
-            if (needShowClass !== "all") {
-                employeeCell.hide();
-                filterArea.find("div." + needShowClass).show()
-                lineWrapAnimation('.emp-container', '.emp-show', 80);
-            } else {
-                employeeCell.show();
-                lineWrapAnimation('.emp-container', '.emp-show', 80);
-            }
-        });
-
-        employeeCell.on('mouseenter', function () {
-
-        });
-        employeeCell.on('mouseleave', function () {
-
-        });
-    };
-
 })(jQuery, 'smartresize');
-
-//
-//var tag = document.createElement('script');
-//tag.src = "http://www.youtube.com/player_api";
-//var firstScriptTag = document.getElementsByTagName('script')[0];
-//firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-//
-//var player;
-//function onYouTubePlayerAPIReady() {
-//    player = new YT.Player('player', {
-//        playerVars: { 'autoplay': 1, 'controls': 1,'autohide':1,'wmode':'opaque' },
-//        videoId: 'gdqvRBO0_ek',
-//        events: {
-//            'onReady': onPlayerReady}
-//    });
-//}
-//
-//function onPlayerReady(event) {
-//    event.target.mute();
-//}

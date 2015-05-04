@@ -45,6 +45,12 @@ body {
     color: #3A4145;
 }
 
+span.font-lg {
+    color: #080808;
+    border-bottom: 1px #080808 dashed;
+    font-size: 20px;
+}
+
 a:active, a:hover {
     outline: 0 none;
 }
@@ -52,6 +58,10 @@ a:active, a:hover {
 .btn {
     text-transform: uppercase;
     border-radius: 1px;
+}
+
+.form-group > .form-control {
+    border-radius: 0;
 }
 
 .btn-brilent {
@@ -204,124 +214,75 @@ section .section-content {
     font-size: 16px;
 }
 
-section .section-content span.font-lg {
-    color: #080808;
-    border-bottom: 1px #080808 dashed;
-    font-size: 20px;
-}
-
 section div.img-container {
 
 }
 
 section div.apply-button {
-    margin-top: 60px;
+    margin: 60px auto 0 auto;
+    max-width: 330px;
     text-align: center;
 }
 
 section div.apply-button button {
     margin: 10px 15px;
-    width: 280px;
+}
+
+section div.apply-button button.btn-apply {
+    font-size: 2em;
+    width: 330px;
+    height: 70px;
+}
+
+.section-content-detail {
+    position: relative;
+    display: block;
+    margin: 40px 15px;
+}
+
+.section-content-detail i {
+    width: 55px;
+    height: 55px;
+    margin: 5px 5px 5px 15px;
+    float: left;
+    font-size: 50px;
+    color: #4294ff;
+}
+
+.section-content-detail p {
+    margin-left: 80px;
+    height: auto;
 }
 
 /* Section-1 */
-#video {
-    margin-top: 70px;
+#bootcamp {
+    margin-top: 30px;
 }
 
-#video button {
+#bootcamp button.btn-video {
     margin: 0 auto;
 }
 
+#bootcamp p.section-content {
+    line-height: 2.5;
+    margin-top: 15px;
+}
+
+#bootcamp h2.sub-title {
+    margin-top: 100px;
+}
+
 /* Section-2 */
-#approach {
-
-}
-
-#approach ul {
-    list-style: none;
-}
-
-#approach ul li {
-    margin-bottom: 5px;
-}
-
-#approach ul li:nth-child(odd) {
-    background: rgba(0, 0, 0, 0.1);
-}
-
-#approach ul li:nth-child(even) {
-    background: rgba(255, 255, 255, 0.1);
-}
-
-/* Section-3 */
 #mentors {
 
 }
 
-.section-people {
+#mentors.section-people {
     position: relative;
 }
 
-/* mentors filter */
-.section-people div.filter {
-    margin-top: -30px;
-    margin-bottom: 30px;
-}
-
-div.filter ul {
-    margin: 15px 0 0;
-    font-size: 18px;
-    list-style: none;
-}
-
-div.filter ul li {
-    padding: 0 10px;
-    display: inline-block;
-    border-left: 1px solid #444;
-    list-style: outside none none;
-}
-
-div.filter ul li:before {
-    content: "";
-    display: inline-block;
-    margin-right: 4px;
-    height: 15px;
-    width: 15px;
-}
-
-div.filter ul li:first-child {
-    border-left: medium none;
-}
-
-div.filter ul li.data:before {
-    background: none repeat scroll 0 0 #FFC336;
-}
-
-div.filter ul li.engineering:before {
-    background: none repeat scroll 0 0 #269abc;
-}
-
-div.filter ul li.career:before {
-    background: none repeat scroll 0 0 #449d44;
-}
-
-div.filter ul li a {
-    cursor: pointer;
-    color: #333;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    transition: all 0.2s ease 0s;
-    text-decoration: none;
-    background: none repeat scroll 0 0 transparent;
-}
-
-div.filter ul li a:hover {
-    text-decoration: none;
-    border-bottom: 1px solid #333;
-}
-
 /* mentors show */
-.section-people div.emp {
+#mentors.section-people div.mentors {
     position: relative;
     float: left;
     width: 100%;
@@ -329,7 +290,14 @@ div.filter ul li a:hover {
     text-align: center;
 }
 
-.section-people .pic {
+#mentors.section-people h4.job-title {
+    font-weight: 500;
+    padding-bottom: 10px;
+    margin: 0 auto 10px;
+    text-align: center;
+}
+
+#mentors.section-people .pic {
     position: relative;
     background-color: #e6f2f7;
     width: 200px;
@@ -337,9 +305,10 @@ div.filter ul li a:hover {
     border-radius: 200px;
     margin: auto;
     overflow: hidden;
+    border: 3px solid #4294ff;
 }
 
-.section-people div.emp img {
+#mentors.section-people div.mentors img {
     background-color: #e6f2f7;
     position: absolute;
     top: 0;
@@ -351,19 +320,7 @@ div.filter ul li a:hover {
     border: 0 none;
 }
 
-.section-people .data .pic {
-    border: 3px solid #FFC336;
-}
-
-.section-people .engineering .pic {
-    border: 3px solid #269abc;
-}
-
-.section-people .career .pic {
-    border: 3px solid #449d44;
-}
-
-.section-people h2.name {
+#mentors.section-people h2.mentorsName {
     font-family: "Courier New", sans-serif;
     text-align: center;
     font-size: 1.25em;
@@ -378,58 +335,131 @@ div.filter ul li a:hover {
     transform: rotate(42deg);
 }
 
-.section-people div.linkedin {
+#mentors.section-people div.company {
     position: absolute;
     left: 50%;
-    bottom: 45px;
+    bottom: 55px;
     width: 40px;
-    height: 35px;
-    margin-left: 50px;
+    height: 30px;
+    margin-left: 60px;
     text-decoration: none;
+    background: #fff;
 }
 
-.section-people div.linkedin a {
-    position: relative;
-    font-size: 25px;
-    background: #fff center center;
-}
-
-.section-people div.linkedin a i {
+#mentors.section-people div.company i {
     font-size: 40px;
-    color: #1f85be;
+    margin-top: -7px;
+    margin-left: -7px;
 }
 
-.emp-container {
+#mentors .mentor-container {
     position: relative;
     width: 100%;
 }
 
-.emp-show {
+#mentors .mentor-show {
     position: absolute;
     float: none;
+    width: 275px;
+    height: 320px;
 }
 
-/* section-4 */
+/* section-3 */
 #fellows {
 
 }
 
-.stu-container {
+/* fellows show */
+#fellows.section-people div.fellows {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 140px;
+    text-align: center;
+}
+
+#fellows.section-people p.job-title {
+    position: absolute;
+    top: 45px;
+    left: 120px;
+    font-size: 0.75em;
+    font-weight: 500;
+    padding-bottom: 10px;
+    margin: 0 auto 10px;
+    text-align: left;
+}
+
+#fellows.section-people .pic {
+    position: relative;
+    background-color: #e6f2f7;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin: auto auto auto 10px;
+    overflow: hidden;
+    border: 3px solid #4294ff;
+}
+
+#fellows.section-people div.fellows img {
+    background-color: #e6f2f7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    vertical-align: middle;
+    border: 0 none;
+}
+
+#fellows.section-people h2.fellowsName {
+    font-family: "Courier New", sans-serif;
+    text-align: left;
+    font-size: 1em;
+    color: #000;
+    font-weight: 600;
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 120px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px #e0e0e0 solid;
+}
+
+#fellows.section-people div.company {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 30px;
+    height: 25px;
+    text-decoration: none;
+    background: #fff;
+}
+
+#fellows.section-people div.company i {
+    font-size: 30px;
+    margin-top: -7px;
+    margin-left: -7px;
+}
+
+#fellows .fellow-container {
     position: relative;
     width: 100%;
 }
 
-.stu-show {
+#fellows .fellow-show {
     position: absolute;
     float: none;
+    width: 330px;
 }
 
-/* section-5 */
-#testimonials {
-
+#fellows h2.sub-title {
+    margin-top: 80px;
 }
 
-#testimonials div.testimonial {
+#fellows div.testimonial {
     display: block;
     margin: 60px 10px;
     padding: 15px;
@@ -438,35 +468,35 @@ div.filter ul li a:hover {
     position: relative;
 }
 
-#testimonials div.testimonial:nth-child(odd) {
+#fellows div.testimonial:nth-child(odd) {
     background: rgba(66, 148, 255, 0.1);
     text-align: right;
 }
 
-#testimonials div.testimonial:nth-child(even) {
+#fellows div.testimonial:nth-child(even) {
     background: rgba(255, 255, 255, 0.1);
     text-align: left;
 }
 
-#testimonials div.testimonial p.camper-name {
+#fellows div.testimonial p.camper-name {
     margin: 30px 0 0 0;
 }
 
-#testimonials div.testimonial p.camper-title {
+#fellows div.testimonial p.camper-title {
     font-weight: 600;
 }
 
-#testimonials .container:after {
+#fellows .container:after {
     display: none;
 }
 
-#testimonials div.apply-button {
+#fellows div.apply-button {
     margin-top: 0;
 }
 
-/* section-6 */
+/* section-4 */
 #academy {
-    margin-top: 70px;
+    margin-top: 30px;
 }
 
 #academy div.section-content-summary {
@@ -485,26 +515,6 @@ div.filter ul li a:hover {
     font-size: 1.2em;
     font-weight: 600;
     margin-bottom: 30px;
-}
-
-#academy .online-content {
-    position: relative;
-    display: block;
-    margin: 40px 15px;
-}
-
-#academy .online-content i {
-    width: 55px;
-    height: 55px;
-    margin: 5px 5px 5px 15px;
-    float: left;
-    font-size: 50px;
-    color: #4294ff;
-}
-
-#academy .online-content p {
-    margin-left: 80px;
-    height: auto;
 }
 
 /* section-7 */
@@ -556,13 +566,11 @@ div.filter ul li a:hover {
     background-color: #4294ff;
 }
 
-#contact h2 {
-    color: #A2F4FF;
-}
-
-#contact a {
-    background-color: transparent;
-    color: #82D4FF;
+#contact iframe.google-map-iframe {
+    margin: 0;
+    width: 100%;
+    height: 460px;
+    border: 0 none;
 }
 
 #contact .btn-brilent {
@@ -608,6 +616,7 @@ div.filter ul li a:hover {
 }
 
 .cover-content {
+    position: relative;
     margin-top: 100px;
 }
 
@@ -844,9 +853,13 @@ blockquote {
     border: 0;
     font-family: 'Open Sans', sans-serif;
     line-height: 120%;
+    width: 100%;
 }
 
 blockquote:before {
+    position: absolute;
+    top: 10px;
+    left: 10px;
     color: #fff;
     content: '\f10d';
     font-family: FontAwesome, sans-serif;
@@ -860,6 +873,9 @@ blockquote:before {
 }
 
 blockquote:after {
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
     color: #fff;
     content: '\f10e';
     font-family: FontAwesome, sans-serif;
@@ -875,6 +891,14 @@ blockquote:after {
 blockquote small {
     color: #fff;
     display: inline;
+}
+
+blockquote div.pull-left {
+    margin-left: 50px;
+}
+
+blockquote div.pull-right {
+    margin-right: 75px;
 }
 
 /*************************************************
@@ -927,38 +951,4 @@ blockquote small {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.buttonNew {
-    border-top: 1px solid #fcfcfc;
-    background: #90caf0;
-    background: -webkit-gradient(linear, left top, left bottom, from(#0e3769), to(#90caf0));
-    background: -webkit-linear-gradient(top, #0e3769, #90caf0);
-    background: -moz-linear-gradient(top, #0e3769, #90caf0);
-    background: -ms-linear-gradient(top, #0e3769, #90caf0);
-    background: -o-linear-gradient(top, #0e3769, #90caf0);
-    padding: 15px 30px;
-    -webkit-border-radius: 16px;
-    -moz-border-radius: 16px;
-    border-radius: 16px;
-    -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
-    -moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
-    box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
-    text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
-    color: #ffffff;
-    font-size: 24px;
-    font-family: Helvetica, Arial, Sans-Serif;
-    text-decoration: none;
-    vertical-align: middle;
-}
-
-.buttonNew:hover {
-    border-top-color: #ffffff;
-    background: #ffffff;
-    color: #4294ff;
-}
-
-.buttonNew:active {
-    border-top-color: #0e396e;
-    background: #0e396e;
 }
