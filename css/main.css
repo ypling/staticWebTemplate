@@ -13,6 +13,7 @@
  *****  3 - Sections                         *****
  *****      3.1 - Section general settings   *****
  *****      3.2 - First section              *****
+ *****  4 - Footer                           *****
  *****                                       *****
  *****  f - Customer animate                 *****
  *****                                       *****
@@ -237,7 +238,7 @@ section div.apply-button button.btn-apply {
 .section-content-detail {
     position: relative;
     display: block;
-    margin: 40px 15px;
+    margin: 0 15px;
 }
 
 .section-content-detail i {
@@ -464,18 +465,16 @@ section div.apply-button button.btn-apply {
     margin: 60px 10px;
     padding: 15px;
     font-size: 16px;
-    height: 180px;
+    min-height: 180px;
     position: relative;
 }
 
 #fellows div.testimonial:nth-child(odd) {
     background: rgba(66, 148, 255, 0.1);
-    text-align: right;
 }
 
 #fellows div.testimonial:nth-child(even) {
     background: rgba(255, 255, 255, 0.1);
-    text-align: left;
 }
 
 #fellows div.testimonial p.camper-name {
@@ -514,53 +513,18 @@ section div.apply-button button.btn-apply {
 #academy h4 {
     font-size: 1.2em;
     font-weight: 600;
-    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
-/* section-7 */
-#faq {
-
+#academy .container:after {
+    height: 0;
 }
 
-#faq .panel-group {
+/* section-5 */
+#contact {
     margin-bottom: 20px;
 }
 
-#faq .panel-title {
-    color: #204d74;
-    display: block;
-    padding: 10px 15px;
-    margin: -10px -15px;
-    outline: none;
-    font-size: 20px;
-    cursor: pointer;
-    font-weight: 600;
-}
-
-#faq .panel-body {
-    border-top: 1px solid lightgray;
-}
-
-#faq .panel-default > .panel-heading {
-    color: #333;
-    background-color: #fff;
-    border-color: #ddd;
-}
-
-#faq .alert {
-    font-size: 12px;
-    padding: 0;
-    margin-bottom: 5px;
-    border: 1px solid transparent;
-    border-radius: 5px;
-}
-
-/* section-8 */
-#applyNow {
-
-}
-
-/* section-9 */
 #contact, #contact h1 {
     color: #fff;
     background-color: #4294ff;
@@ -569,11 +533,21 @@ section div.apply-button button.btn-apply {
 #contact iframe.google-map-iframe {
     margin: 0;
     width: 100%;
-    height: 460px;
+    height: 302px;
     border: 0 none;
 }
 
+#contact div.g-recaptcha {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-right: 10px;
+    width: 100%;
+    height: 75px;
+    overflow: hidden;
+}
+
 #contact .btn-brilent {
+    text-align: center;
+    height: 75px;
     border: 2px #fefefe solid;
     color: #4294ff;
     text-shadow: none;
@@ -589,6 +563,39 @@ section div.apply-button button.btn-apply {
     border: 2px #eeeeee solid;
     text-shadow: none;
     background: #4294ff;
+}
+
+#contact div.container > div.row:nth-child(2) {
+    padding-bottom: 15px;
+    border-bottom: 1px rgba(255, 255, 255, 0.8) solid;
+}
+
+#contact div.row > div.col-xs-6 {
+    margin-top: 20px;
+    height: 200px;
+    overflow: hidden;
+}
+
+#contact div.row > div.col-xs-6 h3 {
+    font-size: 1em;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
+}
+
+#contact div.row > div.col-xs-6 p {
+    font-size: 0.85em;
+    margin-bottom: 20px;
+}
+
+#contact div.row > div.col-xs-6 p a {
+    color: inherit;
+    text-decoration: none;
+    outline: medium none;
+}
+
+#contact div.row > div.col-xs-6:nth-child(1) {
+    border-right: 1px rgba(255, 255, 255, 0.8) solid;
 }
 
 /*************************************************
@@ -903,6 +910,68 @@ blockquote div.pull-right {
 
 /*************************************************
  ******                                     ******
+ ******               Footer                ******
+ ******                                     ******
+ *************************************************/
+
+footer > div {
+    display: block;
+    position: relative;
+    padding: 15px 0;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    height: 100px;
+}
+
+footer .footer-links {
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+footer ul.footer-links li {
+    list-style: none;
+    cursor: pointer;
+}
+
+footer p.tc {
+    position: absolute;
+    bottom: 10px;
+    left: 40px;
+}
+
+footer > div > a {
+    text-align: center;
+    line-height: 0;
+    font-size: 30px;
+    position: absolute;
+    width: 30px;
+    top: 10px;
+    height: 30px;
+    padding: 0;
+    color: #4294ff;
+}
+
+footer > div > :nth-child(3) {
+    right: 50px;
+}
+
+footer > div > :nth-child(4) {
+    right: 90px;
+}
+
+footer > div > :nth-child(5) {
+    right: 130px;
+}
+
+footer p.copyright {
+    position: absolute;
+    bottom: 10px;
+    right: 50px;
+}
+
+/*************************************************
+ ******                                     ******
  ******         Customer animate            ******
  ******                                     ******
  *************************************************/
@@ -950,5 +1019,21 @@ blockquote div.pull-right {
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #fellows div.testimonial:nth-child(odd) {
+        text-align: right;
+    }
+
+    #fellows div.testimonial:nth-child(even) {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #fellows div.testimonial {
+        text-align: left;
     }
 }

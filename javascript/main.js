@@ -3,19 +3,12 @@
  */
 (function ($) {
     "use strict";
-    //variable declare
+    // variable declare
     var navigationBarHeight = 70;
     var $document = $(document);
-    var movingBGImgs;
-    //function define
-    function moveBackgroundImg(scrollOffset) { //move background image base on window scroll offset.
-        movingBGImgs.each(function () {
-            var element = $(this);
-            var offset = element.offset().top - navigationBarHeight - scrollOffset / 1.5;
-            element.css('background-position', '50% ' + offset + "px");
-        });
-    }
 
+    // function define
+    // layout mentors and fellows
     function lineWrapAnimation(containerId, elementClass) {
         var elementWidth = $(elementClass).width();
         var elementHeight = $(elementClass).height();
@@ -35,6 +28,44 @@
         $(containerId).css({height: elementHeight * max});
     }
 
+    function checkContactUsForm() {
+        var search_str = /^[\w\-\.]+@[\w\-\.]+(\.\w+)+$/;
+        $("#errorName").css("display", "none");
+        $("#errorEmailApply").css("display", "none");
+        $("#errorEmailContact").css("display", "none");
+        $("#contactName")
+            .focus(function () {
+                $(this).css("background-color", "rgba(255, 255, 255, 0.75)");
+            })
+            .blur(function () {
+                $(this).css("background-color", "rgba(255, 255, 255, 0.95)");
+                if ($(this).val().length < 4) {
+                    $("#errorName").css("display", "block");
+                }
+                else {
+                    $("#errorName").css("display", "none");
+                }
+            });
+        $("#contactEmailContact")
+            .focus(function () {
+                $(this).css("background-color", "rgba(255, 255, 255, 0.75)");
+            })
+            .blur(function () {
+                $(this).css("background-color", "rgba(255, 255, 255, 0.95)");
+                var email_val = $(this).val();
+                if (!search_str.test(email_val)) {
+                    $("#errorEmailContact").css("display", "block");
+                }
+                else {
+                    $("#errorEmailContact").css("display", "none");
+                }
+            });
+    }
+
+    function checkRegistrationForm() {
+
+    }
+
     $document.ready(function () {
 
         // set jump
@@ -43,38 +74,11 @@
         // init navigation bar
         $('body').scrollspy({target: '#navbar-example'});
 
-        // register moving back ground image
-        movingBGImgs = $('.cover');
+        // register moving background image
+        $('.cover').moveBackgroundImg(navigationBarHeight);
 
         // show and hide navigation bar
-        $(window).scroll(function () {
-            var $nav = $("#navbar-example");
-            if ($(window).height() - ($(document).scrollTop()) <= navigationBarHeight) {
-                $nav.slideDown(300);
-            }
-            if ($(document).scrollTop() <= navigationBarHeight) {
-                $nav.slideUp(300);
-            }
-            //Moving background image slower than window
-            moveBackgroundImg($document.scrollTop());
-        });
-
-        $(window).resize(function () {
-            lineWrapAnimation('.mentor-container', '.mentor-show');
-            lineWrapAnimation('.fellow-container', '.fellow-show');
-        });
-
-        // faq controller
-        $('.panel-body').hide();
-        $('.panel-heading').on('click', function () {
-            var answer = $(this).siblings();
-            if (answer.is(":hidden")) {
-                answer.slideDown();
-            } else {
-                answer.slideUp();
-            }
-            $(this).parent().siblings().find('.panel-body').slideUp();
-        });
+        $("#navbar-example").toggleNavigationBar(navigationBarHeight);
 
         //init mentors positions
         lineWrapAnimation('.mentor-container', '.mentor-show');
@@ -82,49 +86,14 @@
         //init fellows positions
         lineWrapAnimation('.fellow-container', '.fellow-show');
 
+        $(window).resize(function () {
+            lineWrapAnimation('.mentor-container', '.mentor-show');
+            lineWrapAnimation('.fellow-container', '.fellow-show');
+        });
+
         //contact form validation
-        var search_str = /^[\w\-\.]+@[\w\-\.]+(\.\w+)+$/;
-        $("#errorName").css("display", "none");
-        $("#errorEmailApply").css("display", "none");
-        $("#errorEmailContact").css("display", "none");
-        $("#contactName").focus(function () {
-            $(this).css("background-color", "#FFFFCC");
-        });
-        $("#contactName").blur(function () {
-            $(this).css("background-color", "#D6D6FF");
-            if ($(this).val().length < 4) {
-                $("#errorName").css("display", "block");
-            }
-            else {
-                $("#errorName").css("display", "none");
-            }
-        });
-        $("#contactEmailApply").focus(function () {
-            $(this).css("background-color", "#FFFFCC");
-        });
-        $("#contactEmailApply").blur(function () {
-            $(this).css("background-color", "#D6D6FF");
-            var email_val = $("#contactEmailApply").val();
-            if (!search_str.test(email_val)) {
-                $("#errorEmailApply").css("display", "block");
-            }
-            else {
-                $("#errorEmailApply").css("display", "none");
-            }
-        });
-        $("#contactEmailContact").focus(function () {
-            $(this).css("background-color", "#FFFFCC");
-        });
-        $("#contactEmailContact").blur(function () {
-            $(this).css("background-color", "#D6D6FF");
-            var email_val = $(this).val();
-            if (!search_str.test(email_val)) {
-                $("#errorEmailContact").css("display", "block");
-            }
-            else {
-                $("#errorEmailContact").css("display", "none");
-            }
-        });
+        checkContactUsForm();
+        checkRegistrationForm();
 
         // set arcText for mentors' name
         $('h2.mentorsName').arctext({radius: 120, dir: -1});
@@ -164,5 +133,29 @@
             }
         });
 
+    };
+
+    $.fn.toggleNavigationBar = function (height) {
+        var $nav = $(this);
+        $(window).scroll(function () {
+            if ($(window).height() - ($(document).scrollTop()) <= height) {
+                $nav.slideDown(300);
+            }
+            if ($(document).scrollTop() <= height) {
+                $nav.slideUp(300);
+            }
+        });
+    };
+
+    $.fn.moveBackgroundImg = function (height) { //move background image base on window scroll offset.
+        var $this = $(this);
+        $(window).scroll(function () {
+            var scrollOffset = $document.scrollTop();
+            $this.each(function () {
+                var element = $(this);
+                var offset = element.offset().top - height - scrollOffset / 1.5;
+                element.css('background-position', '50% ' + offset + "px");
+            });
+        });
     };
 })(jQuery, 'smartresize');
