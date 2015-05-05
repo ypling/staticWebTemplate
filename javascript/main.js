@@ -63,7 +63,33 @@
     }
 
     function checkRegistrationForm() {
+        var $radioBtn = $('input[name="academy_type"]');
+        var $info = $radioBtn.closest('form').find('.radio-btn-help');
+        var checkedRadioBtn = 'brilentBootcamp';
+        var regForEdu = /.edu$/i;
 
+        $radioBtn.on('change', function () {
+            checkedRadioBtn = $(this).val();
+            infoUpdate($info);
+        });
+
+        $('#email').on('change', function () {
+            infoUpdate($info);
+        });
+
+        function infoUpdate(info) {
+            var money = 0;
+            info.empty();
+            if (checkedRadioBtn === 'onlineAcademy') {
+                money = regForEdu.test($('#email').val()) ? 199.00 : 299.00;
+                info.append("Online Academy cost $299.00 for regular, $199.00 for Students." +
+                "<br>*Student means email is ended with .edu.");
+            } else {
+                money = 0;
+                info.append('Brilent Bootcamp is FREE!');
+            }
+            info.append("<br>Now you need pay: " + money);
+        }
     }
 
     $document.ready(function () {
@@ -124,12 +150,18 @@
 
             if (offset) {
                 toMove = parseInt(offset);
-                $htmlBody.stop(true, false).animate({scrollTop: ($(target).offset().top + toMove)}, allOptions.speed);
+                $htmlBody.stop(true, false).animate({scrollTop: ($(target).offset().top + toMove)}, allOptions.speed, function () {
+                    $("#bs-example-navbar-collapse-1").collapse('hide');
+                });
             } else if (position) {
                 toMove = parseInt(position);
-                $htmlBody.stop(true, false).animate({scrollTop: toMove}, allOptions.speed);
+                $htmlBody.stop(true, false).animate({scrollTop: toMove}, allOptions.speed, function () {
+                    $("#bs-example-navbar-collapse-1").collapse('hide');
+                });
             } else {
-                $htmlBody.stop(true, false).animate({scrollTop: ($(target).offset().top)}, allOptions.speed);
+                $htmlBody.stop(true, false).animate({scrollTop: ($(target).offset().top)}, allOptions.speed, function () {
+                    $("#bs-example-navbar-collapse-1").collapse('hide');
+                });
             }
         });
 
