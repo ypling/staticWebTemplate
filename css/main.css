@@ -98,7 +98,7 @@ button i {
 }
 
 .nav > li > a {
-    padding: 15px 0;
+    padding: 25px 15px 15px 15px;
     cursor: pointer;
     height: 70px;
     text-align: center;
@@ -250,9 +250,20 @@ section div.apply-button button.btn-apply {
     color: #4294ff;
 }
 
+.section-content-detail h3 {
+    margin-left: 80px;
+    height: auto;
+    padding: 0 15px;
+    line-height: 2.3;
+    margin-bottom: 0;
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
 .section-content-detail p {
     margin-left: 80px;
     height: auto;
+    font-size: 1.0em;
 }
 
 /* Section-1 */
@@ -265,8 +276,7 @@ section div.apply-button button.btn-apply {
 }
 
 #bootcamp p.section-content {
-    line-height: 2.5;
-    margin-top: 15px;
+    line-height: 2.3;
 }
 
 #bootcamp h2.sub-title {
@@ -362,7 +372,7 @@ section div.apply-button button.btn-apply {
     position: absolute;
     float: none;
     width: 275px;
-    height: 320px;
+    height: 370px;
 }
 
 /* section-3 */
@@ -381,13 +391,14 @@ section div.apply-button button.btn-apply {
 
 #fellows.section-people p.job-title {
     position: absolute;
-    top: 45px;
-    left: 120px;
+    top: 35px;
+    left: 110px;
     font-size: 0.75em;
     font-weight: 500;
     padding-bottom: 10px;
     margin: 0 auto 10px;
     text-align: left;
+    line-height: 1.5;
 }
 
 #fellows.section-people .pic {
@@ -423,9 +434,10 @@ section div.apply-button button.btn-apply {
     height: auto;
     position: absolute;
     top: 0;
-    left: 120px;
-    margin-top: 10px;
-    padding-bottom: 10px;
+    left: 110px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
     border-bottom: 1px #e0e0e0 solid;
 }
 
@@ -533,21 +545,20 @@ section div.apply-button button.btn-apply {
 #contact iframe.google-map-iframe {
     margin: 0;
     width: 100%;
-    height: 302px;
+    height: 366px;
     border: 0 none;
 }
 
 #contact div.g-recaptcha {
     background-color: rgba(255, 255, 255, 0.9);
     margin-right: 10px;
-    width: 100%;
-    height: 75px;
+    width: 302px;
+    height: 76px;
     overflow: hidden;
 }
 
 #contact .btn-brilent {
     text-align: center;
-    height: 75px;
     border: 2px #fefefe solid;
     color: #4294ff;
     text-shadow: none;
@@ -563,11 +574,6 @@ section div.apply-button button.btn-apply {
     border: 2px #eeeeee solid;
     text-shadow: none;
     background: #4294ff;
-}
-
-#contact div.container > div.row:nth-child(2) {
-    padding-bottom: 15px;
-    border-bottom: 1px rgba(255, 255, 255, 0.8) solid;
 }
 
 #contact div.row > div.col-xs-6 {
@@ -920,7 +926,7 @@ footer > div {
     padding: 15px 0;
     font-size: 1.4rem;
     line-height: 1.5;
-    height: 100px;
+    height: 120px;
 }
 
 footer .footer-links {
@@ -968,6 +974,26 @@ footer p.copyright {
     position: absolute;
     bottom: 10px;
     right: 50px;
+}
+
+footer div.address {
+    position: absolute;
+    top: 10px;
+    left: 28%;
+    width: 310px;
+    height: 90px;
+}
+
+footer div.address h3 {
+    margin: 0 0 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+footer div.address p {
+    margin: 0 0 5px;
+    font-size: 1em;
+    line-height: 1.7;
 }
 
 /*************************************************
