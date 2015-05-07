@@ -68,29 +68,28 @@
         var $radioBtn = $('input[name="academy_type"]');
         var $info = $radioBtn.closest('form').find('.radio-btn-help');
         var checkedRadioBtn = 'brilentBootcamp';
-        var regForEdu = /.edu$/i;
+
+        $info.css({'font-size':'0.8em','line-height':'1.2'});
 
         $radioBtn.on('change', function () {
+            var $label = $(this).parent();
             checkedRadioBtn = $(this).val();
-            infoUpdate($info);
+            infoUpdate($info, $label);
         });
 
         $('#email').on('change', function () {
             infoUpdate($info);
         });
 
-        function infoUpdate(info) {
-            var money = 0;
+        function infoUpdate(info, label) {
             info.empty();
             if (checkedRadioBtn === 'onlineAcademy') {
-                money = regForEdu.test($('#email').val()) ? 199.00 : 299.00;
-                info.append("Online Academy cost $299.00 for regular, $199.00 for Students." +
-                "<br>*Student means email is ended with .edu.");
+                info.append("Regular price: $299.00<br>Student price: $199.00" +
+                "<br><span style=\"font-size: 0.65em;\">* In order to get the student price, you need to register with a student email address(ending with \".edu\")." +
+                "<br>* One email address can only be used for once.</span>");
             } else {
-                money = 0;
                 info.append('Brilent Bootcamp is FREE!');
             }
-            info.append("<br>Now you need pay: " + money);
         }
     }
 
