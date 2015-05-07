@@ -393,7 +393,7 @@ section div.apply-button button.btn-apply {
 #fellows.section-people p.job-title {
     position: absolute;
     top: 35px;
-    left: 110px;
+    left: 125px;
     font-size: 0.75em;
     font-weight: 500;
     padding-bottom: 10px;
@@ -435,28 +435,28 @@ section div.apply-button button.btn-apply {
     height: auto;
     position: absolute;
     top: 0;
-    left: 110px;
+    left: 125px;
     margin-top: 5px;
     margin-bottom: 5px;
     padding-bottom: 5px;
     border-bottom: 1px #e0e0e0 solid;
 }
 
-#fellows.section-people div.company {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    width: 30px;
-    height: 25px;
-    text-decoration: none;
-    background: #fff;
-}
+/*#fellows.section-people div.company {*/
+    /*position: absolute;*/
+    /*right: 10px;*/
+    /*top: 10px;*/
+    /*width: 30px;*/
+    /*height: 25px;*/
+    /*text-decoration: none;*/
+    /*background: #fff;*/
+/*}*/
 
-#fellows.section-people div.company i {
-    font-size: 30px;
-    margin-top: -7px;
-    margin-left: -7px;
-}
+/*#fellows.section-people div.company i {*/
+    /*font-size: 30px;*/
+    /*margin-top: -7px;*/
+    /*margin-left: -7px;*/
+/*}*/
 
 #fellows .fellow-container {
     position: relative;
@@ -519,11 +519,12 @@ section div.apply-button button.btn-apply {
     margin-bottom: 30px;
 }
 
-#academy div.intro-video-container{
+#academy div.intro-video-container {
     height: 470px;
     background-color: #f8f8f8;
 }
-#academy div.intro-video{
+
+#academy div.intro-video {
     max-height: 300px;
     border: 1px solid #e0e0e0;
     margin: 0 auto;
@@ -540,7 +541,7 @@ section div.apply-button button.btn-apply {
     margin-bottom: 20px;
 }
 
-#academy .section-content-no-title{
+#academy .section-content-no-title {
     margin-top: 30px;
 }
 
@@ -874,34 +875,34 @@ blockquote {
 }
 
 /*blockquote:before {*/
-    /*position: absolute;*/
-    /*top: 10px;*/
-    /*left: 10px;*/
-    /*color: #fff;*/
-    /*content: '\f10d';*/
-    /*font-family: FontAwesome, sans-serif;*/
-    /*font-weight: normal;*/
-    /*font-size: 44px;*/
-    /*font-style: normal;*/
-    /*display: inline-block;*/
-    /*text-decoration: inherit;*/
-    /*margin-right: .5em;*/
+/*position: absolute;*/
+/*top: 10px;*/
+/*left: 10px;*/
+/*color: #fff;*/
+/*content: '\f10d';*/
+/*font-family: FontAwesome, sans-serif;*/
+/*font-weight: normal;*/
+/*font-size: 44px;*/
+/*font-style: normal;*/
+/*display: inline-block;*/
+/*text-decoration: inherit;*/
+/*margin-right: .5em;*/
 
 /*}*/
 
 /*blockquote:after {*/
-    /*position: absolute;*/
-    /*bottom: 8px;*/
-    /*right: 10px;*/
-    /*color: #fff;*/
-    /*content: '\f10e';*/
-    /*font-family: FontAwesome, sans-serif;*/
-    /*font-weight: normal;*/
-    /*font-size: 44px;*/
-    /*font-style: normal;*/
-    /*display: inline-block;*/
-    /*text-decoration: inherit;*/
-    /*margin-right: .5em;*/
+/*position: absolute;*/
+/*bottom: 8px;*/
+/*right: 10px;*/
+/*color: #fff;*/
+/*content: '\f10e';*/
+/*font-family: FontAwesome, sans-serif;*/
+/*font-weight: normal;*/
+/*font-size: 44px;*/
+/*font-style: normal;*/
+/*display: inline-block;*/
+/*text-decoration: inherit;*/
+/*margin-right: .5em;*/
 /*}*/
 
 /* Cover font */
@@ -1059,6 +1060,34 @@ footer div.address p {
 
 .icon-transition {
     background: no-repeat url("../images/icons/Transition.png") center center;
+}
+
+/*************************************************
+ ******                                     ******
+ ******           modal detail              ******
+ ******                                     ******
+ *************************************************/
+
+#applyNowModal {
+
+}
+
+#applyNowModal div.form-group label.btn-brilent {
+    border: 2px #e0e0e0 solid;
+    color: #222;
+    text-shadow: none;
+    background: #e0e0e0;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#applyNowModal div.form-group label.btn-brilent:hover, #applyNowModal div.form-group label.btn-brilent:focus, #applyNowModal div.form-group label.btn-brilent.active {
+    border: 2px #4294ff solid;
+    color: #fefefe;
+    text-shadow: none;
+    background: #4294ff;
 }
 
 /*************************************************
