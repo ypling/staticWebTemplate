@@ -69,23 +69,22 @@
         var $info = $radioBtn.closest('form').find('.radio-btn-help');
         var checkedRadioBtn = 'brilentBootcamp';
 
-        $info.css({'font-size':'0.8em','line-height':'1.2'});
+        $info.css({'font-size': '0.8em', 'line-height': '1.8'});
 
         $radioBtn.on('change', function () {
-            var $label = $(this).parent();
             checkedRadioBtn = $(this).val();
-            infoUpdate($info, $label);
+            infoUpdate($info);
         });
 
         $('#email').on('change', function () {
             infoUpdate($info);
         });
 
-        function infoUpdate(info, label) {
+        function infoUpdate(info) {
             info.empty();
             if (checkedRadioBtn === 'onlineAcademy') {
-                info.append("Regular price: $299.00<br>Student price: $199.00" +
-                "<br><span style=\"font-size: 0.65em;\">* In order to get the student price, you need to register with a student email address(ending with \".edu\")." +
+                info.append("Regular price: $299.00<br>Student price<sup>*</sup>: $199.00" +
+                "<br><br><span style=\"font-size: 0.65em; line-height: 1.1em;\">* In order to get the student price, you need to register with a student email address(ending with \".edu\")." +
                 "<br>* One email address can only be used for once.</span>");
             } else {
                 info.append('Brilent Bootcamp is FREE!');
