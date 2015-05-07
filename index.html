@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title></title>
-    <!-- font -->
-    <link rel="stylesheet" type="text/css" href="addOn/cdnLocalCopy/fonts/openSans.css">
-    <!-- Bootstrap 3.3.4 css file -->
-    <link rel="stylesheet" href="addOn/cdnLocalCopy/Bootstrap/bootstrap.css">
-    <!-- Font Awesome 4.3.0 css file -->
-    <link rel="stylesheet" href="addOn/cdnLocalCopy/Font-awesome/font-awesome.css">
     <!--&lt;!&ndash; font &ndash;&gt;-->
-    <!--<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800" rel="stylesheet" type="text/css" />-->
-    <!--&lt;!&ndash; Latest compiled and minified CSS &ndash;&gt;-->
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="addOn/cdnLocalCopy/fonts/openSans.css">-->
+    <!--&lt;!&ndash; Bootstrap 3.3.4 css file &ndash;&gt;-->
+    <!--<link rel="stylesheet" href="addOn/cdnLocalCopy/Bootstrap/bootstrap.css">-->
     <!--&lt;!&ndash; Font Awesome 4.3.0 css file &ndash;&gt;-->
-    <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">-->
+    <!--<link rel="stylesheet" href="addOn/cdnLocalCopy/Font-awesome/font-awesome.css">-->
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800" rel="stylesheet" type="text/css" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- Font Awesome 4.3.0 css file -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <!-- Customer css file -->
     <link rel="stylesheet" href="css/main.css">
@@ -84,13 +84,13 @@
 <!-- Start of cover -->
 <section id="main-header" class="cover">
     <div class="login">
-        <a href="http://54.67.61.190:8080/olat" target="_blank">Login Here</a>
+        <a class="btn btn-brilent" href="http://54.67.61.190:8080/olat" target="_blank">Login Here</a>
     </div>
     <div class="vertical">
         <div class="main-header-content inner">
             <h1 class="page-title">Brilent Academy</h1>
 
-            <p class="page-description"><i>A brilliant boost to your career in Data Science and Analytics</i></p>
+            <p class="page-description">A brilliant boost to your career in Data Science and Analytics</p>
 
             <div class="ghost-button-group">
                 <label class="btn button scroll-go-to" data-target="#bootcamp">
@@ -98,7 +98,7 @@
                     <span class="line line-left"></span>
                     <span class="line line-bottom"></span>
                     <span class="line line-right"></span>
-                    Brilent Bootcamp
+                    In-Person Bootcamp
                 </label>
                 <label class="btn button scroll-go-to" data-target="#academy">
                     <span class="line line-top"></span>
@@ -125,7 +125,7 @@
         <div class="row">
             <div class="col-md-6 col-sm-12">
                 <p class="section-content">
-                    <strong>Brilent Bootcamp</strong> is a <span class="font-lg">6-week</span> data analytics training
+                    <strong>Brilent Bootcamp</strong> is a 6-week data analytics training
                     program where you will get the opportunity to network and be mentored by seasoned data science
                     professionals on real-world projects.
                 </p>
@@ -137,7 +137,7 @@
 
                 <p class="section-content">
                     Our next bootcamp will be offered in both the <br>
-                    <span class="font-lg">San Francisco Silicon Valley</span> and <span class="font-lg">Boston areas</span>.
+                    San Francisco Silicon Valley and Boston areas.
                 </p>
                 <button type="button" class="btn btn-brilent visible-sm visible-xs btn-video" data-toggle="modal"
                         data-target="#introVideoModal">
@@ -166,7 +166,7 @@
                 <div class="row">
                     <div class="col-md-6 col-sm-12 section-content-left">
                         <div class="section-content-detail">
-                            <i class="fa fa-sign-in"></i>
+                            <i class="icon icon-mentors"></i>
                             <h3>Full-time & part-time expert mentors</h3>
                             <p class="section-content">
                                 Work alongside former and current data scientists from Facebook, LinkedIn, Google,
@@ -176,7 +176,7 @@
                     </div>
                     <div class="col-md-6 col-sm-12 section-content-right">
                         <div class="section-content-detail">
-                            <i class="fa fa-sign-in"></i>
+                            <i class="icon icon-projects"></i>
                             <h3>Real-world projects</h3>
                             <p class="section-content">
                                 Build your portfolio and solve real-world problems (some are from companies that have an
@@ -188,7 +188,7 @@
                 <div class="row">
                     <div class="col-md-6 col-sm-12 section-content-left">
                         <div class="section-content-detail">
-                            <i class="fa fa-book"></i>
+                            <i class="icon icon-skills"></i>
                             <h3>Real industry skills</h3>
                             <p class="section-content">
                                 We help you develop problem-solving, critical thinking, and business presentation
@@ -198,7 +198,7 @@
                     </div>
                     <div class="col-md-6 col-sm-12 section-content-right">
                         <div class="section-content-detail">
-                            <i class="fa fa-book"></i>
+                            <i class="icon icon-resources"></i>
                             <h3>Exclusive resources</h3>
                             <p class="section-content">
                                 Have unlimited access to our online resources.
@@ -209,7 +209,7 @@
                 <div class="row">
                     <div class="col-md-6 col-sm-12 section-content-left">
                         <div class="section-content-detail">
-                            <i class="fa fa-graduation-cap"></i>
+                            <i class="icon icon-tuition"></i>
                             <h3>Free tuition</h3>
                             <p class="section-content">
                                 The program is free for admitted fellows – no hidden cost! Employers pay a tuition fee
@@ -219,7 +219,7 @@
                     </div>
                     <div class="col-md-6 col-sm-12 section-content-right">
                         <div class="section-content-detail">
-                            <i class="fa fa-graduation-cap"></i>
+                            <i class="icon icon-no-phd"></i>
                             <h3>No PhD required</h3>
                             <p class="section-content">
                                 We have worked with plenty of superstar data scientists who don’t have a PhD. We
@@ -231,7 +231,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col-sm-offset-1 col-sm-10 col-xs-offset-0 col-xs-12">
                 <p>
                     Here are just a few awesome things our fellows have built:
                     <a target="_blank" href="sample_projects/Brilent%20-%20Dalia.pdf">Dalia</a> and
@@ -240,46 +240,52 @@
             </div>
         </div>
         <div class="row">
-            <!-- Fellows build awesome things -->
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                </ol>
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <img src="images/sample_projects_images/Brilent%20-%20Dalia.jpg" alt="First link web">
-                        <div class="carousel-caption">
-                            <h3></h3>
-                            <p></p>
+            <div class="col-sm-offset-1 col-sm-10 col-xs-offset-0 col-xs-12">
+                <!-- Fellows build awesome things -->
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <a target="_blank" href="sample_projects/Brilent%20-%20Dalia.pdf">
+                                <img src="images/sample_projects_images/Brilent%20-%20Dalia.jpg" alt="First link web">
+                                <div class="carousel-caption">
+                                    <h3></h3>
+                                    <p></p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a target="_blank" href="sample_projects/Brilent%20-%20Analytics%20Job%20Demand.pdf">
+                                <img src="images/sample_projects_images/Brilent%20-%20Analytics%20Job%20Demand.jpg"
+                                     alt="Second link web">
+                                <div class="carousel-caption">
+                                    <h3></h3>
+                                    <p></p>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                    <div class="item">
-                        <img src="images/sample_projects_images/Brilent%20-%20Analytics%20Job%20Demand.jpg" alt="Second link web">
-                        <div class="carousel-caption">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                    </div>
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button"
+                       data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button"
+                       data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
-                <!-- Controls -->
-                <a class="left carousel-control" href="#carousel-example-generic" role="button"
-                   data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#carousel-example-generic" role="button"
-                   data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
             </div>
         </div>
         <div class="row apply-button">
             <button class="btn btn-brilent btn-apply" data-toggle="modal" data-target="#applyNowModal">
-                <i class="fa fa-pencil-square-o"></i>
                 APPLY NOW
             </button>
             <button class="btn btn-link btn-block scroll-go-to" data-target="#contact">
@@ -457,7 +463,6 @@
         </div>
         <div class="row apply-button">
             <button class="btn btn-brilent btn-apply" data-toggle="modal" data-target="#applyNowModal">
-                <i class="fa fa-pencil-square-o"></i>
                 APPLY NOW
             </button>
             <button class="btn btn-link btn-block scroll-go-to" data-target="#contact">
@@ -480,52 +485,42 @@
                 <div class="fellow-show">
                     <div class="fellows">
                         <div class="pic">
-                            <img src="images/fellows/yihua.png" data-info="FACEBOOK -> Former Data Scientist Manager">
+                            <img src="images/fellows/Ellie.jpg" data-info="ESURANCE -> Pricing Data Analyst">
                         </div>
-                        <h2 class="fellowsName">Yihua Liao</h2>
-                        <p class="job-title">&nbsp;&nbsp;&nbsp;&nbsp;Former Data Scientist Manager,
-                            <br><br><i class="fa fa-at"></i> FACEBOOK</p>
+                        <h2 class="fellowsName">Ellie Zhao</h2>
+                        <p class="job-title">&nbsp;&nbsp;&nbsp;&nbsp;Pricing Data Analyst,
+                            <br><br><i class="fa fa-at"></i> ESURANCE</p>
                     </div>
                 </div>
                 <div class="fellow-show">
                     <div class="fellows">
                         <div class="pic">
-                            <img src="images/fellows/yihua.png" data-info="FACEBOOK -> Former Data Scientist Manager">
+                            <img src="images/fellows/Andy.jpg" data-info="PAYPAL -> Business Analytics (Analytics Manager)">
                         </div>
-                        <h2 class="fellowsName">Yihua Liao</h2>
-                        <p class="job-title">&nbsp;&nbsp;&nbsp;&nbsp;Former Data Scientist Manager,
-                            <br><br><i class="fa fa-at"></i> FACEBOOK</p>
+                        <h2 class="fellowsName">Andy Wu</h2>
+                        <p class="job-title">&nbsp;&nbsp;&nbsp;&nbsp;Business Analytics
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;(Analytics Manager),
+                            <br><i class="fa fa-at"></i> PAYPAL</p>
                     </div>
                 </div>
                 <div class="fellow-show">
                     <div class="fellows">
                         <div class="pic">
-                            <img src="images/fellows/yihua.png" data-info="FACEBOOK -> Former Data Scientist Manager">
+                            <img src="images/fellows/FanYe.jpg" data-info="GOOGLE -> Operations Data Analyst">
                         </div>
-                        <h2 class="fellowsName">Yihua Liao</h2>
-                        <p class="job-title">&nbsp;&nbsp;&nbsp;&nbsp;Former Data Scientist Manager,
-                            <br><br><i class="fa fa-at"></i> FACEBOOK</p>
+                        <h2 class="fellowsName">Fan Ye</h2>
+                        <p class="job-title">&nbsp;&nbsp;&nbsp;&nbsp;Operations Data Analyst,
+                            <br><br><i class="fa fa-at"></i> GOOGLE Express</p>
                     </div>
                 </div>
                 <div class="fellow-show">
                     <div class="fellows">
                         <div class="pic">
-                            <img src="images/fellows/edwoo.png" data-info="SHUTTERFLY -> Senior Director of Marketing Analytics">
+                            <img src="images/fellows/Bhabani.jpg" data-info="Volkswagen of America, Inc -> Artificial Intelligence Engineer">
                         </div>
-                        <h2 class="fellowsName">Ed Woo</h2>
-                        <p class="job-title">&nbsp;&nbsp;&nbsp;&nbsp;Senior Director of
-                            <br>&nbsp;&nbsp;&nbsp;&nbsp;Marketing Analytics,
-                            <br><i class="fa fa-at"></i> SHUTTERFLY</p>
-                    </div>
-                </div>
-                <div class="fellow-show">
-                    <div class="fellows">
-                        <div class="pic">
-                            <img src="images/fellows/yihua.png" data-info="FACEBOOK -> Former Data Scientist Manager">
-                        </div>
-                        <h2 class="fellowsName">Yihua Liao</h2>
-                        <p class="job-title">&nbsp;&nbsp;&nbsp;&nbsp;Former Data Scientist Manager,
-                            <br><br><i class="fa fa-at"></i> FACEBOOK</p>
+                        <h2 class="fellowsName">Bhabani Nayak</h2>
+                        <p class="job-title">&nbsp;&nbsp;&nbsp;&nbsp;Artificial Intelligence Engineer,
+                            <br><br><i class="fa fa-at"></i> Volkswagen of America, Inc</p>
                     </div>
                 </div>
             </div>
@@ -606,7 +601,6 @@
         </div>
         <div class="row apply-button">
             <button class="btn btn-brilent btn-apply" data-toggle="modal" data-target="#applyNowModal">
-                <i class="fa fa-pencil-square-o"></i>
                 APPLY NOW
             </button>
             <button class="btn btn-link btn-block scroll-go-to" data-target="#contact">
@@ -624,10 +618,8 @@
         <div class="row">
             <div class="cover-content">
                 <blockquote>
-                    <div class="pull-left">Your bridge to a career in</div>
-                    <br>
-                    <div class="pull-right">Data Science and Analytics</div>
-                    <br>
+                    Your bridge to a career in
+                    Data Science and Analytics
                 </blockquote>
             </div>
         </div>
@@ -642,12 +634,38 @@
             <h1 class="no-subtitle">Online Academy</h1>
         </div>
         <div class="row section-content-summary">
+            <div class="col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0">
             <p>
                 Can’t commit 6 weeks of your time? Not ready for the bootcamp? No problem.
                 <br>
                 You may want to join Brilent’s Online Academy, which offers the expertise and professional network you
                 need to succeed in Data Science and Analytics.
             </p>
+            </div>
+        </div>
+        <div class="row section-video">
+            <div class="col-sm-6 col-xs-12">
+                <div class="thumbnail intro-video-container">
+                    <div class="embed-responsive embed-responsive-16by9 intro-video">
+                        <iframe src="https://www.youtube.com/embed/1oO9XAhYDMs" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="caption">
+                        <h3>Introduction to MySQL </h3>
+                        <p>Relational database concepts and common MySQL techniques to manipulate data and extract information from tables.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <div class="thumbnail intro-video-container">
+                    <div class="embed-responsive embed-responsive-16by9 intro-video">
+                        <iframe src="https://www.youtube.com/embed/9KsmSGO1Qfw" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="caption">
+                        <h3>Introduction to R</h3>
+                        <p>Data types and operations, control statements and functions, using R for data munging, graphics and statistical analysis.</p>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="row">
             <div class="col-xs-12 title">
@@ -656,7 +674,7 @@
             <div class="row">
                 <div class="col-md-6 col-sm-12 section-content-left">
                     <div class="section-content-detail">
-                        <i class="fa fa-sign-in"></i>
+                        <i class="icon icon-unlimited-access"></i>
                         <h3>Unlimited access</h3>
                         <p class="section-content">
                             Learn what you want, when you want, from our entire online course library.
@@ -665,7 +683,7 @@
                 </div>
                 <div class="col-md-6 col-sm-12 section-content-right">
                     <div class="section-content-detail">
-                        <i class="fa fa-book"></i>
+                        <i class="icon icon-content"></i>
                         <h3>Rich content</h3>
                         <p class="section-content">
                             Courses cover core technical skills (SQL, R, statistical methods, and so on) and real data
@@ -677,7 +695,7 @@
             <div class="row">
                 <div class="col-md-6 col-sm-12 section-content-left">
                     <div class="section-content-detail">
-                        <i class="fa fa-graduation-cap"></i>
+                        <i class="icon icon-seasoned-mentor"></i>
                         <h3>Seasoned mentors</h3>
                         <p class="section-content">
                             Watch and learn from the experts of leading companies like Facebook, Google, LinkedIn,
@@ -688,7 +706,7 @@
                 </div>
                 <div class="col-md-6 col-sm-12 section-content-right">
                     <div class="section-content-detail">
-                        <i class="fa fa-desktop"></i>
+                        <i class="icon icon-online-community"></i>
                         <h3>Online community</h3>
                         <p class="section-content">
                             Have access to exclusive job/internship opportunities, and continuous advice from mentors to
@@ -703,8 +721,8 @@
             <div class="row">
                 <div class="col-md-6 col-sm-12 section-content-left">
                     <div class="section-content-detail">
-                        <i class="fa fa-user-plus"></i>
-                        <p class="section-content">
+                        <i class="icon icon-students"></i>
+                        <p class="section-content section-content-no-title">
                             We welcome all students (undergrads, masters, and PhDs) and postdocs with a quantitative
                             background (in Physics, Statistics, Math, Chemistry, Biology, Engineering, Operations
                             Research, Business, Economics, Management Sciences, etc.), who are looking to enter the
@@ -714,8 +732,8 @@
                 </div>
                 <div class="col-md-6 col-sm-12 section-content-right">
                     <div class="section-content-detail">
-                        <i class="fa fa-exchange"></i>
-                        <p class="section-content">
+                        <i class="icon icon-transition"></i>
+                        <p class="section-content section-content-no-title">
                             Professionals seeking to change or advance their careers: those early in their career or
                             experienced career professionals who are looking to switch to Data Science and Analytics.
                         </p>
@@ -725,7 +743,6 @@
         </div>
         <div class="row apply-button">
             <button class="btn btn-brilent btn-apply" data-toggle="modal" data-target="#applyNowModal">
-                <i class="fa fa-pencil-square-o"></i>
                 APPLY NOW
             </button>
             <button class="btn btn-link btn-block scroll-go-to" data-target="#contact">
@@ -1033,17 +1050,17 @@
 </div>
 
 <!-- JavaScript files -->
-<!-- jQuery 2.1.3 -->
-<script src="addOn/cdnLocalCopy/jQuery/jquery-2.1.3.js"></script>
-<!-- Bootstrap js file 3.3.4 -->
-<script src="addOn/cdnLocalCopy/Bootstrap/bootstrap.js"></script>
-
-
 <!--&lt;!&ndash; jQuery 2.1.3 &ndash;&gt;-->
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
+<!--<script src="addOn/cdnLocalCopy/jQuery/jquery-2.1.3.js"></script>-->
+<!--&lt;!&ndash; Bootstrap js file 3.3.4 &ndash;&gt;-->
+<!--<script src="addOn/cdnLocalCopy/Bootstrap/bootstrap.js"></script>-->
 
-<!--&lt;!&ndash; Latest compiled and minified JavaScript &ndash;&gt;-->
-<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>-->
+
+<!-- jQuery 2.1.3 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
 <!-- ArcText -->
 <script src="addOn/arcText/jquery.arctext.js"></script>

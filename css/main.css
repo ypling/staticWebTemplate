@@ -105,8 +105,9 @@ button i {
 }
 
 .nav .navbar-header a {
+    height: 70px;
     width: 180px;
-    background: url("../images/logo.png") no-repeat center center;
+    background: url("../images/Academy_Logo_Black.png") no-repeat center center;
     background-size: 150px auto;
 }
 
@@ -199,7 +200,7 @@ section .container:after {
 .section-block h2.sub-title:after, .section-block h1.no-subtitle:after {
     background-color: #4294ff;
     display: block;
-    height: 1px;
+    height: 3px;
     width: 100px;
     content: '';
     position: absolute;
@@ -276,7 +277,7 @@ section div.apply-button button.btn-apply {
 }
 
 #bootcamp p.section-content {
-    line-height: 2.3;
+    line-height: 2.0;
 }
 
 #bootcamp h2.sub-title {
@@ -514,8 +515,18 @@ section div.apply-button button.btn-apply {
     text-align: center;
     font-size: 1.1em;
     padding-bottom: 15px;
-    border-bottom: 1px solid #888;
+    /*border-bottom: 1px solid #888;*/
     margin-bottom: 30px;
+}
+
+#academy div.intro-video-container{
+    height: 470px;
+    background-color: #f8f8f8;
+}
+#academy div.intro-video{
+    max-height: 300px;
+    border: 1px solid #e0e0e0;
+    margin: 0 auto;
 }
 
 #academy i {
@@ -525,6 +536,11 @@ section div.apply-button button.btn-apply {
 #academy h4 {
     font-size: 1.2em;
     font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#academy .section-content-no-title{
     margin-top: 30px;
 }
 
@@ -625,7 +641,8 @@ section div.apply-button button.btn-apply {
     height: 375px;
     margin-top: 70px;
     margin-bottom: -70px;
-    background-image: url('../images/covers/coaches.jpg');
+    background-size: cover;
+    background: url('../images/covers/coaches.jpg') fixed center center;
 }
 
 .cover-content {
@@ -662,25 +679,12 @@ section div.apply-button button.btn-apply {
     width: 150px;
     height: 38px;
     padding: 0 20px;
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    color: #fff;
     text-align: center;
-    font-size: 12px;
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 600;
     line-height: 35px;
     white-space: nowrap;
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
-}
-
-#main-header div.login a:hover {
-    font-size: 16px;
-    color: #4294ff;
-    border-color: #fff;
-    background: rgba(255, 255, 255, 0.8);
-    transition: all 0.1s ease;
 }
 
 /* Main cover layout */
@@ -715,7 +719,7 @@ section div.apply-button button.btn-apply {
 }
 
 .inner .page-description {
-    margin: 0;
+    margin: 0 0 40px 0;
     font-size: 2rem;
     line-height: 1.5em;
     font-weight: 400;
@@ -869,36 +873,36 @@ blockquote {
     width: 100%;
 }
 
-blockquote:before {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    color: #fff;
-    content: '\f10d';
-    font-family: FontAwesome, sans-serif;
-    font-weight: normal;
-    font-size: 44px;
-    font-style: normal;
-    display: inline-block;
-    text-decoration: inherit;
-    margin-right: .5em;
+/*blockquote:before {*/
+    /*position: absolute;*/
+    /*top: 10px;*/
+    /*left: 10px;*/
+    /*color: #fff;*/
+    /*content: '\f10d';*/
+    /*font-family: FontAwesome, sans-serif;*/
+    /*font-weight: normal;*/
+    /*font-size: 44px;*/
+    /*font-style: normal;*/
+    /*display: inline-block;*/
+    /*text-decoration: inherit;*/
+    /*margin-right: .5em;*/
 
-}
+/*}*/
 
-blockquote:after {
-    position: absolute;
-    bottom: 8px;
-    right: 10px;
-    color: #fff;
-    content: '\f10e';
-    font-family: FontAwesome, sans-serif;
-    font-weight: normal;
-    font-size: 44px;
-    font-style: normal;
-    display: inline-block;
-    text-decoration: inherit;
-    margin-right: .5em;
-}
+/*blockquote:after {*/
+    /*position: absolute;*/
+    /*bottom: 8px;*/
+    /*right: 10px;*/
+    /*color: #fff;*/
+    /*content: '\f10e';*/
+    /*font-family: FontAwesome, sans-serif;*/
+    /*font-weight: normal;*/
+    /*font-size: 44px;*/
+    /*font-style: normal;*/
+    /*display: inline-block;*/
+    /*text-decoration: inherit;*/
+    /*margin-right: .5em;*/
+/*}*/
 
 /* Cover font */
 blockquote small {
@@ -994,6 +998,67 @@ footer div.address p {
     margin: 0 0 5px;
     font-size: 1em;
     line-height: 1.7;
+}
+
+/*************************************************
+ ******                                     ******
+ ******               icons                 ******
+ ******                                     ******
+ *************************************************/
+
+/* icon */
+.icon {
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+}
+
+.icon-mentors {
+    background: no-repeat url("../images/icons/Mentor.png") center center;
+}
+
+.icon-no-phd {
+    background: no-repeat url("../images/icons/No-PhD.png") center center;
+}
+
+.icon-projects {
+    background: no-repeat url("../images/icons/Projects.png") center center;
+}
+
+.icon-resources {
+    background: no-repeat url("../images/icons/Resources.png") center center;
+}
+
+.icon-skills {
+    background: no-repeat url("../images/icons/Skills.png") center center;
+}
+
+.icon-tuition {
+    background: no-repeat url("../images/icons/Tuition.png") center center;
+}
+
+.icon-content {
+    background: no-repeat url("../images/icons/Content.png") center center;
+}
+
+.icon-online-community {
+    background: no-repeat url("../images/icons/Online-Community.png") center center;
+}
+
+.icon-seasoned-mentor {
+    background: no-repeat url("../images/icons/Seasoned-Mentor.png") center center;
+}
+
+.icon-unlimited-access {
+    background: no-repeat url("../images/icons/Unlimited-Access.png") center center;
+}
+
+.icon-students {
+    background: no-repeat url("../images/icons/Students.png") center center;
+}
+
+.icon-transition {
+    background: no-repeat url("../images/icons/Transition.png") center center;
 }
 
 /*************************************************
