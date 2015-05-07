@@ -83,9 +83,7 @@
         function infoUpdate(info) {
             info.empty();
             if (checkedRadioBtn === 'onlineAcademy') {
-                info.append("Regular price: $299.00<br>Student price<sup>*</sup>: $199.00" +
-                "<br><br><span style=\"font-size: 0.65em; line-height: 1.1em;\">* In order to get the student price, you need to register with a student email address(ending with \".edu\")." +
-                "<br>* One email address can only be used for once.</span>");
+                info.append("Membership Fee: $299 for 12 Months");
             } else {
                 info.append('Brilent Bootcamp is FREE!');
             }
@@ -101,7 +99,7 @@
         $('body').scrollspy({target: '#navbar-example'});
 
         // register moving background image
-        $('.cover').moveBackgroundImg(navigationBarHeight);
+        $('.cover').moveBackgroundImg();
 
         // show and hide navigation bar
         $("#navbar-example").toggleNavigationBar(navigationBarHeight);
@@ -179,7 +177,7 @@
         });
     };
 
-    $.fn.moveBackgroundImg = function (height) { //move background image base on window scroll offset.
+    $.fn.moveBackgroundImg = function () { //move background image base on window scroll offset.
         var $this = $(this);
         $(window).scroll(function () {
             var scrollOffset = $document.scrollTop();
