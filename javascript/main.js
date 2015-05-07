@@ -15,6 +15,7 @@
         var numberForLine = Math.floor($(containerId).width() / elementWidth);
         var widthGap = ((($(containerId).width()) - (numberForLine * elementWidth)) / (numberForLine + 1));
         var max = 0;
+        $(elementClass + ':visible').stop();
         $(elementClass + ':visible').each(function (index) {
             var numberOfLine = Math.floor(index / numberForLine) + 1;
             if (numberOfLine > max) {
@@ -25,6 +26,7 @@
                 top: Math.floor(index / numberForLine) === 0 ? 0 : Math.floor(index / numberForLine) * elementHeight
             })
         });
+        $(containerId).stop();
         $(containerId).css({height: elementHeight * max});
     }
 
@@ -185,7 +187,7 @@
             var scrollOffset = $document.scrollTop();
             $this.each(function () {
                 var element = $(this);
-                var offset = element.offset().top - height - scrollOffset / 1.5;
+                var offset = (element.offset().top - scrollOffset) / 1.5;
                 element.css('background-position', '50% ' + offset + "px");
             });
         });
