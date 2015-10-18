@@ -4,22 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title></title>
-    <!-- font -->
-    <link rel="stylesheet" type="text/css" href="addOn/cdnLocalCopy/fonts/openSans.css">
-    <!-- Bootstrap 3.3.4 css file -->
-    <link rel="stylesheet" href="addOn/cdnLocalCopy/Bootstrap/bootstrap.css">
-    <!-- Font Awesome 4.3.0 css file -->
-    <link rel="stylesheet" href="addOn/cdnLocalCopy/Font-awesome/font-awesome.css">
     <!--&lt;!&ndash; font &ndash;&gt;-->
-    <!--<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800" rel="stylesheet" type="text/css" />-->
-    <!--&lt;!&ndash; Latest compiled and minified CSS &ndash;&gt;-->
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="addOn/cdnLocalCopy/fonts/openSans.css">-->
+    <!--&lt;!&ndash; Bootstrap 3.3.4 css file &ndash;&gt;-->
+    <!--<link rel="stylesheet" href="addOn/cdnLocalCopy/Bootstrap/bootstrap.css">-->
     <!--&lt;!&ndash; Font Awesome 4.3.0 css file &ndash;&gt;-->
-    <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">-->
+    <!--<link rel="stylesheet" href="addOn/cdnLocalCopy/Font-awesome/font-awesome.css">-->
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800" rel="stylesheet" type="text/css" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- Font Awesome 4.3.0 css file -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <!-- Customer css file -->
     <link rel="stylesheet" href="css/main.css">
-    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body data-spy="scroll" data-target="#navbar-example">
 <!-- Start of navigation bar fixed top -->
@@ -42,400 +41,1120 @@
             <ul class="nav navbar-nav navbar-right" role="tablist">
                 <li class="active">
                     <a class="scroll-go-to" data-target="#main-header">
-                        <i class="fa fa-home"></i>
                         Home<span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li>
-                    <a class="scroll-go-to" data-target="#gettingStart">
-                        <i class="fa fa-play"></i>
-                        Getting Start
+                    <a class="scroll-go-to" data-target="#bootcamp">
+                        Bootcamp
                     </a>
                 </li>
                 <li>
-                    <a class="scroll-go-to" data-target="#mid">
-                        <i class="fa fa-cogs"></i>
-                        Middle
+                    <a class="scroll-go-to" data-target="#mentors">
+                        Mentors
                     </a>
                 </li>
+                <li>
+                    <a class="scroll-go-to" data-target="#fellows">
+                        Fellows
+                    </a>
+                </li>
+                <li>
+                    <a class="scroll-go-to" data-target="#academy">
+                        Online Academy
+                    </a>
+                </li>
+                <!--<li>-->
+                <!--<a class="scroll-go-to" data-target="#faq">-->
+                <!--<i class="fa fa-gamepad hidden-xs"></i>-->
+                <!--Faq-->
+                <!--</a>-->
+                <!--</li>-->
                 <li>
                     <a class="scroll-go-to" data-target="#contact">
-                        <i class="fa fa-gamepad"></i>
-                        Bottom
+                        Contact
                     </a>
                 </li>
             </ul>
         </div>
-        <!-- /.navbar-collapse -->
     </div>
-    <!-- /.container-fluid -->
 </nav>
 <!-- End of navigation bar fixed top -->
 
 <!-- Start of cover -->
-<section id="main-header" class="section-block cover">
+<section id="main-header" class="cover">
+    <div class="login">
+        <a class="btn btn-brilent" href="http://54.67.61.190:8080/olat" target="_blank">Login Here</a>
+    </div>
     <div class="vertical">
         <div class="main-header-content inner">
-            <h1 class="page-title">Focus</h1>
+            <h1 class="page-title">Brilent Academy</h1>
 
-            <p class="page-description">description about this web page</p>
+            <p class="page-description">A brilliant boost to your career in Data Science and Analytics</p>
 
-            <div>
-                <label class="btn button scroll-go-to" data-target="#gettingStart">
+            <div class="ghost-button-group">
+                <label class="btn button scroll-go-to" data-target="#bootcamp">
                     <span class="line line-top"></span>
                     <span class="line line-left"></span>
                     <span class="line line-bottom"></span>
                     <span class="line line-right"></span>
-                    Getting Start
+                    In-Person Bootcamp
                 </label>
-                <label class="btn button scroll-go-to" data-target="#mid">
+                <label class="btn button scroll-go-to" data-target="#academy">
                     <span class="line line-top"></span>
                     <span class="line line-left"></span>
                     <span class="line line-bottom"></span>
                     <span class="line line-right"></span>
-                    Go to middle
+                    Online Academy
                 </label>
             </div>
         </div>
     </div>
-    <a class="scroll-down scroll-go-to" data-target="#gettingStart" role="button"><i
-            class="fa fa-angle-down"></i></a>
+    <a class="scroll-down scroll-go-to hidden-xs" data-target="#bootcamp" role="button">
+        <i class="fa fa-angle-down"></i>
+    </a>
 </section>
 <!-- End of cover -->
 
-<!-- Start of first temp section -->
-<section id="gettingStart" class="section-block section-1">
+<!-- Start of first section -> intro video-->
+<section id="bootcamp" class="section-block section-1">
     <div class="container">
+        <div class="page-title section-title">
+            <h1 class="no-subtitle">Brilent Bootcamp</h1>
+        </div>
         <div class="row">
-            <div class="page-title">
-                <h1>Getting Start</h1>
+            <div class="col-md-6 col-sm-12">
+                <p class="section-content">
+                    <strong>Brilent Bootcamp</strong> is a 6-week data analytics training
+                    program where you will get the opportunity to network and be mentored by seasoned data science
+                    professionals on real-world projects.
+                </p>
 
-                <h2 class="sub-title subTitle">Request an Application</h2>
+                <p class="section-content">
+                    At the end of the program, you will be able to present your
+                    hard work in front of top employers and be ready to land your dream job!
+                </p>
+
+                <p class="section-content">
+                    The next bootcamp will be offered in our Silicon Valley and Boston area offices.
+                </p>
+                <button type="button" class="btn btn-brilent visible-sm visible-xs btn-video" data-toggle="modal"
+                        data-target="#introVideoModal">
+                    Launch in new modal
+                </button>
             </div>
-            <div class="content">
-                <center>
-                    <p class="col-xs-12 col-md-4 col-md-offset-4">Sign up here to get infomation about future
-                        sessions</p>
-
-                    <form method="post" action="#contact" class="contactForm" id="generalApplyForm" role="form">
-                        <div class="row">
-                            <div class="col-xs-12 col-md-4 col-md-offset-4">
-                                <div class="form-group">
-                                    <label for="contactEmailApply" class="col-xs-12 col-md-4"
-                                           id="emailLabel">Email</label>
-
-                                    <div class="alert alert-danger" role="alert" id="errorEmailApply">
-                                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                                        <span class="sr-only error">Error:</span>
-                                        Please enter a valid Email
-                                    </div>
-                                    <input type="email" class="form-control" name="contactEmailApply"
-                                           id="contactEmailApply" placeholder="Enter email"
-                                           title="Please enter a valid email address"/>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12 col-md-4 col-md-offset-4">
-                                <div id="submitGroupApply" class="form-group">
-                                    <center>
-                                        <button id="applySubmit" class="homeBtn btn btn-lg">submit</button>
-                                    </center>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </center>
+            <div class="col-md-6 hidden-sm hidden-xs">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item"
+                            src="https://www.youtube.com/embed/gdqvRBO0_ek?rel=0&amp;controls=0&amp;showinfo=0"></iframe>
+                </div>
             </div>
+        </div>
+        <!--</div>-->
+        <!--</section>-->
+        <!--&lt;!&ndash; End of first section -> intro video &ndash;&gt;-->
+
+        <!--&lt;!&ndash; Start of second section -> approach &ndash;&gt;-->
+        <!--<section id="approach" class="section-block section-2">-->
+        <!--<div class="container">-->
+        <div class="page-title section-title">
+            <h2 class="sub-title">What makes us unique</h2>
+        </div>
+        <div class="row">
+            <div class="section-content">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 section-content-left">
+                        <div class="section-content-detail">
+                            <i class="icon icon-mentors"></i>
+                            <h3>Full-time & part-time expert mentors</h3>
+                            <p class="section-content">
+                                Work alongside former and current data scientists from Facebook, LinkedIn, Google,
+                                Twitter, and other top tier companies.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 section-content-right">
+                        <div class="section-content-detail">
+                            <i class="icon icon-projects"></i>
+                            <h3>Real-world projects</h3>
+                            <p class="section-content">
+                                Build your portfolio and solve real-world problems (some are from companies that have an
+                                exclusive partnership with Brilent).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 section-content-left">
+                        <div class="section-content-detail">
+                            <i class="icon icon-skills"></i>
+                            <h3>Real industry skills</h3>
+                            <p class="section-content">
+                                We help you develop problem-solving, critical thinking, and business presentation
+                                skills, which will turn you into a more qualified and marketable job applicant
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 section-content-right">
+                        <div class="section-content-detail">
+                            <i class="icon icon-resources"></i>
+                            <h3>Exclusive resources</h3>
+                            <p class="section-content">
+                                Have unlimited access to our online resources.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 section-content-left">
+                        <div class="section-content-detail">
+                            <i class="icon icon-tuition"></i>
+                            <h3>Free tuition</h3>
+                            <p class="section-content">
+                                The program is free for admitted fellows – no hidden cost! Employers pay a tuition fee
+                                when they successfully hire our fellows.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 section-content-right">
+                        <div class="section-content-detail">
+                            <i class="icon icon-no-phd"></i>
+                            <h3>No PhD required</h3>
+                            <p class="section-content">
+                                We have worked with plenty of superstar data scientists who don’t have a PhD. We
+                                encourage people with all educational levels and quantitative background to apply!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-offset-1 col-sm-10 col-xs-offset-0 col-xs-12">
+                <p>
+                    Here are just a few awesome things our fellows have built:
+                    <a target="_blank" href="sample_projects/Brilent%20-%20Dalia.pdf">Dalia</a> and
+                    <a target="_blank" href="sample_projects/Brilent%20-%20Analytics%20Job%20Demand.pdf">Analytics Job Demand</a>.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-offset-1 col-sm-10 col-xs-offset-0 col-xs-12">
+                <!-- Fellows build awesome things -->
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <a target="_blank" href="sample_projects/Brilent%20-%20Dalia.pdf">
+                                <img src="images/sample_projects_images/Brilent%20-%20Dalia.jpg" alt="First link web">
+                                <div class="carousel-caption">
+                                    <h3></h3>
+                                    <p></p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a target="_blank" href="sample_projects/Brilent%20-%20Analytics%20Job%20Demand.pdf">
+                                <img src="images/sample_projects_images/Brilent%20-%20Analytics%20Job%20Demand.jpg"
+                                     alt="Second link web">
+                                <div class="carousel-caption">
+                                    <h3></h3>
+                                    <p></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button"
+                       data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button"
+                       data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row apply-button">
+            <button class="btn btn-brilent btn-apply" data-toggle="modal" data-target="#applyNowModal">
+                APPLY NOW
+            </button>
+            <button class="btn btn-link btn-block scroll-go-to" data-target="#contact">
+                <i class="fa fa-info-circle"></i>
+                REQUEST INFO
+            </button>
         </div>
     </div>
 </section>
-<!-- End of first temp section -->
+<!-- End of first section -> approach -->
 
-<!--employee section-->
-<section id="employee" class="section-block">
+<!-- Start of second section -> mentors -->
+<section id="mentors" class="section-block section-people section-2">
     <div class="container">
-        <div class="row">
-            <div class="page-title">
-                <h1>Employees</h1>
-
-                <h2 class="sub-title">Our awesome team!</h2>
-            </div>
+        <div class="page-title section-title">
+            <h1 class="no-subtitle">Brilent Mentors</h1>
         </div>
         <div class="row">
-            <div class="filter col-xs-12">
-                <ul class="pull-right">
-                    <li>
-                        <a>All</a>
-                    </li>
-                    <li class="data">
-                        <a>Data</a>
-                    </li>
-                    <li class="engineering">
-                        <a>Engineering</a>
-                    </li>
-                    <li class="career">
-                        <a>Career</a>
-                    </li>
-                </ul>
+            <div class="mentor-container">
+                <div class="mentor-show">
+                    <div class="mentors">
+                        <a target="_blank" href="https://www.linkedin.com/in/yihualiao">
+                            <div class="pic">
+                                <img src="images/mentors/yihua.png" data-info="FACEBOOK -> Former Data Scientist Manager">
+                            </div>
+                        </a>
+                        <h2 class="mentorsName">Yihua Liao</h2>
+                    </div>
+                    <h4 class="job-title">Former Data Scientist Manager<br><br><br><i class="fa fa-at"></i> FACKBOOK</h4>
+                </div>
+                <div class="mentor-show">
+                    <div class="mentors">
+                        <a target="_blank" href="https://www.linkedin.com/in/garryma">
+                            <div class="pic">
+                                <img src="images/mentors/garry.png" data-info="FACEBOOK -> Former Product Analyst">
+                            </div>
+                        </a>
+                        <h2 class="mentorsName">Garry Ma</h2>
+                    </div>
+                    <h4 class="job-title">Former Product Analyst<br><br><br><i class="fa fa-at"></i> FACKBOOK</h4>
+                </div>
+                <div class="mentor-show">
+                    <div class="mentors">
+                        <a target="_blank" href="https://www.linkedin.com/in/chiyikuan">
+                            <div class="pic">
+                                <img src="images/mentors/chiyi.png" data-info="LINKEDIN -> Director of Business Analytics">
+                            </div>
+                        </a>
+                        <h2 class="mentorsName">Chi-Yi Guan</h2>
+                    </div>
+                    <h4 class="job-title">Director of Business Analytics<br><br><br><i class="fa fa-at"></i> LINKEDIN</h4>
+                </div>
+                <div class="mentor-show">
+                    <div class="mentors">
+                        <a target="_blank" href="https://www.linkedin.com/pub/holly-zhang/0/880/971">
+                            <div class="pic">
+                                <img src="images/mentors/holly.png" data-info="COUPONS.COM -> Former Director of Business Analytics">
+                            </div>
+                        </a>
+                        <h2 class="mentorsName">Holly Zhang</h2>
+                    </div>
+                    <h4 class="job-title">Former Director of Business Analytics<br><br><i class="fa fa-at"></i> COUPONS.COM</h4>
+                </div>
+                <div class="mentor-show">
+                    <div class="mentors">
+                        <a target="_blank" href="https://www.linkedin.com/pub/jianqiang-jay-wang/6/672/78a">
+                            <div class="pic">
+                                <img src="images/mentors/jay.png" data-info="TWITTER -> Data Scientist">
+                            </div>
+                        </a>
+                        <h2 class="mentorsName">Jay Wang</h2>
+                    </div>
+                    <h4 class="job-title">Data Scientist<br><br><br><i class="fa fa-at"></i> TWITTER</h4>
+                </div>
+                <div class="mentor-show">
+                    <div class="mentors">
+                        <a target="_blank" href="https://www.linkedin.com/in/mktgtechnologist">
+                            <div class="pic">
+                                <img src="images/mentors/sanjoy.jpg" data-info="FOCUSKPI -> VP of Analytics solutions">
+                            </div>
+                        </a>
+                        <h2 class="mentorsName">Sanjoy Haldar</h2>
+                    </div>
+                    <h4 class="job-title">VP of Analytics solutions<br><br><br><i class="fa fa-at"></i> FOCUSKPI</h4>
+                </div>
+                <div class="mentor-show">
+                    <div class="mentors">
+                        <a target="_blank" href="https://www.linkedin.com/in/cindyzhang">
+                            <div class="pic">
+                                <img src="images/mentors/cindi.png" data-info="MICROSOFT -> Analytics Product Manager">
+                            </div>
+                        </a>
+                        <h2 class="mentorsName">Cindy Zhang</h2>
+                    </div>
+                    <h4 class="job-title">Analytics Product Manager<br><br><br><i class="fa fa-at"></i> MICROSOFT</h4>
+                </div>
+                <div class="mentor-show">
+                    <div class="mentors">
+                        <a target="_blank" href="https://www.linkedin.com/pub/may-xu/4/693/bb0">
+                            <div class="pic">
+                                <img src="images/mentors/may.png" data-info="LINKEDIN -> Marketing Analytics Manager">
+                            </div>
+                        </a>
+                        <h2 class="mentorsName">May Xu</h2>
+                    </div>
+                    <h4 class="job-title">Senior Product Manager<br><br><br><i class="fa fa-at"></i> LINKEDIN</h4>
+                </div>
+                <div class="mentor-show">
+                    <div class="mentors">
+                        <a target="_blank" href="https://www.linkedin.com/in/salinacheung">
+                            <div class="pic">
+                                <img src="images/mentors/salina.png" data-info="GYFT -> Head of Analytics">
+                            </div>
+                        </a>
+                        <h2 class="mentorsName">Salina Cheung</h2>
+                    </div>
+                    <h4 class="job-title">Head of Analytics<br><br><br><i class="fa fa-at"></i> GYFT</h4>
+                </div>
+                <div class="mentor-show">
+                    <div class="mentors">
+                        <a target="_blank" href="https://www.linkedin.com/pub/linlin-li/26/175/430">
+                            <div class="pic">
+                                <img src="images/mentors/linlin.png" alt="GOOGLE -> Quantitative Analyst">
+                            </div>
+                        </a>
+                        <h2 class="mentorsName">Linlin Li</h2>
+                    </div>
+                    <h4 class="job-title">Quantitative Analyst<br><br><br><i class="fa fa-at"></i> GOOGLE</h4>
+                </div>
+                <div class="mentor-show">
+                    <div class="mentors">
+                        <a target="_blank" href="https://www.linkedin.com/in/wooed">
+                            <div class="pic">
+                                <img src="images/mentors/edwoo.png" data-info="SHUTTERFLY -> Senior Director of Marketing Analytics">
+                            </div>
+                        </a>
+                        <h2 class="mentorsName">Ed Woo</h2>
+                    </div>
+                    <h4 class="job-title">Senior Director of Marketing Analytics<br><br><i class="fa fa-at"></i> SHUTTERFLY</h4>
+                </div>
+                <div class="mentor-show">
+                    <div class="mentors">
+                        <a target="_blank" href="https://www.linkedin.com/pub/satya-penmetsa/27/763/151">
+                            <div class="pic">
+                                <img src="images/mentors/satya.png" alt="EBAY -> Business Analytics Manager">
+                            </div>
+                        </a>
+                        <h2 class="mentorsName">Satya Penmetsa</h2>
+                    </div>
+                    <h4 class="job-title">Business Analytics Manager<br><br><br><i class="fa fa-at"></i> EBAY</h4>
+                </div>
+                <div class="mentor-show">
+                    <div class="mentors">
+                        <a target="_blank" href="https://www.linkedin.com/pub/karthik-ganapathi/13/488/21">
+                            <div class="pic">
+                                <img src="images/mentors/karthik.jpg" data-info="HOUZZ -> Product and Growth Data Scientist">
+                            </div>
+                        </a>
+                        <h2 class="mentorsName">Karthik Ganapathi</h2>
+                    </div>
+                    <h4 class="job-title">Product and Growth Data Scientist<br><br><i class="fa fa-at"></i> HOUZZ</h4>
+                </div>
+                <div class="mentor-show">
+                    <div class="mentors">
+                        <a target="_blank" href="https://www.linkedin.com/in/hsshah">
+                            <div class="pic">
+                                <img src="images/mentors/harry.png" data-info="PRIMECALULUS  -> Founder">
+                            </div>
+                        </a>
+                        <h2 class="mentorsName">Harry Shah</h2>
+                    </div>
+                    <h4 class="job-title">Digital Marketing Director<br><br><br><i class="fa fa-at"></i> PRIMECALULUS</h4>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div id="empContainer">
-                <div class="data col-lg-3 col-md-4 col-sm-6 col-xs-12 emp-show">
-                    <div class="emp">
-                        <div class="pic">
-                            <img src="images/diablo.jpg" alt="Mr. Liu">
-
-                            <p>This is a good guy</p>
-                        </div>
-                        <h2 class="name">Haizhou Liu</h2>
-
-                        <div class="linkedin"></div>
-                    </div>
-                </div>
-                <div class="engineering col-lg-3 col-md-4 col-sm-6 col-xs-12 emp-show">
-                    <div class="emp">
-                        <div class="pic">
-                            <img src="images/diablo.jpg" alt="Miss. Shao">
-                        </div>
-                        <h2 class="name">Krystal Shao</h2>
-
-                        <div class="linkedin"></div>
-                    </div>
-                </div>
-                <div class="data col-lg-3 col-md-4 col-sm-6 col-xs-12 emp-show">
-                    <div class="emp">
-                        <div class="pic">
-                            <img src="images/diablo.jpg" alt="Mr. Li">
-                        </div>
-                        <h2 class="name">Leonard Li</h2>
-
-                        <div class="linkedin"></div>
-                    </div>
-                </div>
-                <div class="career col-lg-3 col-md-4 col-sm-6 col-xs-12 emp-show">
-                    <div class="emp">
-                        <div class="pic">
-                            <img src="images/diablo.jpg" alt="Mr. Yu">
-                        </div>
-                        <h2 class="name">Albert Yu</h2>
-
-                        <div class="linkedin"></div>
-                    </div>
-                </div>
-            </div>
+        <div class="row apply-button">
+            <button class="btn btn-brilent btn-apply" data-toggle="modal" data-target="#applyNowModal">
+                APPLY NOW
+            </button>
+            <button class="btn btn-link btn-block scroll-go-to" data-target="#contact">
+                <i class="fa fa-info-circle"></i>
+                REQUEST INFO
+            </button>
         </div>
     </div>
 </section>
-<!--End of employee section -->
-<!-- Start of second temp section -->
-<section id="mid" class="section-block section-2 cover">
+<!-- End of second section -> mentors -->
+
+<!-- Start of third section -> fellows -->
+<section id="fellows" class="section-block section-people section-3">
+    <div class="container">
+        <div class="page-title section-title">
+            <h1 class="no-subtitle">Brilent Fellows</h1>
+        </div>
+        <div class="row">
+            <div class="fellow-container">
+                <div class="fellow-show">
+                    <div class="fellows">
+                        <div class="pic">
+                            <img src="images/fellows/Andy.jpg" data-info="Facebook -> Data Scientist">
+                        </div>
+                        <h2 class="fellowsName">Andy Wu</h2>
+                        <p class="job-title">Data Scientist
+                            <br><br><i class="fa fa-at"></i> Facebook</p>
+                    </div>
+                </div>
+                <div class="fellow-show">
+                    <div class="fellows">
+                        <div class="pic">
+                            <img src="images/fellows/JamesBao.jpg" data-info="Google -> Technical PM">
+                        </div>
+                        <h2 class="fellowsName">James Bao</h2>
+                        <p class="job-title">Technical PM
+                            <br><br><i class="fa fa-at"></i> Google</p>
+                    </div>
+                </div>
+                <div class="fellow-show">
+                    <div class="fellows">
+                        <div class="pic">
+                            <img src="images/fellows/CarterLin.jpg" data-info="LinkedIn -> Business Analytics">
+                        </div>
+                        <h2 class="fellowsName">Carter Lin</h2>
+                        <p class="job-title">Business Analytics
+                            <br><br><i class="fa fa-at"></i> LinkedIn</p>
+                    </div>
+                </div>
+                <div class="fellow-show">
+                    <div class="fellows">
+                        <div class="pic">
+                            <img src="images/fellows/FrankJiang.JPG" data-info="AirPR -> Data Scientist">
+                        </div>
+                        <h2 class="fellowsName">Frank Jiang</h2>
+                        <p class="job-title">Data Scientist
+                            <br><br><i class="fa fa-at"></i> AirPR</p>
+                    </div>
+                </div>
+                <div class="fellow-show">
+                    <div class="fellows">
+                        <div class="pic">
+                            <img src="images/fellows/FanYe.jpg" data-info="GOOGLE -> Operations Data Analyst">
+                        </div>
+                        <h2 class="fellowsName">Fan Ye</h2>
+                        <p class="job-title">Operations Data Analyst
+                            <br><br><i class="fa fa-at"></i> GOOGLE Express</p>
+                    </div>
+                </div>
+                <div class="fellow-show">
+                    <div class="fellows">
+                        <div class="pic">
+                            <img src="images/fellows/StevenZhang.jpg" data-info="LinkedIn -> Data Scientist Consultant">
+                        </div>
+                        <h2 class="fellowsName">Steven Zhang</h2>
+                        <p class="job-title">Data Scientist Consultant
+                            <br><br><i class="fa fa-at"></i> LinkedIn</p>
+                    </div>
+                </div>
+                <div class="fellow-show">
+                    <div class="fellows">
+                        <div class="pic">
+                            <img src="images/fellows/JerryJiang.jpg" data-info="eBay -> Buyer Experience Analyst">
+                        </div>
+                        <h2 class="fellowsName">Jerry Jiang</h2>
+                        <p class="job-title">Buyer Experience Analyst
+                            <br><br><i class="fa fa-at"></i> eBay</p>
+                    </div>
+                </div>
+                <div class="fellow-show">
+                    <div class="fellows">
+                        <div class="pic">
+                            <img src="images/fellows/RongZhao.jpg" data-info="Dropbox -> Product Analyst">
+                        </div>
+                        <h2 class="fellowsName">Rong Zhao</h2>
+                        <p class="job-title">Product Analyst
+                            <br><br><i class="fa fa-at"></i> Dropbox</p>
+                    </div>
+                </div>
+                <div class="fellow-show">
+                    <div class="fellows">
+                        <div class="pic">
+                            <img src="images/fellows/Bhabani.jpg" data-info="Volkswagen of America, Inc -> Artificial Intelligence Engineer">
+                        </div>
+                        <h2 class="fellowsName">Bhabani Nayak</h2>
+                        <p class="job-title">Artificial Intelligence Engineer
+                            <br><br><i class="fa fa-at"></i> Volkswagen of America, Inc</p>
+                    </div>
+                </div>
+                <div class="fellow-show">
+                    <div class="fellows">
+                        <div class="pic">
+                            <img src="images/fellows/Olivia%20Zhao.JPG" data-info="SAP Labs -> Data Scientist">
+                        </div>
+                        <h2 class="fellowsName">Olivia Zhao</h2>
+                        <p class="job-title">Data Scientist
+                            <br><br><i class="fa fa-at"></i> SAP Labs</p>
+                    </div>
+                </div>
+                <div class="fellow-show">
+                    <div class="fellows">
+                        <div class="pic">
+                            <img src="images/fellows/SamJu.jpg" data-info="Magoosh -> Data Analyst">
+                        </div>
+                        <h2 class="fellowsName">Sam Ju</h2>
+                        <p class="job-title">Data Analyst
+                            <br><br><i class="fa fa-at"></i> Magoosh</p>
+                    </div>
+                </div>
+                <div class="fellow-show">
+                    <div class="fellows">
+                        <div class="pic">
+                            <img src="images/fellows/Ellie.jpg" data-info="Esurance -> Pricing Data Analyst">
+                        </div>
+                        <h2 class="fellowsName">Ellie Zhao</h2>
+                        <p class="job-title">Pricing Data Analyst
+                            <br><br><i class="fa fa-at"></i> Esurance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--</div>-->
+        <!--</section>-->
+        <!--&lt;!&ndash; End of fourth section -> fellows &ndash;&gt;-->
+
+        <!--&lt;!&ndash; Start of fifth section -> testimonials &ndash;&gt;-->
+        <!--<section id="testimonials" class="section-block section-5">-->
+        <!--<div class="container">-->
+        <div class="page-title section-title">
+            <h2 class="sub-title">Testimonials</h2>
+        </div>
+        <div class="section-content">
+            <div class="row testimonial">
+                <div class="testimonial-content col-sm-10 col-xs-12">
+                    <p>
+                        "Brilent provided me with a tremendous opportunity to network with industry leaders at the
+                        one-to-one level. The data projects are great ways to learn and showcase skills to potential
+                        employers."
+                    </p>
+
+                    <p class="camper-name">Carter Lin</p>
+
+                    <p class="camper-title">Business Analytics at LinkedIn, PhD in Physics</p>
+                </div>
+                <div class="col-sm-2 hidden-xs">
+                    <img class="img-thumbnail" src="images/testimonials/CL.JPG" alt="lin Carter">
+                </div>
+            </div>
+            <div class="row testimonial">
+                <div class="col-sm-2 hidden-xs">
+                    <img class="img-thumbnail" src="images/testimonials/YG-1.JPG" alt="lin Carter">
+                </div>
+                <div class="testimonial-content col-sm-10 col-xs-12">
+                    <p>
+                        "Brilent helped me launch my career. It also provided me with the great network to continually
+                        grow professionally and personally."
+                    </p>
+
+                    <p class="camper-name">Shane Li</p>
+
+                    <p class="camper-title">Data Scientist at Sabre Airline Solutions</p>
+                </div>
+            </div>
+            <div class="row testimonial">
+                <div class="testimonial-content col-sm-10 col-xs-12">
+                    <p>
+                        "One of the most valuable things that I had learned from Brilent’s bootcamp is the connection
+                        between analytics and business. It provided a giant leap towards my dream job!"
+                    </p>
+
+                    <p class="camper-name">Steven Zhang</p>
+
+                    <p class="camper-title">Data Scientist Consultant at LinkedIn</p>
+                </div>
+                <div class="col-sm-2 hidden-xs">
+                    <img class="img-thumbnail" src="images/testimonials/ZZ.jpg" alt="lin Carter">
+                </div>
+            </div>
+            <div class="row testimonial">
+                <div class="col-sm-2 hidden-xs">
+                    <img class="img-thumbnail" src="images/testimonials/JJ.JPG" alt="lin Carter">
+                </div>
+                <div class="testimonial-content col-sm-10 col-xs-12">
+                    <p>
+                        "Being a member of the bootcamp, I was thrilled to have the opportunity to network with many
+                        industry leaders in analytics, which is actually the most effective way for me to have full
+                        understanding of the area."
+                    </p>
+
+                    <p class="camper-name">Jerry Jiang</p>
+
+                    <p class="camper-title">User Experience Analyst at eBay</p>
+                </div>
+            </div>
+        </div>
+        <div class="row apply-button">
+            <button class="btn btn-brilent btn-apply" data-toggle="modal" data-target="#applyNowModal">
+                APPLY NOW
+            </button>
+            <button class="btn btn-link btn-block scroll-go-to" data-target="#contact">
+                <i class="fa fa-info-circle"></i>
+                REQUEST INFO
+            </button>
+        </div>
+    </div>
+</section>
+<!-- End of third section -> testimonials -->
+
+<!-- Start of cover 1  Section change -->
+<div id="cover-1" class="cover mid-cover">
     <div class="container">
         <div class="row">
-            <div class="page-title">
-
-                <h1><i class="fa fa-bolt"></i></h1>
-
-            </div>
-            <div class="content">
-                <blockquote>Data are becoming the new raw material of business<br>
-                    <small>The Economist</small>
+            <div class="cover-content">
+                <blockquote>
+                    Your bridge to a career in
+                    Data Science and Analytics
                 </blockquote>
             </div>
         </div>
     </div>
-</section>
-<!-- End of second temp section -->
+</div>
+<!-- End of cover 1  Section change -->
 
-<!--start of clinet section-->
-<section id="client" class="section-block">
+<!-- Start of fourth section -> academy -->
+<section id="academy" class="section-block section-4">
     <div class="container">
-        <div class="row">
-            <h2 class="sub-title">Our clinet:</h2>
+        <div class="page-title section-title">
+            <h1 class="no-subtitle">Online Academy</h1>
         </div>
-        <div class="">
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                <img class="client-logo img-responsive" src="images/IBM.png" data-toggle="tooltip" data-placement="top"
-                     data-original-title="IBM">
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                <img class="client-logo img-responsive" src="images/Microsoft.png" data-toggle="tooltip"
-                     data-placement="top" data-original-title="Microsoft">
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 hidden-sm hidden-xs">
-                <img class="client-logo img-responsive" src="images/Apple.png" data-toggle="tooltip"
-                     data-placement="top" data-original-title="Apple">
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 hidden-sm hidden-xs">
-                <img class="client-logo img-responsive" src="images/Samsung.png" data-toggle="tooltip"
-                     data-placement="top" data-original-title="Samsong">
+        <div class="row section-content-summary">
+            <div class="col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0">
+            <p>
+                Can’t commit 6 weeks of your time? Not ready for the bootcamp? No problem.
+                <br>
+                You may want to join Brilent’s Online Academy, which offers the expertise and professional network you
+                need to succeed in Data Science and Analytics.
+            </p>
             </div>
         </div>
-    </div>
-</section>
-<!--end of client section-->
-<section id="faq" class="section-block section-3 ">
-    <div class="container">
-        <div class="row">
-            <div class="page-title">
-                <div>
-                    <h1>FREQUENTLY ASKED QUESTIONS</h1>
-
-                    <h2 class="subTitle"></h2>
+        <div class="row section-video">
+            <div class="col-xs-12 title">
+                <h4>Sample Courses</h4>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <div class="thumbnail intro-video-container">
+                    <div class="embed-responsive embed-responsive-16by9 intro-video">
+                        <iframe src="https://www.youtube.com/embed/1oO9XAhYDMs" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="caption">
+                        <h3>Introduction to MySQL </h3>
+                        <p>Relational database concepts and common MySQL techniques to manipulate data and extract information from tables.</p>
+                    </div>
                 </div>
             </div>
-            <div class="content">
-                <div class="col-md-10 col-md-offset-1">
-                    <div class="panel-group accordion">
-                        <!--question 1-->
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">What is a data scientist?</h4>
-                            </div>
-                            <div class="panel-body">
-                                <p>Ninety percent of all the world's data was generated in the last two years. Every
-                                    2 days, we generate as much data as all of humanity did up to 2003. Data
-                                    scientists have the analytical and programming skills needed to extract valuable
-                                    knowledge out the data. The unique combination of skills that data scientists
-                                    have are used across many industries for projects such as:</p>
-                                <ul>
-                                    <li>Parsing unstructured electronic medical records to detect new risk factors
-                                        for cancer
-                                    </li>
-                                    <li>Poring through educational app data to glean insights on how students
-                                        learn
-                                    </li>
-                                    <li>Form personalized recommendation for restaurants and bars for millions of
-                                        users
-                                    </li>
-                                    <li>Predicting crime based on social network data</li>
-                                    <li>Crawling through stock market data for hidden price signals</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!--question 2-->
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    What are you looking for in an application?
-                                </h4>
-                            </div>
-                            <div class="panel-body">
-                                <p>We are looking for people with strong scientific training who are able to work
-                                    with data programatically and can make valid real-world inferences based on
-                                    data. Applicants usually have a strong background in probability, statistics,
-                                    and experience with programming, scripting, or statistical packages.</p>
-                            </div>
-                        </div>
-                        <!--question 3-->
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    What is the price for fellows? Are there hidden costs?
-                                </h4>
-                            </div>
-                            <div class="panel-body">
-                                The program is completely free and the tuition fee is paid for by hiring employers.
-                                The only cost for in-person fellows is their room and board during the fellowship
-                                and we can assist fellows in finding housing in New York City. The only cost for
-                                online fellows is the cost of hosting a server in the cloud which is required for
-                                running the course material.
-                            </div>
-                        </div>
-                        <!---->
+            <div class="col-sm-6 col-xs-12">
+                <div class="thumbnail intro-video-container">
+                    <div class="embed-responsive embed-responsive-16by9 intro-video">
+                        <iframe src="https://www.youtube.com/embed/9KsmSGO1Qfw" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="caption">
+                        <h3>Introduction to R</h3>
+                        <p>Data types and operations, control statements and functions, using R for data munging, graphics and statistical analysis.</p>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-xs-12 title">
+                <h4><i class="fa fa-compass"></i>Membership includes</h4>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12 section-content-left">
+                    <div class="section-content-detail">
+                        <i class="icon icon-unlimited-access"></i>
+                        <h3>Unlimited access</h3>
+                        <p class="section-content">
+                            Learn what you want, when you want, from our entire online course library.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 section-content-right">
+                    <div class="section-content-detail">
+                        <i class="icon icon-content"></i>
+                        <h3>Rich content</h3>
+                        <p class="section-content">
+                            Courses cover core technical skills (SQL, R, statistical methods, and so on) and real data
+                            science case studies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12 section-content-left">
+                    <div class="section-content-detail">
+                        <i class="icon icon-seasoned-mentor"></i>
+                        <h3>Seasoned mentors</h3>
+                        <p class="section-content">
+                            Watch and learn from the experts of leading companies like Facebook, Google, LinkedIn,
+                            Twitter, eBay, Coupons.com and Shutterfly, who are willing to share their firsthand
+                            experience in Big Data and Analytics, and provide valuable career advice.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 section-content-right">
+                    <div class="section-content-detail">
+                        <i class="icon icon-online-community"></i>
+                        <h3>Online community</h3>
+                        <p class="section-content">
+                            Have access to exclusive job/internship opportunities, and continuous advice from mentors to
+                            ensure long-term career success.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 title">
+                <h4><i class="fa fa-users"></i>Who should enroll</h4>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12 section-content-left">
+                    <div class="section-content-detail">
+                        <i class="icon icon-students"></i>
+                        <p class="section-content section-content-no-title">
+                            We welcome all students (undergrads, masters, and PhDs) and postdocs with a quantitative
+                            background (in Physics, Statistics, Math, Chemistry, Biology, Engineering, Operations
+                            Research, Business, Economics, Management Sciences, etc.), who are looking to enter the
+                            exciting world of Data Science and Analytics.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 section-content-right">
+                    <div class="section-content-detail">
+                        <i class="icon icon-transition"></i>
+                        <p class="section-content section-content-no-title">
+                            Professionals seeking to change or advance their careers: those early in their career or
+                            experienced career professionals who are looking to switch to Data Science and Analytics.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row apply-button">
+            <button class="btn btn-brilent btn-apply" data-toggle="modal" data-target="#applyNowModal">
+                APPLY NOW
+            </button>
+            <button class="btn btn-link btn-block scroll-go-to" data-target="#contact">
+                <i class="fa fa-info-circle"></i>
+                REQUEST INFO
+            </button>
+        </div>
     </div>
 </section>
+<!-- End of fourth section -> academy -->
 
-<div style="margin-bottom: -70px;height: 100px;"></div>
+<!-- Start of seventh section -> faq-->
+<!--<section id="faq" class="section-block section-7">-->
+    <!--<div class="container">-->
+        <!--<div class="page-title section-title">-->
+            <!--<div>-->
+                <!--<h1 class="no-subtitle">Frequently Asked Questions</h1>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+            <!--<div class="col-md-10 col-md-offset-1">-->
+                <!--<div class="panel-group accordion">-->
+                    <!--&lt;!&ndash;question 1&ndash;&gt;-->
+                    <!--<div class="panel panel-default">-->
+                        <!--<div class="panel-heading">-->
+                            <!--<h4 class="panel-title">What is a data scientist?</h4>-->
+                        <!--</div>-->
+                        <!--<div class="panel-body">-->
+                            <!--<p>Ninety percent of all the world's data was generated in the last two years. Every-->
+                                <!--2 days, we generate as much data as all of humanity did up to 2003. Data-->
+                                <!--scientists have the analytical and programming skills needed to extract valuable-->
+                                <!--knowledge out the data. The unique combination of skills that data scientists-->
+                                <!--have are used across many industries for projects such as:</p>-->
+                            <!--<ul>-->
+                                <!--<li>Parsing unstructured electronic medical records to detect new risk factors-->
+                                    <!--for cancer-->
+                                <!--</li>-->
+                                <!--<li>Poring through educational app data to glean insights on how students-->
+                                    <!--learn-->
+                                <!--</li>-->
+                                <!--<li>Form personalized recommendation for restaurants and bars for millions of-->
+                                    <!--users-->
+                                <!--</li>-->
+                                <!--<li>Predicting crime based on social network data</li>-->
+                                <!--<li>Crawling through stock market data for hidden price signals</li>-->
+                            <!--</ul>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;question 2&ndash;&gt;-->
+                    <!--<div class="panel panel-default">-->
+                        <!--<div class="panel-heading">-->
+                            <!--<h4 class="panel-title">-->
+                                <!--What are you looking for in an application?-->
+                            <!--</h4>-->
+                        <!--</div>-->
+                        <!--<div class="panel-body">-->
+                            <!--<p>We are looking for people with strong scientific training who are able to work-->
+                                <!--with data programatically and can make valid real-world inferences based on-->
+                                <!--data. Applicants usually have a strong background in probability, statistics,-->
+                                <!--and experience with programming, scripting, or statistical packages.</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;question 3&ndash;&gt;-->
+                    <!--<div class="panel panel-default">-->
+                        <!--<div class="panel-heading">-->
+                            <!--<h4 class="panel-title">-->
+                                <!--What is the price for fellows? Are there hidden costs?-->
+                            <!--</h4>-->
+                        <!--</div>-->
+                        <!--<div class="panel-body">-->
+                            <!--The program is completely free and the tuition fee is paid for by hiring employers.-->
+                            <!--The only cost for in-person fellows is their room and board during the fellowship-->
+                            <!--and we can assist fellows in finding housing in New York City. The only cost for-->
+                            <!--online fellows is the cost of hosting a server in the cloud which is required for-->
+                            <!--running the course material.-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</section>-->
+<!-- End of seventh section -> faq-->
 
-<!-- Start of third temp section -->
-<section id="contact" class="section-block section-4 color1">
+<!-- Start fifth section -> apply now -->
+<!-- End of fifth section -> apply now -->
+
+<!-- Start of fifth section -> contact us -->
+<section id="contact" class="section-block section-5">
     <div class="container">
+        <div class="page-title section-title">
+            <h1 class="no-subtitle">CONTACT US</h1>
+        </div>
         <div class="row">
-            <div class="col-xs-12">
+            <div class="pull-right col-xs-12 col-sm-12 col-md-7 map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.06659248123!2d-121.95880120000001!3d37.388257399999986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fc99a67cf567f%3A0x342429585a86601d!2s1900+Wyatt+Dr+%236%2C+Santa+Clara%2C+CA+95054!5e0!3m2!1sen!2sus!4v1410292503118"
+                        frameborder="0" class="google-map-iframe"></iframe>
+            </div>
+            <div class="pull-left col-xs-12 col-sm-12 col-md-5 content">
+                <form method="POST" action="" class="contactForm" id="generalContactForm" role="form">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label class="sr-only" for="contactName">Name</label>
 
-                <h1>CONTACT US</h1>
-
-                <h2 class="subTitle">Do you have a question unaswered by the <a href="#faq">FAQ</a>? Write us!</h2>
-
-                <div class="content">
-                    <form method="post" action="#contact" class="contactForm" id="generalContactForm" role="form">
-                        <div class="row">
-                            <div class="col-xs-12 col-md-4">
-                                <div class="form-group">
-                                    <label for="contactName">Name</label>
-
-                                    <div class="alert alert-danger" role="alert" id="errorName">
-                                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                                        <span class="sr-only error">Error:</span>
-                                        Please enter your name (at least 3 characters)
-                                    </div>
-                                    <input type="text" class="form-control" name="contactName" id="contactName"
-                                           placeholder="Enter name"
-                                           title="Please enter your name (at least 3 characters)"/>
+                                <div class="alert alert-danger" role="alert" id="errorName">
+                                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                    <span class="sr-only error">Error:</span>
+                                    Please enter your name (at least 4 characters)
                                 </div>
-                                <div class="form-group">
-                                    <label for="contactEmailContact">Email</label>
-
-                                    <div class="alert alert-danger" role="alert" id="errorEmailContact">
-                                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                                        <span class="sr-only error">Error:</span>
-                                        Please enter a valid Email
-                                    </div>
-                                    <input type="email" class="form-control" name="contactEmailContact"
-                                           id="contactEmailContact"
-                                           placeholder="Enter email" title="Please enter a valid email address"/>
-                                </div>
+                                <input type="text" class="form-control" name="contactName" id="contactName"
+                                       placeholder="Enter Your Name"
+                                       title="Please enter your name (at least 3 characters)"/>
                             </div>
-                            <div class="col-xs-12 col-md-4">
-                                <div class="form-group">
-                                    <label for="contactComment">Comments</label>
-                <textarea name="contactComment" class="form-control" id="contactComment" cols="3" rows="5"
-                          placeholder="Enter your message"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-md-4">
-                                <label for="recaptcha_div">Recaptcha</label>
+                            <div class="form-group">
+                                <label class="sr-only" for="contactEmailContact">Email</label>
 
+                                <div class="alert alert-danger" role="alert" id="errorEmailContact">
+                                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                    <span class="sr-only error">Error:</span>
+                                    Please enter a valid Email
+                                </div>
+                                <input type="email" class="form-control" name="contactEmailContact"
+                                       id="contactEmailContact"
+                                       placeholder="Enter Your Email" title="Please enter a valid email address"/>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label class="sr-only" for="contactComment">Comments</label>
+                                <textarea name="contactComment" class="form-control" id="contactComment" cols="3"
+                                          rows="5" placeholder="Enter your message"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label class="sr-only" for="recaptcha_div">Recaptcha</label>
                                 <div id="recaptcha_div" class="g-recaptcha"
-                                     data-sitekey="6LcE8gUTAAAAAKhpxfgb7SNWxYgtsm6jkf4vaLbz"></div>
-                            </div>
-                        </div>
-                        <div class="row mt15">
-                            <div class="col-xs-12 col-md-4 col-md-offset-4">
-                                <div id="submitGroup" class="form-group">
-                                    <button id="contactSubmit" class="homeBtn btn btn-lg">submit</button>
+                                     data-sitekey="6LcE8gUTAAAAAKhpxfgb7SNWxYgtsm6jkf4vaLbz">
                                 </div>
                             </div>
                         </div>
-                    </form>
-                </div>
+                        <div class="col-xs-4">
+                            <div class="form-group">
+                                <button id="contactSubmit" class="btn btn-brilent btn-lg btn-block">submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 </section>
-<!-- End of third temp section -->
+<!-- End of fifth section -> contact us -->
+
+<!-- Start of footer -->
+<footer class="section-block">
+    <div class="container">
+        <ul class="footer-links">
+            <li><a class="scroll-go-to" data-target="#main-header">Top</a></li>
+            <li><a class="scroll-go-to" data-target="#contact">Contact Us</a></li>
+
+        </ul>
+        <p class="tc">Terms and Conditions</p>
+
+        <a target="_blank" href="mailto:inquiries@brilent.com"><i class="fa fa-envelope-square"></i></a>
+        <a target="_blank" href="https://www.linkedin.com/company/3750669?trk=vsrp_companies_cluster_name&trkInfo=VSRPsearchId%3A450175291409239385644%2CVSRPtargetId%3A3750669%2CVSRPcmpt%3Acompanies_cluster"><i class="fa fa-linkedin-square"></i></a>
+        <a target="_blank" href="https://www.facebook.com/brilent.careers"><i class="fa fa-facebook-square"></i></a>
+        <p class="copyright">© 2014 Brilent Inc. All rights reserved.</p>
+
+        <div class="address">
+            <div class="pull-left">
+                <h3>Headquarters:</h3>
+                <p>
+                    1900 Wyatt Dr. Suite 6<br>
+                    Santa Clara, CA 95054<br>
+                    United States
+                </p>
+            </div>
+            <div class="pull-right">
+                <h3>Phone:</h3>
+                <p><a href="tel:408-650-7003">(408) 650-7003</a></p>
+                <h3>Email:</h3>
+                <p><a href="mailto:inquiries@brilent.com">inquiries@brilent.com</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End of footer -->
+
+
+<!-- All Modals Here-->
+<!-- Modal for introduction video -->
+<div class="modal fade" id="introVideoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="videoModalLabel">Follow us on Youtube</h4>
+            </div>
+            <div class="modal-body">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" width="1280" height="720"
+                            src="https://www.youtube.com/embed/gdqvRBO0_ek?rel=0&controls=0&showinfo=0"
+                            frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Apply Now -->
+<div class="modal fade" id="applyNowModal" tabindex="-1" role="dialog" aria-labelledby="applyNowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <form method="POST" enctype="multipart/form-data" id="generalApplyForm" role="form"
+                  action="http://www.brilent.com/technical-training-register" class="contact-form">
+                <input type="hidden" name="token" value="59d657fd95e0a4eab010ef29594ccca7">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h2 class="modal-title" id="applyNowModalLabel">Apply now</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-7 col-sm-12">
+                            <div class="form-group">
+                                <input id="first_name" name="first_name" type="text" placeholder="* FIRST NAME"
+                                       class="form-control">
+
+                                <p class="help-block"></p>
+                            </div>
+                            <div class="form-group">
+                                <input id="last_name" name="last_name" type="text" placeholder="* LAST NAME"
+                                       class="form-control">
+
+                                <p class="help-block"></p>
+                            </div>
+                            <div class="form-group">
+                                <input id="email" name="email" type="text" placeholder="* EMAIL"
+                                       class="form-control">
+
+                                <p class="help-block"></p>
+                            </div>
+                            <div class="form-group">
+                                <input id="phone_number" name="phone_number" type="text"
+                                       placeholder="* PHONE NUMBER" class="form-control">
+
+                                <p class="help-block"></p>
+                            </div>
+                            <div class="form-group">
+                                <input id="linkedIn" name="linkedIn" type="text" placeholder="LINKEDIN PROFILE"
+                                       class="form-control">
+
+                                <p class="help-block"></p>
+                            </div>
+                            <div class="form-group">
+                                <div data-toggle="buttons">
+                                    <label class="btn btn-brilent active">
+                                        <input type="radio" name="academy_type" value="brilentBootcamp"
+                                               id="brilent_bootcamp" autocomplete="off" checked>
+                                        Brilent Bootcamp
+                                    </label>
+                                    &nbsp;
+                                    <label class="btn btn-brilent">
+                                        <input type="radio" name="academy_type" value="onlineAcademy"
+                                               id="online_academy"
+                                               autocomplete="off">
+                                        Online Academy
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 hidden-sm hidden-xs">
+                            <div class="img-container">
+                                <img src="images/apply-now.jpg" class="img-responsive img-thumbnail" alt="apply now">
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <p class="radio-btn-help">
+                                    Brilent Bootcamp is FREE!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-12">
+                            <div class="form-group">
+                                <label for="upload_cv">Upload CV/Resume</label>
+                                <input type="file" name="upload_cv" id="upload_cv" class="form-control">
+
+                                <p class="help-block"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="hear_from">How did you hear about Brilent?</label>
+                                <textarea id="hear_from" name="hear_from" row="4" class="form-control input"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-brilent">Apply</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 <!-- JavaScript files -->
+<!--&lt;!&ndash; jQuery 2.1.3 &ndash;&gt;-->
+<!--<script src="addOn/cdnLocalCopy/jQuery/jquery-2.1.3.js"></script>-->
+<!--&lt;!&ndash; Bootstrap js file 3.3.4 &ndash;&gt;-->
+<!--<script src="addOn/cdnLocalCopy/Bootstrap/bootstrap.js"></script>-->
+
+
 <!-- jQuery 2.1.3 -->
-<script src="addOn/cdnLocalCopy/jQuery/jquery-2.1.3.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
 <!-- ArcText -->
 <script src="addOn/arcText/jquery.arctext.js"></script>
-<!-- Bootstrap js file 3.3.4 -->
-<script src="addOn/cdnLocalCopy/Bootstrap/bootstrap.js"></script>
 
-
-<!--&lt;!&ndash; jQuery 2.1.3 &ndash;&gt;-->
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
-
-<!--&lt;!&ndash; Latest compiled and minified JavaScript &ndash;&gt;-->
-<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>-->
-
+<!-- Google api for re-capture -->
+<script src='https://www.google.com/recaptcha/api.js?hl=en'></script>
 
 <!-- Customer js file -->
 <script src="javascript/main.js"></script>

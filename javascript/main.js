@@ -3,41 +3,91 @@
  */
 (function ($) {
     "use strict";
-    //variable declare
+    // variable declare
     var navigationBarHeight = 70;
     var $document = $(document);
-    var movingBGImgs;
-    //function define
-    function moveBackgroundImg(scrollOffset) { //move background image base on window scroll offset.
-        movingBGImgs.each(function(){
-            var element = $(this);
-            var offset = element.offset().top -navigationBarHeight - scrollOffset /1.5;
-            element.css('background-position', '50% ' + offset + "px");
-        });
-    }
 
-    function lineWrapAnimation(containerId,elementClass,gap) {
+    // function define
+    // layout mentors and fellows
+    function lineWrapAnimation(containerId, elementClass) {
         var elementWidth = $(elementClass).width();
         var elementHeight = $(elementClass).height();
-        var numberForLine = Math.floor($(containerId).width()/elementWidth);
-        var max = 0 ;
-        $(elementClass+':visible').each(function (index) {
-            var numberOfLine = Math.floor(index / numberForLine)+1;
-            if(numberOfLine>max){
+        var numberForLine = Math.floor($(containerId).width() / elementWidth);
+        var widthGap = ((($(containerId).width()) - (numberForLine * elementWidth)) / (numberForLine + 1));
+        var max = 0;
+        $(elementClass + ':visible').stop();
+        $(elementClass + ':visible').each(function (index) {
+            var numberOfLine = Math.floor(index / numberForLine) + 1;
+            if (numberOfLine > max) {
                 max = numberOfLine;
             }
-            $(this).animate({
-                left:index % numberForLine * elementWidth + gap,
-                top:Math.floor(index / numberForLine) * elementHeight + gap
+            $(this).css({
+                left: index % numberForLine === 0 ? widthGap : index % numberForLine * (elementWidth + widthGap) + widthGap,
+                top: Math.floor(index / numberForLine) === 0 ? 0 : Math.floor(index / numberForLine) * elementHeight
             })
         });
-        $(elementClass+':hidden').each(function (index) {
-            $(this).css(
-                {left:gap,
-                top:gap}
-            )
+        $(containerId).stop();
+        $(containerId).css({height: elementHeight * max});
+    }
+
+    function checkContactUsForm() {
+        var search_str = /^[\w\-\.]+@[\w\-\.]+(\.\w+)+$/;
+        $("#errorName").css("display", "none");
+        $("#errorEmailApply").css("display", "none");
+        $("#errorEmailContact").css("display", "none");
+        $("#contactName")
+            .focus(function () {
+                $(this).css("background-color", "rgba(255, 255, 255, 0.75)");
+            })
+            .blur(function () {
+                $(this).css("background-color", "rgba(255, 255, 255, 0.95)");
+                if ($(this).val().length < 4) {
+                    $("#errorName").css("display", "block");
+                }
+                else {
+                    $("#errorName").css("display", "none");
+                }
+            });
+        $("#contactEmailContact")
+            .focus(function () {
+                $(this).css("background-color", "rgba(255, 255, 255, 0.75)");
+            })
+            .blur(function () {
+                $(this).css("background-color", "rgba(255, 255, 255, 0.95)");
+                var email_val = $(this).val();
+                if (!search_str.test(email_val)) {
+                    $("#errorEmailContact").css("display", "block");
+                }
+                else {
+                    $("#errorEmailContact").css("display", "none");
+                }
+            });
+    }
+
+    function checkRegistrationForm() {
+        var $radioBtn = $('input[name="academy_type"]');
+        var $info = $radioBtn.closest('form').find('.radio-btn-help');
+        var checkedRadioBtn = 'brilentBootcamp';
+
+        $info.css({'font-size': '0.8em', 'line-height': '1.8'});
+
+        $radioBtn.on('change', function () {
+            checkedRadioBtn = $(this).val();
+            infoUpdate($info);
         });
-        $(containerId).animate({height:(elementHeight+gap)*max});
+
+        $('#email').on('change', function () {
+            infoUpdate($info);
+        });
+
+        function infoUpdate(info) {
+            info.empty();
+            if (checkedRadioBtn === 'onlineAcademy') {
+                info.append("Membership Fee: $299 for 12 Months");
+            } else {
+                info.append('Brilent Bootcamp is FREE!');
+            }
+        }
     }
 
     $document.ready(function () {
@@ -48,80 +98,32 @@
         // init navigation bar
         $('body').scrollspy({target: '#navbar-example'});
 
-        // register moving back ground image
-        movingBGImgs = $('.cover');
+        // register moving background image
+        $('.cover').moveBackgroundImg();
 
         // show and hide navigation bar
-        $(window).scroll(function () {
-            var $nav = $("#navbar-example");
-            if ($(window).height() - ($(document).scrollTop()) <= navigationBarHeight) {
-                $nav.slideDown(300);
-            }
-            if ($(document).scrollTop() <= navigationBarHeight) {
-                $nav.slideUp(300);
-            }
-            //Moving background image slower than window
-            moveBackgroundImg($document.scrollTop());
-        });
+        $("#navbar-example").toggleNavigationBar(navigationBarHeight);
 
-        $(window).resize(function(){
-            lineWrapAnimation('#empContainer', '.emp-show', 80);
-        });
+        //init mentors positions
+        lineWrapAnimation('.mentor-container', '.mentor-show');
 
-        // faq controller
-        $('.panel-body').hide();
-        $('.panel-heading').on('click',function(){
-            var answer = $(this).siblings();
-            if ( answer.is( ":hidden" ) ) {
-                answer.slideDown();
-            } else {
-                answer.slideUp();
-            }
-            $(this).parent().siblings().find('.panel-body').slideUp();
-        });
+        //init fellows positions
+        lineWrapAnimation('.fellow-container', '.fellow-show');
 
-        //init employee positions
-        lineWrapAnimation('#empContainer','.emp-show',80);
+        $(window).resize(function () {
+            lineWrapAnimation('.mentor-container', '.mentor-show');
+            lineWrapAnimation('.fellow-container', '.fellow-show');
+        });
 
         //contact form validation
-        var search_str = /^[\w\-\.]+@[\w\-\.]+(\.\w+)+$/;
-        $("#errorName").css("display","none");
-        $("#errorEmailApply").css("display","none");
-        $("#errorEmailContact").css("display","none");
-        $("#contactName").focus(function(){
-            $(this).css("background-color","#FFFFCC");
-        });
-        $("#contactName").blur(function(){
-            $(this).css("background-color","#D6D6FF");
-            if($(this).val().length<4){$("#errorName").css("display","block");}
-            else{$("#errorName").css("display","none");}
-        });
-        $("#contactEmailApply").focus(function(){
-            $(this).css("background-color","#FFFFCC");
-        });
-        $("#contactEmailApply").blur(function(){
-            $(this).css("background-color","#D6D6FF");
-            var email_val = $("#contactEmailApply").val();
-            if(!search_str.test(email_val)){$("#errorEmailApply").css("display","block");}
-            else{$("#errorEmailApply").css("display","none");}
-        });
-        $("#contactEmailContact").focus(function(){
-            $(this).css("background-color","#FFFFCC");
-        });
-        $("#contactEmailContact").blur(function(){
-            $(this).css("background-color","#D6D6FF");
-            var email_val = $(this).val();
-            if(!search_str.test(email_val)){$("#errorEmailContact").css("display","block");}
-            else{$("#errorEmailContact").css("display","none");}
-        });
-        //init tooltips
-        $('[data-toggle="tooltip"]').tooltip();
-        // set arcText for employees' name
-        var $text = $('h2.name');
-        $text.arctext({radius: 120, dir: -1});
+        checkContactUsForm();
+        checkRegistrationForm();
 
-        // set employee filter
-        $(".filter li").employeeFilter();
+        // set arcText for mentors' name
+        $('h2.mentorsName').arctext({radius: 120, dir: -1});
+
+        // set arcText for fellows' name
+        //$('h2.fellowsName').arctext({radius: 55, dir: -1});
     });
 
     // Arctic Scroll by Paul Adam Davis
@@ -130,7 +132,7 @@
 
         var defaults = {
                 elem: $(this),
-                speed: 500
+                speed: 1000
             },
 
             allOptions = $.extend(defaults, options);
@@ -146,32 +148,44 @@
 
             if (offset) {
                 toMove = parseInt(offset);
-                $htmlBody.stop(true, false).animate({scrollTop: ($(target).offset().top + toMove)}, allOptions.speed);
+                $htmlBody.stop(true, false).animate({scrollTop: ($(target).offset().top + toMove)}, allOptions.speed, function () {
+                    $("#bs-example-navbar-collapse-1").collapse('hide');
+                });
             } else if (position) {
                 toMove = parseInt(position);
-                $htmlBody.stop(true, false).animate({scrollTop: toMove}, allOptions.speed);
+                $htmlBody.stop(true, false).animate({scrollTop: toMove}, allOptions.speed, function () {
+                    $("#bs-example-navbar-collapse-1").collapse('hide');
+                });
             } else {
-                $htmlBody.stop(true, false).animate({scrollTop: ($(target).offset().top)}, allOptions.speed);
+                $htmlBody.stop(true, false).animate({scrollTop: ($(target).offset().top)}, allOptions.speed, function () {
+                    $("#bs-example-navbar-collapse-1").collapse('hide');
+                });
             }
         });
 
     };
 
-    $.fn.employeeFilter = function () {
-        var filterArea = $(this).closest('section');
-        var employeeCell = filterArea.find('div.emp');
-        $(this).on('click', function () {
-            var $this = $(this);
-            var needShowClass = $this.attr("class") ? $this.attr("class") : "all";
-            if (needShowClass !== "all") {
-                employeeCell.parent().hide();
-                filterArea.find("div." + needShowClass).show();
-            } else {
-                employeeCell.parent().show();
+    $.fn.toggleNavigationBar = function (height) {
+        var $nav = $(this);
+        $(window).scroll(function () {
+            if ($(window).height() - ($(document).scrollTop()) <= height) {
+                $nav.slideDown(300);
             }
-            lineWrapAnimation('#empContainer', '.emp-show', 80);
+            if ($(document).scrollTop() <= height) {
+                $nav.slideUp(300);
+            }
         });
     };
 
+    $.fn.moveBackgroundImg = function () { //move background image base on window scroll offset.
+        var $this = $(this);
+        $(window).scroll(function () {
+            var scrollOffset = $document.scrollTop();
+            $this.each(function () {
+                var element = $(this);
+                var offset = (element.offset().top - scrollOffset) / 1.5;
+                element.css('background-position', '50% ' + offset + "px");
+            });
+        });
+    };
 })(jQuery, 'smartresize');
-
